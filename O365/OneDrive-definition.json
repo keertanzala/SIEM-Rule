@@ -1,0 +1,1251 @@
+{
+    "id": 117543427094,
+    "dashboard.name": "OneDrive",
+    "dashboard.category": "O365",
+    "dashboard.access.type": "public",
+    "dashboard.users": [],
+    "dashboard.scope": "user",
+    "dashboard.user.profiles": [],
+    "dashboard.assigned.users": [],
+    "dashboard.assigned.user.profiles": [],
+    "dashboard.tabs": [],
+    "custom.tabs": [],
+    "style": {
+        "font.size": "medium",
+        "h.gap": 10,
+        "v.gap": 10,
+        "row.height": 50
+    },
+    "dashboard.context": {
+        "dashboard.widgets": [
+            {
+                "x": 0,
+                "y": 0,
+                "h": 2,
+                "w": 3,
+                "id": 117543427081,
+                "i": "2ee7cfd8-10c9-4bc7-8e49-0027c548e2cd",
+                "options": {},
+                "definition": {
+                    "id": 117543427081,
+                    "_type": "1",
+                    "container.type": "dashboard",
+                    "visualization.name": "Total OneDrive events",
+                    "visualization.type": "MetroTile",
+                    "visualization.category": "Gauge",
+                    "visualization.timeline": {
+                        "relative.timeline": "-48h",
+                        "visualization.time.range.inclusive": "no"
+                    },
+                    "visualization.result.by": [],
+                    "visualization.properties": {
+                        "gauge": {
+                            "style": {
+                                "type": "number",
+                                "font.size": "small",
+                                "text.align": "left",
+                                "chart.label": "no",
+                                "chart.legend": "no",
+                                "color.conditions": [
+                                    {
+                                        "color": "#f04e3e",
+                                        "value": 0
+                                    },
+                                    {
+                                        "color": "#f58518",
+                                        "value": 0
+                                    },
+                                    {
+                                        "color": "#f5bc18",
+                                        "value": 0
+                                    }
+                                ],
+                                "trend.background.enabled": false
+                            },
+                            "font.color.conditions": []
+                        }
+                    },
+                    "visualization.data.sources": [
+                        {
+                            "type": "log",
+                            "filters": {
+                                "data.filter": {
+                                    "filter": "include",
+                                    "groups": [
+                                        {
+                                            "filter": "include",
+                                            "operator": "or",
+                                            "conditions": [
+                                                {
+                                                    "value": "OneDrive",
+                                                    "operand": "event.category",
+                                                    "operator": "="
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "operator": "and"
+                                },
+                                "result.filter": {},
+                                "drill.down.filter": {}
+                            },
+                            "category": "log",
+                            "data.points": [
+                                {
+                                    "entities": [],
+                                    "aggregator": "count",
+                                    "data.point": "id"
+                                }
+                            ]
+                        }
+                    ],
+                    "visualization.timeline.preference": "no"
+                }
+            },
+            {
+                "x": 3,
+                "y": 0,
+                "h": 2,
+                "w": 3,
+                "id": 117543427082,
+                "i": "17ede038-3619-4778-bdda-87066386c21d",
+                "options": {},
+                "definition": {
+                    "id": 117543427082,
+                    "_type": "1",
+                    "container.type": "dashboard",
+                    "visualization.name": "File access events",
+                    "visualization.type": "MetroTile",
+                    "visualization.category": "Gauge",
+                    "visualization.timeline": {
+                        "relative.timeline": "-48h",
+                        "visualization.time.range.inclusive": "no"
+                    },
+                    "visualization.result.by": [],
+                    "visualization.properties": {
+                        "gauge": {
+                            "style": {
+                                "type": "number",
+                                "font.size": "small",
+                                "text.align": "left",
+                                "chart.label": "no",
+                                "chart.legend": "no",
+                                "color.conditions": [
+                                    {
+                                        "color": "#f04e3e",
+                                        "value": 0
+                                    },
+                                    {
+                                        "color": "#f58518",
+                                        "value": 0
+                                    },
+                                    {
+                                        "color": "#f5bc18",
+                                        "value": 0
+                                    }
+                                ],
+                                "trend.background.enabled": false
+                            },
+                            "font.color.conditions": []
+                        }
+                    },
+                    "visualization.data.sources": [
+                        {
+                            "type": "log",
+                            "filters": {
+                                "data.filter": {
+                                    "filter": "include",
+                                    "groups": [
+                                        {
+                                            "filter": "include",
+                                            "operator": "or",
+                                            "conditions": [
+                                                {
+                                                    "value": "OneDrive",
+                                                    "operand": "event.category",
+                                                    "operator": "="
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "filter": "include",
+                                            "operator": "or",
+                                            "conditions": [
+                                                {
+                                                    "value": "FileAccessed",
+                                                    "operand": "event.type",
+                                                    "operator": "contain"
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "operator": "and"
+                                },
+                                "result.filter": {},
+                                "drill.down.filter": {}
+                            },
+                            "category": "log",
+                            "data.points": [
+                                {
+                                    "entities": [],
+                                    "aggregator": "count",
+                                    "data.point": "id"
+                                }
+                            ]
+                        }
+                    ],
+                    "visualization.timeline.preference": "no"
+                }
+            },
+            {
+                "x": 6,
+                "y": 0,
+                "h": 2,
+                "w": 3,
+                "id": 117543427083,
+                "i": "e4f1422f-7fec-4e7c-ac40-a20420fb82f4",
+                "options": {},
+                "definition": {
+                    "id": 117543427083,
+                    "_type": "1",
+                    "container.type": "dashboard",
+                    "visualization.name": "File modifications",
+                    "visualization.type": "MetroTile",
+                    "visualization.category": "Gauge",
+                    "visualization.timeline": {
+                        "relative.timeline": "-48h",
+                        "visualization.time.range.inclusive": "no"
+                    },
+                    "visualization.result.by": [],
+                    "visualization.properties": {
+                        "gauge": {
+                            "style": {
+                                "type": "number",
+                                "font.size": "small",
+                                "text.align": "left",
+                                "chart.label": "no",
+                                "chart.legend": "no",
+                                "color.conditions": [
+                                    {
+                                        "color": "#f04e3e",
+                                        "value": 0
+                                    },
+                                    {
+                                        "color": "#f58518",
+                                        "value": 0
+                                    },
+                                    {
+                                        "color": "#f5bc18",
+                                        "value": 0
+                                    }
+                                ],
+                                "trend.background.enabled": false
+                            },
+                            "font.color.conditions": []
+                        }
+                    },
+                    "visualization.data.sources": [
+                        {
+                            "type": "log",
+                            "filters": {
+                                "data.filter": {
+                                    "filter": "include",
+                                    "groups": [
+                                        {
+                                            "filter": "include",
+                                            "operator": "or",
+                                            "conditions": [
+                                                {
+                                                    "value": "OneDrive",
+                                                    "operand": "event.category",
+                                                    "operator": "="
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "filter": "include",
+                                            "operator": "or",
+                                            "conditions": [
+                                                {
+                                                    "value": "FileModified",
+                                                    "operand": "event.type",
+                                                    "operator": "contain"
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "operator": "and"
+                                },
+                                "result.filter": {},
+                                "drill.down.filter": {}
+                            },
+                            "category": "log",
+                            "data.points": [
+                                {
+                                    "entities": [],
+                                    "aggregator": "count",
+                                    "data.point": "id"
+                                }
+                            ]
+                        }
+                    ],
+                    "visualization.timeline.preference": "no"
+                }
+            },
+            {
+                "x": 9,
+                "y": 0,
+                "h": 2,
+                "w": 3,
+                "id": 117543427085,
+                "i": "72dfc257-46ed-4972-b8d4-852842464627",
+                "options": {},
+                "definition": {
+                    "id": 117543427085,
+                    "_type": "1",
+                    "container.type": "dashboard",
+                    "visualization.name": "File downloads",
+                    "visualization.type": "MetroTile",
+                    "visualization.category": "Gauge",
+                    "visualization.timeline": {
+                        "relative.timeline": "-48h",
+                        "visualization.time.range.inclusive": "no"
+                    },
+                    "visualization.result.by": [],
+                    "visualization.properties": {
+                        "gauge": {
+                            "style": {
+                                "type": "number",
+                                "font.size": "small",
+                                "text.align": "left",
+                                "chart.label": "no",
+                                "chart.legend": "no",
+                                "color.conditions": [
+                                    {
+                                        "color": "#2ecc71",
+                                        "value": 0
+                                    },
+                                    {
+                                        "color": "#f5bc18",
+                                        "value": 1
+                                    },
+                                    {
+                                        "color": "#f04e3e",
+                                        "value": 5
+                                    }
+                                ],
+                                "trend.background.enabled": false
+                            },
+                            "font.color.conditions": []
+                        }
+                    },
+                    "visualization.data.sources": [
+                        {
+                            "type": "log",
+                            "filters": {
+                                "data.filter": {
+                                    "filter": "include",
+                                    "groups": [
+                                        {
+                                            "filter": "include",
+                                            "operator": "or",
+                                            "conditions": [
+                                                {
+                                                    "value": "OneDrive",
+                                                    "operand": "event.category",
+                                                    "operator": "="
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "filter": "include",
+                                            "operator": "or",
+                                            "conditions": [
+                                                {
+                                                    "value": "FileDownloaded",
+                                                    "operand": "event.type",
+                                                    "operator": "contain"
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "operator": "and"
+                                },
+                                "result.filter": {},
+                                "drill.down.filter": {}
+                            },
+                            "category": "log",
+                            "data.points": [
+                                {
+                                    "entities": [],
+                                    "aggregator": "count",
+                                    "data.point": "id"
+                                }
+                            ]
+                        }
+                    ],
+                    "visualization.timeline.preference": "no"
+                }
+            },
+            {
+                "x": 0,
+                "y": 2,
+                "h": 7,
+                "w": 8,
+                "id": 117543427086,
+                "i": "a5073733-f6bd-4386-b914-9d5f3186d815",
+                "options": {},
+                "definition": {
+                    "id": 117543427086,
+                    "_type": "1",
+                    "granularity": {
+                        "unit": "m",
+                        "value": "5"
+                    },
+                    "container.type": "dashboard",
+                    "visualization.name": "OneDrive activity",
+                    "visualization.type": "StackedArea",
+                    "visualization.category": "Chart",
+                    "visualization.timeline": {
+                        "relative.timeline": "-48h",
+                        "visualization.time.range.inclusive": "no"
+                    },
+                    "visualization.result.by": [
+                        "event.type"
+                    ],
+                    "visualization.properties": {
+                        "chart": {
+                            "sorting": {
+                                "limit": 10,
+                                "order": "desc"
+                            },
+                            "line.style": "solid",
+                            "line.width": 2,
+                            "point.size": 4,
+                            "axis.titles": {
+                                "x": "Time",
+                                "y": "Event Count"
+                            },
+                            "chart.label": "no",
+                            "chart.legend": "no",
+                            "points.enabled": "no",
+                            "rotation.angle": 0,
+                            "marker.property": [
+                                {
+                                    "marker.threshold": [
+                                        null,
+                                        null
+                                    ]
+                                }
+                            ],
+                            "vertical.legend": "no",
+                            "data.label.enabled": "no",
+                            "highchart.settings": {},
+                            "metric.grid.enabled": false
+                        }
+                    },
+                    "visualization.granularity": "5 m",
+                    "visualization.data.sources": [
+                        {
+                            "type": "log",
+                            "filters": {
+                                "data.filter": {
+                                    "filter": "include",
+                                    "groups": [
+                                        {
+                                            "filter": "include",
+                                            "operator": "or",
+                                            "conditions": [
+                                                {
+                                                    "value": "OneDrive",
+                                                    "operand": "event.category",
+                                                    "operator": "="
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "operator": "and"
+                                },
+                                "result.filter": {},
+                                "drill.down.filter": {}
+                            },
+                            "category": "log",
+                            "data.points": [
+                                {
+                                    "entities": [],
+                                    "aggregator": "count",
+                                    "data.point": "id"
+                                }
+                            ],
+                            "visualization.result.by": [
+                                "event.type"
+                            ]
+                        }
+                    ],
+                    "visualization.timeline.preference": "no"
+                }
+            },
+            {
+                "x": 8,
+                "y": 2,
+                "h": 7,
+                "w": 4,
+                "id": 117543427087,
+                "i": "023278c1-da3e-436b-baf3-51ce9b7f702c",
+                "options": {},
+                "definition": {
+                    "id": 117543427087,
+                    "_type": "1",
+                    "container.type": "dashboard",
+                    "visualization.name": "Top operations ",
+                    "visualization.type": "Pie",
+                    "visualization.category": "TopN",
+                    "visualization.timeline": {
+                        "relative.timeline": "-48h",
+                        "visualization.time.range.inclusive": "no"
+                    },
+                    "visualization.result.by": [
+                        "event.type"
+                    ],
+                    "visualization.properties": {
+                        "chart": {
+                            "sorting": {
+                                "limit": "5",
+                                "order": "desc",
+                                "column": "id.count"
+                            },
+                            "line.style": "solid",
+                            "line.width": 2,
+                            "point.size": 4,
+                            "chart.label": "no",
+                            "chart.legend": "yes",
+                            "points.enabled": "no",
+                            "rotation.angle": 0,
+                            "marker.property": [
+                                {
+                                    "marker.threshold": [
+                                        null,
+                                        null
+                                    ]
+                                }
+                            ],
+                            "vertical.legend": "no",
+                            "data.label.enabled": "yes",
+                            "highchart.settings": {}
+                        }
+                    },
+                    "visualization.data.sources": [
+                        {
+                            "type": "log",
+                            "filters": {
+                                "data.filter": {
+                                    "filter": "include",
+                                    "groups": [
+                                        {
+                                            "filter": "include",
+                                            "operator": "or",
+                                            "conditions": [
+                                                {
+                                                    "value": "OneDrive",
+                                                    "operand": "event.category",
+                                                    "operator": "="
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "operator": "and"
+                                },
+                                "result.filter": {},
+                                "drill.down.filter": {}
+                            },
+                            "category": "log",
+                            "data.points": [
+                                {
+                                    "entities": [],
+                                    "aggregator": "count",
+                                    "data.point": "id"
+                                }
+                            ],
+                            "visualization.result.by": [
+                                "event.type"
+                            ]
+                        }
+                    ],
+                    "visualization.timeline.preference": "no"
+                }
+            },
+            {
+                "x": 8,
+                "y": 9,
+                "h": 7,
+                "w": 4,
+                "id": 117543427088,
+                "i": "b89e2456-51fd-490f-86c0-2f88fc37c867",
+                "options": {},
+                "definition": {
+                    "id": 117543427088,
+                    "_type": "1",
+                    "container.type": "dashboard",
+                    "visualization.name": "Top users ",
+                    "visualization.type": "HorizontalBar",
+                    "visualization.category": "TopN",
+                    "visualization.timeline": {
+                        "relative.timeline": "-48h",
+                        "visualization.time.range.inclusive": "no"
+                    },
+                    "visualization.result.by": [
+                        "user.id"
+                    ],
+                    "visualization.properties": {
+                        "chart": {
+                            "sorting": {
+                                "limit": "5",
+                                "order": "desc",
+                                "column": "id.count"
+                            },
+                            "line.style": "solid",
+                            "line.width": 2,
+                            "point.size": 4,
+                            "chart.label": "no",
+                            "chart.legend": "no",
+                            "points.enabled": "no",
+                            "rotation.angle": 0,
+                            "marker.property": [
+                                {
+                                    "marker.threshold": [
+                                        null,
+                                        null
+                                    ]
+                                }
+                            ],
+                            "vertical.legend": "no",
+                            "data.label.enabled": "yes",
+                            "highchart.settings": {}
+                        }
+                    },
+                    "visualization.data.sources": [
+                        {
+                            "type": "log",
+                            "filters": {
+                                "data.filter": {
+                                    "filter": "include",
+                                    "groups": [
+                                        {
+                                            "filter": "include",
+                                            "operator": "or",
+                                            "conditions": [
+                                                {
+                                                    "value": "OneDrive",
+                                                    "operand": "event.category",
+                                                    "operator": "="
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "operator": "and"
+                                },
+                                "result.filter": {},
+                                "drill.down.filter": {}
+                            },
+                            "category": "log",
+                            "data.points": [
+                                {
+                                    "entities": [],
+                                    "aggregator": "count",
+                                    "data.point": "id"
+                                }
+                            ],
+                            "visualization.result.by": [
+                                "user.id"
+                            ]
+                        }
+                    ],
+                    "visualization.timeline.preference": "no"
+                }
+            },
+            {
+                "x": 0,
+                "y": 9,
+                "h": 7,
+                "w": 4,
+                "id": 117543427089,
+                "i": "c562a1ec-70fd-4ef9-9988-4d8e239b8858",
+                "options": {},
+                "definition": {
+                    "id": 117543427089,
+                    "_type": "1",
+                    "container.type": "dashboard",
+                    "visualization.name": "Most-accessed files",
+                    "visualization.type": "HorizontalBar",
+                    "visualization.category": "TopN",
+                    "visualization.timeline": {
+                        "relative.timeline": "-48h",
+                        "visualization.time.range.inclusive": "no"
+                    },
+                    "visualization.result.by": [
+                        "source.file.name"
+                    ],
+                    "visualization.properties": {
+                        "chart": {
+                            "sorting": {
+                                "limit": "5",
+                                "order": "desc",
+                                "column": "id.count"
+                            },
+                            "line.style": "solid",
+                            "line.width": 2,
+                            "point.size": 4,
+                            "chart.label": "no",
+                            "chart.legend": "no",
+                            "points.enabled": "no",
+                            "rotation.angle": 0,
+                            "marker.property": [
+                                {
+                                    "marker.threshold": [
+                                        null,
+                                        null
+                                    ]
+                                }
+                            ],
+                            "vertical.legend": "no",
+                            "data.label.enabled": "yes",
+                            "highchart.settings": {}
+                        }
+                    },
+                    "visualization.data.sources": [
+                        {
+                            "type": "log",
+                            "filters": {
+                                "data.filter": {
+                                    "filter": "include",
+                                    "groups": [
+                                        {
+                                            "filter": "include",
+                                            "operator": "or",
+                                            "conditions": [
+                                                {
+                                                    "value": "OneDrive",
+                                                    "operand": "event.category",
+                                                    "operator": "="
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "operator": "and"
+                                },
+                                "result.filter": {},
+                                "drill.down.filter": {}
+                            },
+                            "category": "log",
+                            "data.points": [
+                                {
+                                    "entities": [],
+                                    "aggregator": "count",
+                                    "data.point": "id"
+                                }
+                            ],
+                            "visualization.result.by": [
+                                "source.file.name"
+                            ]
+                        }
+                    ],
+                    "visualization.timeline.preference": "no"
+                }
+            },
+            {
+                "x": 6,
+                "y": 16,
+                "h": 7,
+                "w": 6,
+                "id": 117543427093,
+                "i": "8fe77157-55fc-479d-82df-62b885fcf375",
+                "options": {},
+                "definition": {
+                    "id": 117543427093,
+                    "_type": "1",
+                    "container.type": "dashboard",
+                    "visualization.name": "Most active IP address ",
+                    "visualization.type": "HorizontalBar",
+                    "visualization.category": "TopN",
+                    "visualization.timeline": {
+                        "relative.timeline": "-48h",
+                        "visualization.time.range.inclusive": "no"
+                    },
+                    "visualization.result.by": [
+                        "client.ip"
+                    ],
+                    "visualization.properties": {
+                        "chart": {
+                            "sorting": {
+                                "limit": "5",
+                                "order": "desc",
+                                "column": "id.count"
+                            },
+                            "line.style": "solid",
+                            "line.width": 2,
+                            "point.size": 4,
+                            "chart.label": "no",
+                            "chart.legend": "no",
+                            "points.enabled": "no",
+                            "rotation.angle": 0,
+                            "marker.property": [
+                                {
+                                    "marker.threshold": [
+                                        null,
+                                        null
+                                    ]
+                                }
+                            ],
+                            "vertical.legend": "no",
+                            "data.label.enabled": "yes",
+                            "highchart.settings": {}
+                        }
+                    },
+                    "visualization.data.sources": [
+                        {
+                            "type": "log",
+                            "filters": {
+                                "data.filter": {
+                                    "filter": "include",
+                                    "groups": [
+                                        {
+                                            "filter": "include",
+                                            "operator": "or",
+                                            "conditions": [
+                                                {
+                                                    "value": "OneDrive",
+                                                    "operand": "event.category",
+                                                    "operator": "="
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "operator": "and"
+                                },
+                                "result.filter": {},
+                                "drill.down.filter": {}
+                            },
+                            "category": "log",
+                            "data.points": [
+                                {
+                                    "entities": [],
+                                    "aggregator": "count",
+                                    "data.point": "id"
+                                }
+                            ],
+                            "visualization.result.by": [
+                                "client.ip"
+                            ]
+                        }
+                    ],
+                    "visualization.timeline.preference": "no"
+                }
+            },
+            {
+                "x": 4,
+                "y": 9,
+                "h": 7,
+                "w": 4,
+                "id": 117543427091,
+                "i": "58cdfa4a-ed88-43bf-8b68-beb3c48cc4ee",
+                "options": {},
+                "definition": {
+                    "id": 117543427091,
+                    "_type": "1",
+                    "container.type": "dashboard",
+                    "visualization.name": "Bulk downloads by user",
+                    "visualization.type": "Pie",
+                    "visualization.category": "TopN",
+                    "visualization.timeline": {
+                        "relative.timeline": "-48h",
+                        "visualization.time.range.inclusive": "no"
+                    },
+                    "visualization.result.by": [
+                        "user.id"
+                    ],
+                    "visualization.properties": {
+                        "chart": {
+                            "sorting": {
+                                "limit": 25,
+                                "order": "desc",
+                                "column": "id.count"
+                            },
+                            "line.style": "solid",
+                            "line.width": 2,
+                            "point.size": 4,
+                            "chart.label": "no",
+                            "chart.legend": "yes",
+                            "points.enabled": "no",
+                            "rotation.angle": 0,
+                            "marker.property": [
+                                {
+                                    "marker.threshold": [
+                                        null,
+                                        null
+                                    ]
+                                }
+                            ],
+                            "vertical.legend": "no",
+                            "data.label.enabled": "yes",
+                            "highchart.settings": {}
+                        }
+                    },
+                    "visualization.data.sources": [
+                        {
+                            "type": "log",
+                            "filters": {
+                                "data.filter": {
+                                    "filter": "include",
+                                    "groups": [
+                                        {
+                                            "filter": "include",
+                                            "operator": "or",
+                                            "conditions": [
+                                                {
+                                                    "value": "OneDrive",
+                                                    "operand": "event.category",
+                                                    "operator": "="
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "filter": "include",
+                                            "operator": "or",
+                                            "conditions": [
+                                                {
+                                                    "value": "FileDownloaded",
+                                                    "operand": "event.type",
+                                                    "operator": "contain"
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "operator": "and"
+                                },
+                                "result.filter": {},
+                                "drill.down.filter": {}
+                            },
+                            "category": "log",
+                            "data.points": [
+                                {
+                                    "entities": [],
+                                    "aggregator": "count",
+                                    "data.point": "id"
+                                }
+                            ],
+                            "visualization.result.by": [
+                                "user.id"
+                            ]
+                        }
+                    ],
+                    "visualization.timeline.preference": "no"
+                }
+            },
+            {
+                "x": 0,
+                "y": 16,
+                "h": 7,
+                "w": 6,
+                "id": 117617045406,
+                "i": "new-od-topngrid",
+                "options": {},
+                "definition": {
+                    "id": 117617045406,
+                    "_type": "1",
+                    "container.type": "dashboard",
+                    "visualization.name": "Top files ranked",
+                    "visualization.type": "Grid",
+                    "visualization.category": "TopN",
+                    "visualization.timeline": {
+                        "relative.timeline": "-48h",
+                        "visualization.time.range.inclusive": "no"
+                    },
+                    "visualization.result.by": [
+                        "source.file.name",
+                        "user.id"
+                    ],
+                    "visualization.properties": {
+                        "grid": {
+                            "style": {
+                                "header.font.size": "small"
+                            },
+                            "header": "yes",
+                            "columns": [
+                                {
+                                    "name": "source.file.name",
+                                    "show": "yes",
+                                    "style": {
+                                        "width.percent": 32
+                                    },
+                                    "title": "File",
+                                    "disable": "no",
+                                    "position": 1,
+                                    "sortable": "yes",
+                                    "orderable": "yes",
+                                    "resizable": "yes",
+                                    "selectable": "yes"
+                                },
+                                {
+                                    "name": "id.count",
+                                    "show": "yes",
+                                    "style": {
+                                        "width.percent": 33
+                                    },
+                                    "title": "Accesses",
+                                    "disable": "no",
+                                    "position": 2,
+                                    "sortable": "yes",
+                                    "orderable": "yes",
+                                    "resizable": "yes",
+                                    "selectable": "yes"
+                                },
+                                {
+                                    "name": "user.id",
+                                    "show": "yes",
+                                    "style": {
+                                        "change.case": "none",
+                                        "width.percent": 32
+                                    },
+                                    "title": "email",
+                                    "disable": "no",
+                                    "position": 3,
+                                    "sortable": "yes",
+                                    "orderable": "yes",
+                                    "resizable": "yes",
+                                    "selectable": "yes"
+                                }
+                            ],
+                            "sorting": {
+                                "limit": 15,
+                                "order": "desc",
+                                "column": "id.count"
+                            },
+                            "searchable": "yes",
+                            "sorting.order": "desc",
+                            "sorting.column": "id.count",
+                            "column.selection": "no",
+                            "thresholdSettings": {},
+                            "visualization.grid.properties.required": "no"
+                        }
+                    },
+                    "visualization.data.sources": [
+                        {
+                            "type": "log",
+                            "filters": {
+                                "data.filter": {
+                                    "filter": "include",
+                                    "groups": [
+                                        {
+                                            "filter": "include",
+                                            "operator": "or",
+                                            "conditions": [
+                                                {
+                                                    "value": "OneDrive",
+                                                    "operand": "event.category",
+                                                    "operator": "="
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "operator": "and"
+                                },
+                                "result.filter": {},
+                                "drill.down.filter": {}
+                            },
+                            "category": "log",
+                            "data.points": [
+                                {
+                                    "entities": [],
+                                    "aggregator": "count",
+                                    "data.point": "id"
+                                }
+                            ],
+                            "visualization.result.by": [
+                                "source.file.name",
+                                "user.id"
+                            ]
+                        }
+                    ],
+                    "visualization.timeline.preference": "no"
+                }
+            },
+            {
+                "x": 0,
+                "y": 23,
+                "h": 6,
+                "w": 12,
+                "id": 117543427092,
+                "i": "4fe94edf-088c-4803-87ba-a6a5a4527aa6",
+                "options": {},
+                "definition": {
+                    "id": 117543427092,
+                    "_type": "1",
+                    "cache": true,
+                    "join.type": "custom",
+                    "join.result": "log.event",
+                    "max.records": 500,
+                    "container.type": "dashboard",
+                    "visualization.name": "Recent OneDrive activity",
+                    "visualization.type": "Grid",
+                    "visualization.category": "Event History",
+                    "visualization.timeline": {
+                        "relative.timeline": "-48h",
+                        "visualization.time.range.inclusive": "no"
+                    },
+                    "visualization.result.by": [],
+                    "visualization.properties": {
+                        "grid": {
+                            "style": {
+                                "header.font.size": "small"
+                            },
+                            "header": "yes",
+                            "columns": [
+                                {
+                                    "name": "timestamp",
+                                    "show": "yes",
+                                    "style": {
+                                        "change.case": "none"
+                                    },
+                                    "title": "Time",
+                                    "disable": "no",
+                                    "position": 1,
+                                    "sortable": "yes",
+                                    "orderable": "yes",
+                                    "resizable": "yes",
+                                    "selectable": "yes"
+                                },
+                                {
+                                    "name": "user.id",
+                                    "show": "yes",
+                                    "style": {
+                                        "change.case": "none"
+                                    },
+                                    "title": "User",
+                                    "disable": "no",
+                                    "position": 2,
+                                    "sortable": "yes",
+                                    "orderable": "yes",
+                                    "resizable": "yes",
+                                    "selectable": "yes"
+                                },
+                                {
+                                    "name": "event.type",
+                                    "show": "yes",
+                                    "style": {
+                                        "change.case": "none"
+                                    },
+                                    "title": "Operation",
+                                    "disable": "no",
+                                    "position": 3,
+                                    "sortable": "yes",
+                                    "orderable": "yes",
+                                    "resizable": "yes",
+                                    "selectable": "yes"
+                                },
+                                {
+                                    "name": "source.file.name",
+                                    "show": "yes",
+                                    "style": {
+                                        "change.case": "none"
+                                    },
+                                    "title": "File",
+                                    "disable": "no",
+                                    "position": 4,
+                                    "sortable": "yes",
+                                    "orderable": "yes",
+                                    "resizable": "yes",
+                                    "selectable": "yes"
+                                },
+                                {
+                                    "name": "client.ip",
+                                    "show": "yes",
+                                    "style": {
+                                        "change.case": "none"
+                                    },
+                                    "title": "Client IP",
+                                    "disable": "no",
+                                    "position": 5,
+                                    "sortable": "yes",
+                                    "orderable": "yes",
+                                    "resizable": "yes",
+                                    "selectable": "yes"
+                                },
+                                {
+                                    "name": "geo.location",
+                                    "show": "yes",
+                                    "style": {
+                                        "change.case": "none"
+                                    },
+                                    "title": "Geo",
+                                    "disable": "no",
+                                    "position": 6,
+                                    "sortable": "yes",
+                                    "orderable": "yes",
+                                    "resizable": "yes",
+                                    "selectable": "yes"
+                                }
+                            ],
+                            "searchable": "yes",
+                            "column.selection": "no",
+                            "thresholdSettings": {},
+                            "visualization.grid.properties.required": "no"
+                        }
+                    },
+                    "visualization.data.sources": [
+                        {
+                            "type": "log",
+                            "filters": {
+                                "data.filter": {
+                                    "filter": "include",
+                                    "groups": [
+                                        {
+                                            "filter": "include",
+                                            "operator": "or",
+                                            "conditions": [
+                                                {
+                                                    "value": "OneDrive",
+                                                    "operand": "event.category",
+                                                    "operator": "="
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "operator": "and"
+                                },
+                                "result.filter": {},
+                                "drill.down.filter": {}
+                            },
+                            "join.type": "custom",
+                            "data.points": [
+                                {
+                                    "aggregator": "",
+                                    "data.point": "user.id"
+                                },
+                                {
+                                    "aggregator": "",
+                                    "data.point": "event.type"
+                                },
+                                {
+                                    "aggregator": "",
+                                    "data.point": "source.file.name"
+                                },
+                                {
+                                    "aggregator": "",
+                                    "data.point": "client.ip"
+                                },
+                                {
+                                    "aggregator": "",
+                                    "data.point": "geo.location"
+                                }
+                            ],
+                            "visualization.result.by": []
+                        }
+                    ],
+                    "visualization.secondary.category": "event.history",
+                    "visualization.timeline.preference": "no"
+                }
+            }
+        ],
+        "dashboard.users": []
+    }
+}

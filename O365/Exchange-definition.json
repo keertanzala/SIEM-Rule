@@ -1,0 +1,1029 @@
+{
+    "id": 117543427067,
+    "dashboard.name": "Exchange",
+    "dashboard.category": "O365",
+    "dashboard.access.type": "public",
+    "dashboard.users": [],
+    "dashboard.scope": "user",
+    "dashboard.user.profiles": [],
+    "dashboard.assigned.users": [],
+    "dashboard.assigned.user.profiles": [],
+    "dashboard.tabs": [],
+    "custom.tabs": [],
+    "style": {
+        "font.size": "medium",
+        "h.gap": 10,
+        "v.gap": 10,
+        "row.height": 50
+    },
+    "dashboard.context": {
+        "dashboard.widgets": [
+            {
+                "x": 0,
+                "y": 0,
+                "h": 2,
+                "w": 3,
+                "id": 117543427053,
+                "i": "49b964f3-4117-4a5a-b661-3b0f5b9cbfe3",
+                "options": {},
+                "definition": {
+                    "id": 117543427053,
+                    "_type": "1",
+                    "container.type": "dashboard",
+                    "visualization.name": "Total Exchange events",
+                    "visualization.type": "MetroTile",
+                    "visualization.category": "Gauge",
+                    "visualization.timeline": {
+                        "relative.timeline": "-48h",
+                        "visualization.time.range.inclusive": "no"
+                    },
+                    "visualization.result.by": [],
+                    "visualization.properties": {
+                        "gauge": {
+                            "style": {
+                                "type": "number",
+                                "font.size": "small",
+                                "text.align": "left",
+                                "chart.label": "no",
+                                "chart.legend": "no",
+                                "color.conditions": [
+                                    {
+                                        "color": "#f04e3e",
+                                        "value": 0
+                                    },
+                                    {
+                                        "color": "#f58518",
+                                        "value": 0
+                                    },
+                                    {
+                                        "color": "#f5bc18",
+                                        "value": 0
+                                    }
+                                ],
+                                "trend.background.enabled": false
+                            },
+                            "font.color.conditions": []
+                        }
+                    },
+                    "visualization.data.sources": [
+                        {
+                            "type": "log",
+                            "filters": {
+                                "data.filter": {
+                                    "filter": "include",
+                                    "groups": [
+                                        {
+                                            "filter": "include",
+                                            "operator": "or",
+                                            "conditions": [
+                                                {
+                                                    "value": "Exchange",
+                                                    "operand": "event.category",
+                                                    "operator": "="
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "operator": "and"
+                                },
+                                "result.filter": {},
+                                "drill.down.filter": {}
+                            },
+                            "category": "log",
+                            "data.points": [
+                                {
+                                    "entities": [],
+                                    "aggregator": "count",
+                                    "data.point": "id"
+                                }
+                            ]
+                        }
+                    ],
+                    "visualization.timeline.preference": "no"
+                }
+            },
+            {
+                "x": 3,
+                "y": 0,
+                "h": 2,
+                "w": 3,
+                "id": 117543427054,
+                "i": "dfbad4b1-b979-4171-83b9-4fb4a52ec60a",
+                "options": {},
+                "definition": {
+                    "id": 117543427054,
+                    "_type": "1",
+                    "container.type": "dashboard",
+                    "visualization.name": "Mail access events",
+                    "visualization.type": "MetroTile",
+                    "visualization.category": "Gauge",
+                    "visualization.timeline": {
+                        "relative.timeline": "-48h",
+                        "visualization.time.range.inclusive": "no"
+                    },
+                    "visualization.result.by": [],
+                    "visualization.properties": {
+                        "gauge": {
+                            "style": {
+                                "type": "number",
+                                "font.size": "small",
+                                "text.align": "left",
+                                "chart.label": "no",
+                                "chart.legend": "no",
+                                "color.conditions": [
+                                    {
+                                        "color": "#f04e3e",
+                                        "value": 0
+                                    },
+                                    {
+                                        "color": "#f58518",
+                                        "value": 0
+                                    },
+                                    {
+                                        "color": "#f5bc18",
+                                        "value": 0
+                                    }
+                                ],
+                                "trend.background.enabled": false
+                            },
+                            "font.color.conditions": []
+                        }
+                    },
+                    "visualization.data.sources": [
+                        {
+                            "type": "log",
+                            "filters": {
+                                "data.filter": {
+                                    "filter": "include",
+                                    "groups": [
+                                        {
+                                            "filter": "include",
+                                            "operator": "or",
+                                            "conditions": [
+                                                {
+                                                    "value": "Exchange",
+                                                    "operand": "event.category",
+                                                    "operator": "="
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "filter": "include",
+                                            "operator": "or",
+                                            "conditions": [
+                                                {
+                                                    "value": "MailItemsAccessed",
+                                                    "operand": "event.type",
+                                                    "operator": "contain"
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "operator": "and"
+                                },
+                                "result.filter": {},
+                                "drill.down.filter": {}
+                            },
+                            "category": "log",
+                            "data.points": [
+                                {
+                                    "entities": [],
+                                    "aggregator": "count",
+                                    "data.point": "id"
+                                }
+                            ]
+                        }
+                    ],
+                    "visualization.timeline.preference": "no"
+                }
+            },
+            {
+                "x": 6,
+                "y": 0,
+                "h": 2,
+                "w": 3,
+                "id": 117543427055,
+                "i": "87aac697-0482-41f9-9540-223e89cb13ed",
+                "options": {},
+                "definition": {
+                    "id": 117543427055,
+                    "_type": "1",
+                    "container.type": "dashboard",
+                    "visualization.name": "Send operations",
+                    "visualization.type": "MetroTile",
+                    "visualization.category": "Gauge",
+                    "visualization.timeline": {
+                        "relative.timeline": "-48h",
+                        "visualization.time.range.inclusive": "no"
+                    },
+                    "visualization.result.by": [],
+                    "visualization.properties": {
+                        "gauge": {
+                            "style": {
+                                "type": "number",
+                                "font.size": "small",
+                                "text.align": "left",
+                                "chart.label": "no",
+                                "chart.legend": "no",
+                                "color.conditions": [
+                                    {
+                                        "color": "#f04e3e",
+                                        "value": 0
+                                    },
+                                    {
+                                        "color": "#f58518",
+                                        "value": 0
+                                    },
+                                    {
+                                        "color": "#f5bc18",
+                                        "value": 0
+                                    }
+                                ],
+                                "trend.background.enabled": false
+                            },
+                            "font.color.conditions": []
+                        }
+                    },
+                    "visualization.data.sources": [
+                        {
+                            "type": "log",
+                            "filters": {
+                                "data.filter": {
+                                    "filter": "include",
+                                    "groups": [
+                                        {
+                                            "filter": "include",
+                                            "operator": "or",
+                                            "conditions": [
+                                                {
+                                                    "value": "Exchange",
+                                                    "operand": "event.category",
+                                                    "operator": "="
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "filter": "include",
+                                            "operator": "or",
+                                            "conditions": [
+                                                {
+                                                    "value": "Send",
+                                                    "operand": "event.type",
+                                                    "operator": "contain"
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "operator": "and"
+                                },
+                                "result.filter": {},
+                                "drill.down.filter": {}
+                            },
+                            "category": "log",
+                            "data.points": [
+                                {
+                                    "entities": [],
+                                    "aggregator": "count",
+                                    "data.point": "id"
+                                }
+                            ]
+                        }
+                    ],
+                    "visualization.timeline.preference": "no"
+                }
+            },
+            {
+                "x": 9,
+                "y": 0,
+                "h": 2,
+                "w": 3,
+                "id": 117543427056,
+                "i": "1b7a844e-f146-4c08-a650-202a66fdb9fe",
+                "options": {},
+                "definition": {
+                    "id": 117543427056,
+                    "_type": "1",
+                    "container.type": "dashboard",
+                    "visualization.name": "External-access events",
+                    "visualization.type": "MetroTile",
+                    "visualization.category": "Gauge",
+                    "visualization.timeline": {
+                        "relative.timeline": "-48h",
+                        "visualization.time.range.inclusive": "no"
+                    },
+                    "visualization.result.by": [],
+                    "visualization.properties": {
+                        "gauge": {
+                            "style": {
+                                "type": "number",
+                                "font.size": "small",
+                                "text.align": "left",
+                                "chart.label": "no",
+                                "chart.legend": "no",
+                                "color.conditions": [
+                                    {
+                                        "color": "#f04e3e",
+                                        "value": 0
+                                    },
+                                    {
+                                        "color": "#f58518",
+                                        "value": 0
+                                    },
+                                    {
+                                        "color": "#f5bc18",
+                                        "value": 0
+                                    }
+                                ],
+                                "trend.background.enabled": false
+                            },
+                            "font.color.conditions": []
+                        }
+                    },
+                    "visualization.data.sources": [
+                        {
+                            "type": "log",
+                            "filters": {
+                                "data.filter": {
+                                    "filter": "include",
+                                    "groups": [
+                                        {
+                                            "filter": "include",
+                                            "operator": "or",
+                                            "conditions": [
+                                                {
+                                                    "value": "Exchange",
+                                                    "operand": "event.category",
+                                                    "operator": "="
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "filter": "include",
+                                            "operator": "or",
+                                            "conditions": [
+                                                {
+                                                    "value": "true",
+                                                    "operand": "external.access",
+                                                    "operator": "="
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "operator": "and"
+                                },
+                                "result.filter": {},
+                                "drill.down.filter": {}
+                            },
+                            "category": "log",
+                            "data.points": [
+                                {
+                                    "entities": [],
+                                    "aggregator": "count",
+                                    "data.point": "id"
+                                }
+                            ]
+                        }
+                    ],
+                    "visualization.timeline.preference": "no"
+                }
+            },
+            {
+                "x": 0,
+                "y": 2,
+                "h": 7,
+                "w": 8,
+                "id": 117543427058,
+                "i": "cfba1af8-168e-4446-ac47-d016c3d254df",
+                "options": {},
+                "definition": {
+                    "id": 117543427058,
+                    "_type": "1",
+                    "granularity": {
+                        "unit": "m",
+                        "value": "5"
+                    },
+                    "container.type": "dashboard",
+                    "visualization.name": "Exchange activity",
+                    "visualization.type": "StackedArea",
+                    "visualization.category": "Chart",
+                    "visualization.timeline": {
+                        "relative.timeline": "-48h",
+                        "visualization.time.range.inclusive": "no"
+                    },
+                    "visualization.result.by": [
+                        "event.type"
+                    ],
+                    "visualization.properties": {
+                        "chart": {
+                            "sorting": {
+                                "limit": 10,
+                                "order": "desc"
+                            },
+                            "line.style": "solid",
+                            "line.width": 2,
+                            "point.size": 4,
+                            "axis.titles": {
+                                "x": "Time",
+                                "y": "Event Count"
+                            },
+                            "chart.label": "no",
+                            "chart.legend": "no",
+                            "points.enabled": "no",
+                            "rotation.angle": 0,
+                            "marker.property": [
+                                {
+                                    "marker.threshold": [
+                                        null,
+                                        null
+                                    ]
+                                }
+                            ],
+                            "vertical.legend": "no",
+                            "data.label.enabled": "no",
+                            "highchart.settings": {},
+                            "metric.grid.enabled": false
+                        }
+                    },
+                    "visualization.granularity": "5 m",
+                    "visualization.data.sources": [
+                        {
+                            "type": "log",
+                            "filters": {
+                                "data.filter": {
+                                    "filter": "include",
+                                    "groups": [
+                                        {
+                                            "filter": "include",
+                                            "operator": "or",
+                                            "conditions": [
+                                                {
+                                                    "value": "Exchange",
+                                                    "operand": "event.category",
+                                                    "operator": "="
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "operator": "and"
+                                },
+                                "result.filter": {},
+                                "drill.down.filter": {}
+                            },
+                            "category": "log",
+                            "data.points": [
+                                {
+                                    "entities": [],
+                                    "aggregator": "count",
+                                    "data.point": "id"
+                                }
+                            ],
+                            "visualization.result.by": [
+                                "event.type"
+                            ]
+                        }
+                    ],
+                    "visualization.timeline.preference": "no"
+                }
+            },
+            {
+                "x": 8,
+                "y": 2,
+                "h": 7,
+                "w": 4,
+                "id": 117543427059,
+                "i": "307b9926-dc5c-44db-8e14-84b304a00eab",
+                "options": {},
+                "definition": {
+                    "id": 117543427059,
+                    "_type": "1",
+                    "container.type": "dashboard",
+                    "visualization.name": "Top operations",
+                    "visualization.type": "Pie",
+                    "visualization.category": "TopN",
+                    "visualization.timeline": {
+                        "relative.timeline": "-48h",
+                        "visualization.time.range.inclusive": "no"
+                    },
+                    "visualization.result.by": [
+                        "event.type"
+                    ],
+                    "visualization.properties": {
+                        "chart": {
+                            "sorting": {
+                                "limit": "25",
+                                "order": "desc",
+                                "column": "id.count"
+                            },
+                            "line.style": "solid",
+                            "line.width": 2,
+                            "point.size": 4,
+                            "chart.label": "no",
+                            "chart.legend": "yes",
+                            "points.enabled": "no",
+                            "rotation.angle": 0,
+                            "marker.property": [
+                                {
+                                    "marker.threshold": [
+                                        null,
+                                        null
+                                    ]
+                                }
+                            ],
+                            "vertical.legend": "no",
+                            "data.label.enabled": "yes",
+                            "highchart.settings": {}
+                        }
+                    },
+                    "visualization.data.sources": [
+                        {
+                            "type": "log",
+                            "filters": {
+                                "data.filter": {
+                                    "filter": "include",
+                                    "groups": [
+                                        {
+                                            "filter": "include",
+                                            "operator": "or",
+                                            "conditions": [
+                                                {
+                                                    "value": "Exchange",
+                                                    "operand": "event.category",
+                                                    "operator": "="
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "operator": "and"
+                                },
+                                "result.filter": {},
+                                "drill.down.filter": {}
+                            },
+                            "category": "log",
+                            "data.points": [
+                                {
+                                    "entities": [],
+                                    "aggregator": "count",
+                                    "data.point": "id"
+                                }
+                            ],
+                            "visualization.result.by": [
+                                "event.type"
+                            ]
+                        }
+                    ],
+                    "visualization.timeline.preference": "no"
+                }
+            },
+            {
+                "x": 0,
+                "y": 9,
+                "h": 7,
+                "w": 4,
+                "id": 117543427064,
+                "i": "a07bab82-4f33-4266-abd3-456167038f44",
+                "options": {},
+                "definition": {
+                    "id": 117543427064,
+                    "_type": "1",
+                    "container.type": "dashboard",
+                    "visualization.name": "Most active IP address",
+                    "visualization.type": "HorizontalBar",
+                    "visualization.category": "TopN",
+                    "visualization.timeline": {
+                        "relative.timeline": "-48h",
+                        "visualization.time.range.inclusive": "no"
+                    },
+                    "visualization.result.by": [
+                        "client.ip"
+                    ],
+                    "visualization.properties": {
+                        "chart": {
+                            "sorting": {
+                                "limit": "5",
+                                "order": "desc",
+                                "column": "id.count"
+                            },
+                            "line.style": "solid",
+                            "line.width": 2,
+                            "point.size": 4,
+                            "chart.label": "no",
+                            "chart.legend": "no",
+                            "points.enabled": "no",
+                            "rotation.angle": 0,
+                            "marker.property": [
+                                {
+                                    "marker.threshold": [
+                                        null,
+                                        null
+                                    ]
+                                }
+                            ],
+                            "vertical.legend": "no",
+                            "data.label.enabled": "yes",
+                            "highchart.settings": {}
+                        }
+                    },
+                    "visualization.data.sources": [
+                        {
+                            "type": "log",
+                            "filters": {
+                                "data.filter": {
+                                    "filter": "include",
+                                    "groups": [
+                                        {
+                                            "filter": "include",
+                                            "operator": "or",
+                                            "conditions": [
+                                                {
+                                                    "value": "Exchange",
+                                                    "operand": "event.category",
+                                                    "operator": "="
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "operator": "and"
+                                },
+                                "result.filter": {},
+                                "drill.down.filter": {}
+                            },
+                            "category": "log",
+                            "data.points": [
+                                {
+                                    "entities": [],
+                                    "aggregator": "count",
+                                    "data.point": "id"
+                                }
+                            ],
+                            "visualization.result.by": [
+                                "client.ip"
+                            ]
+                        }
+                    ],
+                    "visualization.timeline.preference": "no"
+                }
+            },
+            {
+                "x": 8,
+                "y": 9,
+                "h": 7,
+                "w": 4,
+                "id": 117543427061,
+                "i": "1720dfe7-db7e-49ad-81f1-ed2c1d7265ab",
+                "options": {},
+                "definition": {
+                    "id": 117543427061,
+                    "_type": "1",
+                    "container.type": "dashboard",
+                    "visualization.name": "Top mailbox users​",
+                    "visualization.type": "HorizontalBar",
+                    "visualization.category": "TopN",
+                    "visualization.timeline": {
+                        "relative.timeline": "-48h",
+                        "visualization.time.range.inclusive": "no"
+                    },
+                    "visualization.result.by": [
+                        "mailbox.owner.upn"
+                    ],
+                    "visualization.properties": {
+                        "chart": {
+                            "sorting": {
+                                "limit": "5",
+                                "order": "desc",
+                                "column": "id.count"
+                            },
+                            "line.style": "solid",
+                            "line.width": 2,
+                            "point.size": 4,
+                            "chart.label": "no",
+                            "chart.legend": "no",
+                            "points.enabled": "no",
+                            "rotation.angle": 0,
+                            "marker.property": [
+                                {
+                                    "marker.threshold": [
+                                        null,
+                                        null
+                                    ]
+                                }
+                            ],
+                            "vertical.legend": "no",
+                            "data.label.enabled": "yes",
+                            "highchart.settings": {}
+                        }
+                    },
+                    "visualization.data.sources": [
+                        {
+                            "type": "log",
+                            "filters": {
+                                "data.filter": {
+                                    "filter": "include",
+                                    "groups": [
+                                        {
+                                            "filter": "include",
+                                            "operator": "or",
+                                            "conditions": [
+                                                {
+                                                    "value": "Exchange",
+                                                    "operand": "event.category",
+                                                    "operator": "="
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "operator": "and"
+                                },
+                                "result.filter": {},
+                                "drill.down.filter": {}
+                            },
+                            "category": "log",
+                            "data.points": [
+                                {
+                                    "entities": [],
+                                    "aggregator": "count",
+                                    "data.point": "id"
+                                }
+                            ],
+                            "visualization.result.by": [
+                                "mailbox.owner.upn"
+                            ]
+                        }
+                    ],
+                    "visualization.timeline.preference": "no"
+                }
+            },
+            {
+                "x": 4,
+                "y": 9,
+                "h": 7,
+                "w": 4,
+                "id": 117617045404,
+                "i": "new-topn-grid",
+                "options": {},
+                "definition": {
+                    "id": 117617045404,
+                    "_type": "1",
+                    "visualization.name": "Top mailbox users ranked",
+                    "visualization.type": "Grid",
+                    "visualization.category": "TopN",
+                    "visualization.timeline": {
+                        "relative.timeline": "-48h",
+                        "visualization.time.range.inclusive": "no"
+                    },
+                    "visualization.result.by": [
+                        "user.id",
+                        "client.info"
+                    ],
+                    "visualization.properties": {
+                        "grid": {
+                            "style": {
+                                "header.font.size": "small"
+                            },
+                            "header": "yes",
+                            "columns": [
+                                {
+                                    "name": "user.id",
+                                    "show": "yes",
+                                    "title": "User",
+                                    "disable": "no",
+                                    "position": 1,
+                                    "sortable": "yes",
+                                    "orderable": "yes",
+                                    "resizable": "yes",
+                                    "selectable": "yes"
+                                },
+                                {
+                                    "name": "client.info",
+                                    "show": "yes",
+                                    "title": "Client",
+                                    "disable": "no",
+                                    "position": 2,
+                                    "sortable": "yes",
+                                    "orderable": "yes",
+                                    "resizable": "yes",
+                                    "selectable": "yes"
+                                },
+                                {
+                                    "name": "id.count",
+                                    "show": "yes",
+                                    "title": "Events",
+                                    "disable": "no",
+                                    "position": 3,
+                                    "sortable": "yes",
+                                    "orderable": "yes",
+                                    "resizable": "yes",
+                                    "selectable": "yes"
+                                }
+                            ],
+                            "sorting": {
+                                "limit": 15,
+                                "order": "desc",
+                                "column": "id.count"
+                            },
+                            "searchable": "yes",
+                            "column.selection": "no"
+                        }
+                    },
+                    "visualization.data.sources": [
+                        {
+                            "type": "log",
+                            "filters": {
+                                "data.filter": {
+                                    "filter": "include",
+                                    "groups": [
+                                        {
+                                            "filter": "include",
+                                            "operator": "or",
+                                            "conditions": [
+                                                {
+                                                    "value": "Exchange",
+                                                    "operand": "event.category",
+                                                    "operator": "="
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "operator": "and"
+                                },
+                                "result.filter": {},
+                                "drill.down.filter": {}
+                            },
+                            "category": "log",
+                            "data.points": [
+                                {
+                                    "entities": [],
+                                    "aggregator": "count",
+                                    "data.point": "id"
+                                }
+                            ],
+                            "visualization.result.by": [
+                                "user.id",
+                                "client.info"
+                            ]
+                        }
+                    ],
+                    "visualization.timeline.preference": "no"
+                }
+            },
+            {
+                "x": 0,
+                "y": 16,
+                "h": 6,
+                "w": 12,
+                "id": 117543427065,
+                "i": "f8704f19-13cf-4e61-902f-d05524bf942b",
+                "options": {},
+                "definition": {
+                    "id": 117543427065,
+                    "_type": "1",
+                    "cache": true,
+                    "join.type": "custom",
+                    "join.result": "log.event",
+                    "max.records": 500,
+                    "container.type": "dashboard",
+                    "visualization.name": "Recent Exchange activity",
+                    "visualization.type": "Grid",
+                    "visualization.category": "Event History",
+                    "visualization.timeline": {
+                        "relative.timeline": "-48h",
+                        "visualization.time.range.inclusive": "no"
+                    },
+                    "visualization.result.by": [],
+                    "visualization.properties": {
+                        "grid": {
+                            "style": {
+                                "header.font.size": "small"
+                            },
+                            "header": "yes",
+                            "columns": [
+                                {
+                                    "name": "timestamp",
+                                    "show": "yes",
+                                    "style": {
+                                        "change.case": "none"
+                                    },
+                                    "title": "Time",
+                                    "disable": "no",
+                                    "position": 1,
+                                    "sortable": "yes",
+                                    "orderable": "yes",
+                                    "resizable": "yes",
+                                    "selectable": "yes"
+                                },
+                                {
+                                    "name": "user.id",
+                                    "show": "yes",
+                                    "style": {
+                                        "change.case": "none"
+                                    },
+                                    "title": "User",
+                                    "disable": "no",
+                                    "position": 2,
+                                    "sortable": "yes",
+                                    "orderable": "yes",
+                                    "resizable": "yes",
+                                    "selectable": "yes"
+                                },
+                                {
+                                    "name": "event.type",
+                                    "show": "yes",
+                                    "style": {
+                                        "change.case": "none"
+                                    },
+                                    "title": "Operation",
+                                    "disable": "no",
+                                    "position": 3,
+                                    "sortable": "yes",
+                                    "orderable": "yes",
+                                    "resizable": "yes",
+                                    "selectable": "yes"
+                                },
+                                {
+                                    "name": "client.ip",
+                                    "show": "yes",
+                                    "style": {
+                                        "change.case": "none"
+                                    },
+                                    "title": "Client IP",
+                                    "disable": "no",
+                                    "position": 4,
+                                    "sortable": "yes",
+                                    "orderable": "yes",
+                                    "resizable": "yes",
+                                    "selectable": "yes"
+                                },
+                                {
+                                    "name": "client.info",
+                                    "show": "yes",
+                                    "style": {
+                                        "change.case": "none"
+                                    },
+                                    "title": "Client",
+                                    "disable": "no",
+                                    "position": 5,
+                                    "sortable": "yes",
+                                    "orderable": "yes",
+                                    "resizable": "yes",
+                                    "selectable": "yes"
+                                }
+                            ],
+                            "searchable": "yes",
+                            "column.selection": "no",
+                            "thresholdSettings": {},
+                            "visualization.grid.properties.required": "no"
+                        }
+                    },
+                    "visualization.data.sources": [
+                        {
+                            "type": "log",
+                            "filters": {
+                                "data.filter": {
+                                    "filter": "include",
+                                    "groups": [
+                                        {
+                                            "filter": "include",
+                                            "operator": "or",
+                                            "conditions": [
+                                                {
+                                                    "value": "Exchange",
+                                                    "operand": "event.category",
+                                                    "operator": "="
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "operator": "and"
+                                },
+                                "result.filter": {},
+                                "drill.down.filter": {}
+                            },
+                            "join.type": "custom",
+                            "data.points": [
+                                {
+                                    "aggregator": "",
+                                    "data.point": "user.id"
+                                },
+                                {
+                                    "aggregator": "",
+                                    "data.point": "event.type"
+                                },
+                                {
+                                    "aggregator": "",
+                                    "data.point": "client.ip"
+                                },
+                                {
+                                    "aggregator": "",
+                                    "data.point": "client.info"
+                                }
+                            ],
+                            "visualization.result.by": []
+                        }
+                    ],
+                    "visualization.secondary.category": "event.history",
+                    "visualization.timeline.preference": "no"
+                }
+            }
+        ],
+        "dashboard.users": []
+    }
+}

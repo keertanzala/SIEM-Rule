@@ -1,0 +1,1959 @@
+{
+    "id": 115887833071,
+    "dashboard.name": "Account Management",
+    "dashboard.category": "Windows",
+    "dashboard.access.type": "public",
+    "dashboard.users": [],
+    "dashboard.scope": "user",
+    "dashboard.user.profiles": [],
+    "dashboard.assigned.users": [],
+    "dashboard.assigned.user.profiles": [],
+    "dashboard.tabs": [],
+    "custom.tabs": [],
+    "style": {
+        "font.size": "medium",
+        "h.gap": 10,
+        "v.gap": 10,
+        "row.height": 50
+    },
+    "dashboard.context": {
+        "dashboard.widgets": [
+            {
+                "x": 0,
+                "y": 0,
+                "h": 2,
+                "w": 2,
+                "id": 115887833072,
+                "i": "2805666f-4295-400f-8025-a411c9a68aa8",
+                "options": {},
+                "definition": {
+                    "id": 115887833072,
+                    "_type": "1",
+                    "container.type": "dashboard",
+                    "visualization.name": "Total account changes",
+                    "visualization.type": "MetroTile",
+                    "visualization.category": "Gauge",
+                    "visualization.timeline": {
+                        "relative.timeline": "-48h",
+                        "visualization.time.range.inclusive": "no"
+                    },
+                    "visualization.result.by": [],
+                    "visualization.properties": {
+                        "gauge": {
+                            "style": {
+                                "type": "number",
+                                "font.size": "small",
+                                "text.align": "left",
+                                "chart.label": "no",
+                                "chart.legend": "no",
+                                "color.conditions": [],
+                                "trend.background.enabled": false
+                            },
+                            "font.color.conditions": []
+                        }
+                    },
+                    "visualization.data.sources": [
+                        {
+                            "type": "log",
+                            "filters": {
+                                "data.filter": {
+                                    "filter": "include",
+                                    "groups": [
+                                        {
+                                            "filter": "include",
+                                            "operator": "or",
+                                            "conditions": [
+                                                {
+                                                    "value": 4720,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4722,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4723,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4724,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4725,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4726,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4738,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4740,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4767,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4781,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4728,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4732,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4756,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4729,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4733,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4757,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4727,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4730,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4731,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4734,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4735,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4754,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4755,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4764,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4741,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4742,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4743,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "operator": "and"
+                                },
+                                "result.filter": {},
+                                "drill.down.filter": {}
+                            },
+                            "category": "log",
+                            "data.points": [
+                                {
+                                    "entities": [],
+                                    "aggregator": "count",
+                                    "data.point": "system.task"
+                                }
+                            ]
+                        }
+                    ],
+                    "visualization.timeline.preference": "no"
+                }
+            },
+            {
+                "x": 2,
+                "y": 0,
+                "h": 2,
+                "w": 2,
+                "id": 115887833078,
+                "i": "5e9133b6-f394-4a90-be1e-98f608acda61",
+                "options": {},
+                "definition": {
+                    "id": 115887833078,
+                    "_type": "1",
+                    "container.type": "dashboard",
+                    "visualization.name": "Accounts created",
+                    "visualization.type": "MetroTile",
+                    "visualization.category": "Gauge",
+                    "visualization.timeline": {
+                        "relative.timeline": "-48h",
+                        "visualization.time.range.inclusive": "no"
+                    },
+                    "visualization.result.by": [],
+                    "visualization.properties": {
+                        "gauge": {
+                            "style": {
+                                "type": "number",
+                                "font.size": "small",
+                                "text.align": "left",
+                                "chart.label": "no",
+                                "chart.legend": "no",
+                                "color.conditions": [
+                                    {
+                                        "color": "#f04e3e",
+                                        "value": 0
+                                    },
+                                    {
+                                        "color": "#f58518",
+                                        "value": 0
+                                    },
+                                    {
+                                        "color": "#f5bc18",
+                                        "value": 0
+                                    }
+                                ],
+                                "trend.background.enabled": false
+                            },
+                            "font.color.conditions": []
+                        }
+                    },
+                    "visualization.data.sources": [
+                        {
+                            "type": "log",
+                            "filters": {
+                                "data.filter": {
+                                    "filter": "include",
+                                    "groups": [
+                                        {
+                                            "filter": "include",
+                                            "operator": "or",
+                                            "conditions": [
+                                                {
+                                                    "value": 4720,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "operator": "and"
+                                },
+                                "result.filter": {},
+                                "drill.down.filter": {}
+                            },
+                            "category": "log",
+                            "data.points": [
+                                {
+                                    "entities": [],
+                                    "aggregator": "count",
+                                    "data.point": "system.task"
+                                }
+                            ]
+                        }
+                    ],
+                    "visualization.timeline.preference": "no"
+                }
+            },
+            {
+                "x": 6,
+                "y": 0,
+                "h": 2,
+                "w": 2,
+                "id": 115887833080,
+                "i": "9441d4fb-14dc-41b1-a181-6a696f50b0ed",
+                "options": {},
+                "definition": {
+                    "id": 115887833080,
+                    "_type": "1",
+                    "container.type": "dashboard",
+                    "visualization.name": "Admin password resets",
+                    "visualization.type": "MetroTile",
+                    "visualization.category": "Gauge",
+                    "visualization.timeline": {
+                        "relative.timeline": "-48h",
+                        "visualization.time.range.inclusive": "no"
+                    },
+                    "visualization.result.by": [],
+                    "visualization.properties": {
+                        "gauge": {
+                            "style": {
+                                "type": "number",
+                                "font.size": "small",
+                                "text.align": "left",
+                                "chart.label": "no",
+                                "chart.legend": "no",
+                                "color.conditions": [
+                                    {
+                                        "color": "#f04e3e",
+                                        "value": 0
+                                    },
+                                    {
+                                        "color": "#f58518",
+                                        "value": 0
+                                    },
+                                    {
+                                        "color": "#f5bc18",
+                                        "value": 0
+                                    }
+                                ],
+                                "trend.background.enabled": false
+                            },
+                            "font.color.conditions": []
+                        }
+                    },
+                    "visualization.data.sources": [
+                        {
+                            "type": "log",
+                            "filters": {
+                                "data.filter": {
+                                    "filter": "include",
+                                    "groups": [
+                                        {
+                                            "filter": "include",
+                                            "operator": "or",
+                                            "conditions": [
+                                                {
+                                                    "value": 4724,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "operator": "and"
+                                },
+                                "result.filter": {},
+                                "drill.down.filter": {}
+                            },
+                            "category": "log",
+                            "data.points": [
+                                {
+                                    "entities": [],
+                                    "aggregator": "count",
+                                    "data.point": "system.task"
+                                }
+                            ]
+                        }
+                    ],
+                    "visualization.timeline.preference": "no"
+                }
+            },
+            {
+                "x": 10,
+                "y": 0,
+                "h": 2,
+                "w": 2,
+                "id": 115887833081,
+                "i": "b020b1db-edd5-41cb-b5df-aa4655041f3d",
+                "options": {},
+                "definition": {
+                    "id": 115887833081,
+                    "_type": "1",
+                    "container.type": "dashboard",
+                    "visualization.name": "Account lockouts",
+                    "visualization.type": "MetroTile",
+                    "visualization.category": "Gauge",
+                    "visualization.timeline": {
+                        "relative.timeline": "-48h",
+                        "visualization.time.range.inclusive": "no"
+                    },
+                    "visualization.result.by": [],
+                    "visualization.properties": {
+                        "gauge": {
+                            "style": {
+                                "type": "number",
+                                "font.size": "small",
+                                "text.align": "left",
+                                "chart.label": "no",
+                                "chart.legend": "no",
+                                "color.conditions": [
+                                    {
+                                        "color": "#f04e3e",
+                                        "value": 20
+                                    },
+                                    {
+                                        "color": "#f58518",
+                                        "value": 5
+                                    },
+                                    {
+                                        "color": "#f5bc18",
+                                        "value": 0
+                                    }
+                                ],
+                                "trend.background.enabled": false
+                            },
+                            "font.color.conditions": []
+                        }
+                    },
+                    "visualization.data.sources": [
+                        {
+                            "type": "log",
+                            "filters": {
+                                "data.filter": {
+                                    "filter": "include",
+                                    "groups": [
+                                        {
+                                            "filter": "include",
+                                            "operator": "or",
+                                            "conditions": [
+                                                {
+                                                    "value": 4740,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "operator": "and"
+                                },
+                                "result.filter": {},
+                                "drill.down.filter": {}
+                            },
+                            "category": "log",
+                            "data.points": [
+                                {
+                                    "entities": [],
+                                    "aggregator": "count",
+                                    "data.point": "system.task"
+                                }
+                            ]
+                        }
+                    ],
+                    "visualization.timeline.preference": "no"
+                }
+            },
+            {
+                "x": 8,
+                "y": 0,
+                "h": 2,
+                "w": 2,
+                "id": 115887833083,
+                "i": "55528341-b6f7-4098-8ddf-b470be444973",
+                "options": {},
+                "definition": {
+                    "id": 115887833083,
+                    "_type": "1",
+                    "container.type": "dashboard",
+                    "visualization.name": "Privileged group changes",
+                    "visualization.type": "MetroTile",
+                    "visualization.category": "Gauge",
+                    "visualization.timeline": {
+                        "relative.timeline": "-48h",
+                        "visualization.time.range.inclusive": "no"
+                    },
+                    "visualization.result.by": [],
+                    "visualization.properties": {
+                        "gauge": {
+                            "style": {
+                                "type": "number",
+                                "font.size": "small",
+                                "text.align": "left",
+                                "chart.label": "no",
+                                "chart.legend": "no",
+                                "color.conditions": [
+                                    {
+                                        "color": "#f04e3e",
+                                        "value": 1
+                                    },
+                                    {
+                                        "color": "#f58518",
+                                        "value": 0
+                                    },
+                                    {
+                                        "color": "#f5bc18",
+                                        "value": 0
+                                    }
+                                ],
+                                "trend.background.enabled": false
+                            },
+                            "font.color.conditions": []
+                        }
+                    },
+                    "visualization.data.sources": [
+                        {
+                            "type": "log",
+                            "filters": {
+                                "data.filter": {
+                                    "filter": "include",
+                                    "groups": [
+                                        {
+                                            "filter": "include",
+                                            "operator": "or",
+                                            "conditions": [
+                                                {
+                                                    "value": 4728,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4732,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4756,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4729,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4733,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4757,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "operator": "and"
+                                },
+                                "result.filter": {},
+                                "drill.down.filter": {}
+                            },
+                            "category": "log",
+                            "data.points": [
+                                {
+                                    "entities": [],
+                                    "aggregator": "count",
+                                    "data.point": "system.task"
+                                }
+                            ]
+                        }
+                    ],
+                    "visualization.timeline.preference": "no"
+                }
+            },
+            {
+                "x": 4,
+                "y": 0,
+                "h": 2,
+                "w": 2,
+                "id": 115887833085,
+                "i": "da9b5636-d6e2-4b46-8763-9c614c4cba37",
+                "options": {},
+                "definition": {
+                    "id": 115887833085,
+                    "_type": "1",
+                    "container.type": "dashboard",
+                    "visualization.name": "Accounts deleted",
+                    "visualization.type": "MetroTile",
+                    "visualization.category": "Gauge",
+                    "visualization.timeline": {
+                        "relative.timeline": "-48h",
+                        "visualization.time.range.inclusive": "no"
+                    },
+                    "visualization.result.by": [],
+                    "visualization.properties": {
+                        "gauge": {
+                            "style": {
+                                "type": "number",
+                                "font.size": "small",
+                                "text.align": "left",
+                                "chart.label": "no",
+                                "chart.legend": "no",
+                                "color.conditions": [
+                                    {
+                                        "color": "#f58518",
+                                        "value": 1
+                                    },
+                                    {
+                                        "color": "#f58518",
+                                        "value": 0
+                                    },
+                                    {
+                                        "color": "#f5bc18",
+                                        "value": 0
+                                    }
+                                ],
+                                "trend.background.enabled": false
+                            },
+                            "font.color.conditions": []
+                        }
+                    },
+                    "visualization.data.sources": [
+                        {
+                            "type": "log",
+                            "filters": {
+                                "data.filter": {
+                                    "filter": "include",
+                                    "groups": [
+                                        {
+                                            "filter": "include",
+                                            "operator": "or",
+                                            "conditions": [
+                                                {
+                                                    "value": 4726,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "operator": "and"
+                                },
+                                "result.filter": {},
+                                "drill.down.filter": {}
+                            },
+                            "category": "log",
+                            "data.points": [
+                                {
+                                    "entities": [],
+                                    "aggregator": "count",
+                                    "data.point": "system.task"
+                                }
+                            ]
+                        }
+                    ],
+                    "visualization.timeline.preference": "no"
+                }
+            },
+            {
+                "x": 0,
+                "y": 2,
+                "h": 6,
+                "w": 8,
+                "id": 115887833088,
+                "i": "cb5a2856-7d69-4ea5-a34e-dcdfb34a10d9",
+                "options": {},
+                "definition": {
+                    "id": 115887833088,
+                    "_type": "1",
+                    "granularity": {
+                        "unit": "m",
+                        "value": 5
+                    },
+                    "container.type": "dashboard",
+                    "visualization.name": "Change timeline by action",
+                    "visualization.type": "StackedArea",
+                    "visualization.category": "Chart",
+                    "visualization.timeline": {
+                        "relative.timeline": "-48h",
+                        "visualization.time.range.inclusive": "no"
+                    },
+                    "visualization.result.by": [
+                        "operation.user.status"
+                    ],
+                    "visualization.properties": {
+                        "chart": {
+                            "sorting": {
+                                "limit": 10,
+                                "order": "desc"
+                            },
+                            "line.style": "solid",
+                            "line.width": 2,
+                            "point.size": 4,
+                            "axis.titles": {
+                                "x": "Time",
+                                "y": "Event Count"
+                            },
+                            "chart.label": "no",
+                            "chart.legend": "no",
+                            "points.enabled": "no",
+                            "rotation.angle": 0,
+                            "marker.property": [
+                                {
+                                    "marker.threshold": [
+                                        null,
+                                        null
+                                    ]
+                                }
+                            ],
+                            "vertical.legend": "no",
+                            "data.label.enabled": "no",
+                            "highchart.settings": {},
+                            "metric.grid.enabled": false
+                        }
+                    },
+                    "visualization.granularity": "5 m",
+                    "visualization.data.sources": [
+                        {
+                            "type": "log",
+                            "filters": {
+                                "data.filter": {
+                                    "filter": "include",
+                                    "groups": [
+                                        {
+                                            "filter": "include",
+                                            "operator": "or",
+                                            "conditions": [
+                                                {
+                                                    "value": 4720,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4722,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4723,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4724,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4725,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4726,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4738,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4740,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4767,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4781,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4728,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4732,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4756,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4729,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4733,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4757,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4727,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4730,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4731,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4734,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4735,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4754,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4755,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4764,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4741,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4742,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4743,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "operator": "and"
+                                },
+                                "result.filter": {},
+                                "drill.down.filter": {}
+                            },
+                            "category": "log",
+                            "data.points": [
+                                {
+                                    "entities": [],
+                                    "aggregator": "count",
+                                    "data.point": "system.task"
+                                }
+                            ],
+                            "visualization.result.by": [
+                                "operation.user.status"
+                            ]
+                        }
+                    ],
+                    "visualization.timeline.preference": "no"
+                }
+            },
+            {
+                "x": 8,
+                "y": 8,
+                "h": 6,
+                "w": 4,
+                "id": 115887833095,
+                "i": "fe968446-4482-434b-a093-b2984b80ac24",
+                "options": {},
+                "definition": {
+                    "id": 115887833095,
+                    "_type": "1",
+                    "container.type": "dashboard",
+                    "visualization.name": "Who is making changes",
+                    "visualization.type": "HorizontalBar",
+                    "visualization.category": "TopN",
+                    "visualization.timeline": {
+                        "relative.timeline": "-48h",
+                        "visualization.time.range.inclusive": "no"
+                    },
+                    "visualization.result.by": [
+                        "eventdata.subjectusername"
+                    ],
+                    "visualization.properties": {
+                        "chart": {
+                            "sorting": {
+                                "limit": 10,
+                                "order": "desc",
+                                "column": "system.task.count"
+                            },
+                            "line.style": "solid",
+                            "line.width": 2,
+                            "point.size": 4,
+                            "chart.label": "no",
+                            "chart.legend": "no",
+                            "points.enabled": "no",
+                            "rotation.angle": 0,
+                            "marker.property": [
+                                {
+                                    "marker.threshold": [
+                                        null,
+                                        null
+                                    ]
+                                }
+                            ],
+                            "vertical.legend": "no",
+                            "data.label.enabled": "no",
+                            "highchart.settings": {}
+                        }
+                    },
+                    "visualization.data.sources": [
+                        {
+                            "type": "log",
+                            "filters": {
+                                "data.filter": {
+                                    "filter": "include",
+                                    "groups": [
+                                        {
+                                            "filter": "include",
+                                            "operator": "or",
+                                            "conditions": [
+                                                {
+                                                    "value": 4720,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4722,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4723,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4724,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4725,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4726,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4738,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4740,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4767,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4781,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4728,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4732,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4756,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4729,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4733,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4757,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4727,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4730,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4731,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4734,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4735,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4754,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4755,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4764,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4741,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4742,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4743,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "operator": "and"
+                                },
+                                "result.filter": {},
+                                "drill.down.filter": {}
+                            },
+                            "category": "log",
+                            "data.points": [
+                                {
+                                    "entities": [],
+                                    "aggregator": "count",
+                                    "data.point": "system.task"
+                                }
+                            ],
+                            "visualization.result.by": [
+                                "eventdata.subjectusername"
+                            ]
+                        }
+                    ],
+                    "visualization.timeline.preference": "no"
+                }
+            },
+            {
+                "x": 8,
+                "y": 2,
+                "h": 6,
+                "w": 4,
+                "id": 115887833099,
+                "i": "b4baddb6-9770-49d0-a3d8-dcc5d8f425dd",
+                "options": {},
+                "definition": {
+                    "id": 115887833099,
+                    "_type": "1",
+                    "container.type": "dashboard",
+                    "visualization.name": "Most-Changed Accounts",
+                    "visualization.type": "Pie",
+                    "visualization.category": "TopN",
+                    "visualization.timeline": {
+                        "relative.timeline": "-48h",
+                        "visualization.time.range.inclusive": "no"
+                    },
+                    "visualization.result.by": [
+                        "eventdata.targetusername"
+                    ],
+                    "visualization.properties": {
+                        "chart": {
+                            "sorting": {
+                                "limit": 10,
+                                "order": "desc",
+                                "column": "system.task.count"
+                            },
+                            "line.style": "solid",
+                            "line.width": 2,
+                            "point.size": 4,
+                            "chart.label": "no",
+                            "chart.legend": "yes",
+                            "points.enabled": "no",
+                            "rotation.angle": 0,
+                            "marker.property": [
+                                {
+                                    "marker.threshold": [
+                                        null,
+                                        null
+                                    ]
+                                }
+                            ],
+                            "vertical.legend": "no",
+                            "data.label.enabled": "no",
+                            "highchart.settings": {}
+                        }
+                    },
+                    "visualization.data.sources": [
+                        {
+                            "type": "log",
+                            "filters": {
+                                "data.filter": {
+                                    "filter": "include",
+                                    "groups": [
+                                        {
+                                            "filter": "include",
+                                            "operator": "or",
+                                            "conditions": [
+                                                {
+                                                    "value": 4720,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4722,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4723,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4724,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4725,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4726,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4738,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4740,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4767,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4781,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "operator": "and"
+                                },
+                                "result.filter": {},
+                                "drill.down.filter": {}
+                            },
+                            "category": "log",
+                            "data.points": [
+                                {
+                                    "entities": [],
+                                    "aggregator": "count",
+                                    "data.point": "system.task"
+                                }
+                            ],
+                            "visualization.result.by": [
+                                "eventdata.targetusername"
+                            ]
+                        }
+                    ],
+                    "visualization.timeline.preference": "no"
+                }
+            },
+            {
+                "x": 0,
+                "y": 14,
+                "h": 6,
+                "w": 6,
+                "id": 115887833101,
+                "i": "c436002c-2728-4536-b62c-9c60426b91ba",
+                "options": {},
+                "definition": {
+                    "id": 115887833101,
+                    "_type": "1",
+                    "cache": true,
+                    "join.type": "custom",
+                    "join.result": "log.event",
+                    "max.records": 500,
+                    "container.type": "dashboard",
+                    "visualization.name": "Recent Events2",
+                    "visualization.type": "Grid",
+                    "visualization.category": "Event History",
+                    "visualization.timeline": {
+                        "relative.timeline": "-48h",
+                        "visualization.time.range.inclusive": "no"
+                    },
+                    "visualization.result.by": [],
+                    "visualization.properties": {
+                        "grid": {
+                            "style": {
+                                "header.font.size": "small"
+                            },
+                            "header": "yes",
+                            "columns": [
+                                {
+                                    "name": "timestamp",
+                                    "show": "yes",
+                                    "style": {
+                                        "change.case": "none"
+                                    },
+                                    "title": "TIme",
+                                    "disable": "no",
+                                    "position": 1,
+                                    "sortable": "yes",
+                                    "orderable": "yes",
+                                    "resizable": "yes",
+                                    "selectable": "yes"
+                                },
+                                {
+                                    "name": "system.computer",
+                                    "show": "yes",
+                                    "style": {
+                                        "change.case": "none"
+                                    },
+                                    "title": "Host",
+                                    "disable": "no",
+                                    "position": 2,
+                                    "sortable": "yes",
+                                    "orderable": "yes",
+                                    "resizable": "yes",
+                                    "selectable": "yes"
+                                },
+                                {
+                                    "name": "eventdata.subjectusername",
+                                    "show": "yes",
+                                    "style": {
+                                        "change.case": "none"
+                                    },
+                                    "title": "Actor",
+                                    "disable": "no",
+                                    "position": 3,
+                                    "sortable": "yes",
+                                    "orderable": "yes",
+                                    "resizable": "yes",
+                                    "selectable": "yes"
+                                },
+                                {
+                                    "name": "message",
+                                    "show": "no",
+                                    "style": {
+                                        "change.case": "none"
+                                    },
+                                    "title": "",
+                                    "disable": "no",
+                                    "position": 4,
+                                    "sortable": "yes",
+                                    "orderable": "yes",
+                                    "resizable": "yes",
+                                    "selectable": "yes"
+                                },
+                                {
+                                    "name": "eventdata.targetusername",
+                                    "show": "yes",
+                                    "style": {
+                                        "change.case": "none"
+                                    },
+                                    "title": "User",
+                                    "disable": "no",
+                                    "position": 5,
+                                    "sortable": "yes",
+                                    "orderable": "yes",
+                                    "resizable": "yes",
+                                    "selectable": "yes"
+                                },
+                                {
+                                    "name": "summary",
+                                    "show": "yes",
+                                    "style": {
+                                        "change.case": "none"
+                                    },
+                                    "disable": "no",
+                                    "position": 6,
+                                    "sortable": "yes",
+                                    "orderable": "yes",
+                                    "resizable": "yes",
+                                    "selectable": "yes"
+                                }
+                            ],
+                            "searchable": "yes",
+                            "column.selection": "no",
+                            "thresholdSettings": {},
+                            "visualization.grid.properties.required": "no"
+                        }
+                    },
+                    "visualization.data.sources": [
+                        {
+                            "type": "log",
+                            "filters": {
+                                "data.filter": {
+                                    "filter": "include",
+                                    "groups": [
+                                        {
+                                            "filter": "include",
+                                            "operator": "or",
+                                            "conditions": [
+                                                {
+                                                    "value": 4720,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4722,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4723,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4724,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4725,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4726,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4738,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4740,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4767,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4781,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4728,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4732,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4756,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4729,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4733,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4757,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4727,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4730,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4731,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4734,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4735,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4754,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4755,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4764,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4741,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4742,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4743,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "operator": "and"
+                                },
+                                "result.filter": {},
+                                "drill.down.filter": {}
+                            },
+                            "join.type": "custom",
+                            "data.points": [
+                                {
+                                    "aggregator": "",
+                                    "data.point": "summary"
+                                },
+                                {
+                                    "aggregator": "",
+                                    "data.point": "eventdata.subjectusername"
+                                },
+                                {
+                                    "aggregator": "",
+                                    "data.point": "system.computer"
+                                },
+                                {
+                                    "aggregator": "",
+                                    "data.point": "eventdata.targetusername"
+                                },
+                                {
+                                    "aggregator": "",
+                                    "data.point": "message"
+                                }
+                            ],
+                            "visualization.result.by": []
+                        }
+                    ],
+                    "visualization.secondary.category": "event.history",
+                    "visualization.timeline.preference": "no"
+                }
+            },
+            {
+                "x": 4,
+                "y": 8,
+                "h": 6,
+                "w": 4,
+                "id": 116243198371,
+                "i": "40270b6b-13aa-42fe-9273-5636c6196bad",
+                "options": {},
+                "definition": {
+                    "id": 116243198371,
+                    "_type": "1",
+                    "visualization.name": "Privileged group membership changes",
+                    "visualization.type": "HorizontalBar",
+                    "visualization.category": "TopN",
+                    "visualization.timeline": {
+                        "relative.timeline": "-48h",
+                        "visualization.time.range.inclusive": "no"
+                    },
+                    "visualization.result.by": [
+                        "eventdata.targetusername",
+                        "eventdata.membername"
+                    ],
+                    "visualization.properties": {
+                        "chart": {
+                            "sorting": {
+                                "limit": 25,
+                                "order": "desc",
+                                "column": "system.task.count"
+                            },
+                            "line.style": "solid",
+                            "line.width": 2,
+                            "point.size": 4,
+                            "chart.label": "no",
+                            "chart.legend": "no",
+                            "points.enabled": "no",
+                            "rotation.angle": 0,
+                            "marker.property": [
+                                {
+                                    "marker.threshold": [
+                                        null,
+                                        null
+                                    ]
+                                }
+                            ],
+                            "vertical.legend": "no",
+                            "data.label.enabled": "no",
+                            "highchart.settings": {}
+                        }
+                    },
+                    "visualization.data.sources": [
+                        {
+                            "type": "log",
+                            "filters": {
+                                "data.filter": {
+                                    "filter": "include",
+                                    "groups": [
+                                        {
+                                            "filter": "include",
+                                            "operator": "or",
+                                            "conditions": [
+                                                {
+                                                    "value": 4728,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4732,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4756,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4729,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4733,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4757,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "operator": "and"
+                                },
+                                "result.filter": {},
+                                "drill.down.filter": {}
+                            },
+                            "category": "log",
+                            "data.points": [
+                                {
+                                    "entities": [],
+                                    "aggregator": "count",
+                                    "data.point": "system.task"
+                                }
+                            ],
+                            "visualization.result.by": [
+                                "eventdata.targetusername",
+                                "eventdata.membername"
+                            ]
+                        }
+                    ],
+                    "visualization.timeline.preference": "no"
+                }
+            },
+            {
+                "x": 0,
+                "y": 8,
+                "h": 6,
+                "w": 4,
+                "id": 116243198372,
+                "i": "ef8af0fb-8410-4916-b902-df7ccf9369df",
+                "options": {},
+                "definition": {
+                    "id": 116243198372,
+                    "_type": "1",
+                    "visualization.name": "Account creations by actor",
+                    "visualization.type": "HorizontalBar",
+                    "visualization.category": "TopN",
+                    "visualization.timeline": {
+                        "relative.timeline": "-48h",
+                        "visualization.time.range.inclusive": "no"
+                    },
+                    "visualization.result.by": [
+                        "eventdata.subjectusername"
+                    ],
+                    "visualization.properties": {
+                        "chart": {
+                            "sorting": {
+                                "limit": 25,
+                                "order": "desc",
+                                "column": "system.task.count"
+                            },
+                            "line.style": "solid",
+                            "line.width": 2,
+                            "point.size": 4,
+                            "chart.label": "no",
+                            "chart.legend": "no",
+                            "points.enabled": "no",
+                            "rotation.angle": 0,
+                            "marker.property": [
+                                {
+                                    "marker.threshold": [
+                                        null,
+                                        null
+                                    ]
+                                }
+                            ],
+                            "vertical.legend": "no",
+                            "data.label.enabled": "no",
+                            "highchart.settings": {}
+                        }
+                    },
+                    "visualization.data.sources": [
+                        {
+                            "type": "log",
+                            "filters": {
+                                "data.filter": {
+                                    "filter": "include",
+                                    "groups": [
+                                        {
+                                            "filter": "include",
+                                            "operator": "or",
+                                            "conditions": [
+                                                {
+                                                    "value": 4720,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "operator": "and"
+                                },
+                                "result.filter": {},
+                                "drill.down.filter": {}
+                            },
+                            "category": "log",
+                            "data.points": [
+                                {
+                                    "entities": [],
+                                    "aggregator": "count",
+                                    "data.point": "system.task"
+                                }
+                            ],
+                            "visualization.result.by": [
+                                "eventdata.subjectusername"
+                            ]
+                        }
+                    ],
+                    "visualization.timeline.preference": "no"
+                }
+            },
+            {
+                "x": 6,
+                "y": 14,
+                "h": 6,
+                "w": 6,
+                "id": 116243198373,
+                "i": "7794ab59-3674-4621-a2f1-cdda77ec8b8c",
+                "options": {},
+                "definition": {
+                    "id": 116243198373,
+                    "_type": "1",
+                    "cache": true,
+                    "join.type": "custom",
+                    "join.result": "log.event",
+                    "max.records": 500,
+                    "container.type": "dashboard",
+                    "visualization.name": "Privileged group member changes",
+                    "visualization.type": "Grid",
+                    "visualization.category": "Event History",
+                    "visualization.timeline": {
+                        "relative.timeline": "-48h",
+                        "visualization.time.range.inclusive": "no"
+                    },
+                    "visualization.result.by": [],
+                    "visualization.properties": {
+                        "grid": {
+                            "style": {
+                                "header.font.size": "small"
+                            },
+                            "header": "yes",
+                            "columns": [
+                                {
+                                    "name": "timestamp",
+                                    "show": "yes",
+                                    "style": {
+                                        "change.case": "none"
+                                    },
+                                    "title": "Time",
+                                    "disable": "no",
+                                    "position": 1,
+                                    "sortable": "yes",
+                                    "orderable": "yes",
+                                    "resizable": "yes",
+                                    "selectable": "yes"
+                                },
+                                {
+                                    "name": "system.computer",
+                                    "show": "yes",
+                                    "style": {
+                                        "change.case": "none"
+                                    },
+                                    "title": "DC",
+                                    "disable": "no",
+                                    "position": 2,
+                                    "sortable": "yes",
+                                    "orderable": "yes",
+                                    "resizable": "yes",
+                                    "selectable": "yes"
+                                },
+                                {
+                                    "name": "eventdata.subjectusername",
+                                    "show": "yes",
+                                    "style": {
+                                        "change.case": "none"
+                                    },
+                                    "title": "Actor",
+                                    "disable": "no",
+                                    "position": 3,
+                                    "sortable": "yes",
+                                    "orderable": "yes",
+                                    "resizable": "yes",
+                                    "selectable": "yes"
+                                },
+                                {
+                                    "name": "eventdata.membername",
+                                    "show": "yes",
+                                    "style": {
+                                        "change.case": "none"
+                                    },
+                                    "title": "Member",
+                                    "disable": "no",
+                                    "position": 4,
+                                    "sortable": "yes",
+                                    "orderable": "yes",
+                                    "resizable": "yes",
+                                    "selectable": "yes"
+                                },
+                                {
+                                    "name": "eventdata.targetusername",
+                                    "show": "yes",
+                                    "style": {
+                                        "change.case": "none"
+                                    },
+                                    "title": "Group",
+                                    "disable": "no",
+                                    "position": 5,
+                                    "sortable": "yes",
+                                    "orderable": "yes",
+                                    "resizable": "yes",
+                                    "selectable": "yes"
+                                },
+                                {
+                                    "name": "message",
+                                    "show": "no",
+                                    "style": {
+                                        "change.case": "none"
+                                    },
+                                    "disable": "no",
+                                    "position": 6,
+                                    "sortable": "yes",
+                                    "orderable": "yes",
+                                    "resizable": "yes",
+                                    "selectable": "yes"
+                                }
+                            ],
+                            "searchable": "yes",
+                            "column.selection": "no",
+                            "thresholdSettings": {},
+                            "visualization.grid.properties.required": "no"
+                        }
+                    },
+                    "visualization.data.sources": [
+                        {
+                            "type": "log",
+                            "filters": {
+                                "data.filter": {
+                                    "filter": "include",
+                                    "groups": [
+                                        {
+                                            "filter": "include",
+                                            "operator": "or",
+                                            "conditions": [
+                                                {
+                                                    "value": 4728,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4732,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4756,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4729,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4733,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 4757,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "operator": "and"
+                                },
+                                "result.filter": {},
+                                "drill.down.filter": {}
+                            },
+                            "join.type": "custom",
+                            "data.points": [
+                                {
+                                    "aggregator": "",
+                                    "data.point": "system.computer"
+                                },
+                                {
+                                    "aggregator": "",
+                                    "data.point": "eventdata.subjectusername"
+                                },
+                                {
+                                    "aggregator": "",
+                                    "data.point": "eventdata.membername"
+                                },
+                                {
+                                    "aggregator": "",
+                                    "data.point": "eventdata.targetusername"
+                                },
+                                {
+                                    "aggregator": "",
+                                    "data.point": "message"
+                                }
+                            ],
+                            "visualization.result.by": []
+                        }
+                    ],
+                    "visualization.secondary.category": "event.history",
+                    "visualization.timeline.preference": "no"
+                }
+            }
+        ],
+        "dashboard.users": []
+    }
+}

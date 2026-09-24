@@ -1,0 +1,905 @@
+{
+    "id": 116243198957,
+    "dashboard.name": "Audit and Log Health",
+    "dashboard.category": "Windows",
+    "dashboard.access.type": "public",
+    "dashboard.users": [],
+    "dashboard.scope": "user",
+    "dashboard.user.profiles": [],
+    "dashboard.assigned.users": [],
+    "dashboard.assigned.user.profiles": [],
+    "dashboard.tabs": [],
+    "custom.tabs": [],
+    "style": {
+        "font.size": "medium",
+        "h.gap": 10,
+        "v.gap": 10,
+        "row.height": 50
+    },
+    "dashboard.context": {
+        "dashboard.widgets": [
+            {
+                "x": 9,
+                "y": 0,
+                "h": 2,
+                "w": 3,
+                "id": 116243198943,
+                "i": "138dc975-a171-4cbf-9eb7-209a2796fd94",
+                "options": {},
+                "definition": {
+                    "id": 116243198943,
+                    "_type": "1",
+                    "container.type": "dashboard",
+                    "visualization.name": "Audit logs cleared",
+                    "visualization.type": "MetroTile",
+                    "visualization.category": "Gauge",
+                    "visualization.timeline": {
+                        "relative.timeline": "-48h",
+                        "visualization.time.range.inclusive": "no"
+                    },
+                    "visualization.result.by": [],
+                    "visualization.properties": {
+                        "gauge": {
+                            "style": {
+                                "type": "number",
+                                "font.size": "small",
+                                "text.align": "left",
+                                "chart.label": "no",
+                                "chart.legend": "no",
+                                "color.conditions": [
+                                    {
+                                        "color": "#2ecc71",
+                                        "value": 0
+                                    },
+                                    {
+                                        "color": "#f5bc18",
+                                        "value": 1
+                                    },
+                                    {
+                                        "color": "#f04e3e",
+                                        "value": 1
+                                    }
+                                ],
+                                "trend.background.enabled": false
+                            },
+                            "font.color.conditions": []
+                        }
+                    },
+                    "visualization.data.sources": [
+                        {
+                            "type": "log",
+                            "filters": {
+                                "data.filter": {
+                                    "filter": "include",
+                                    "groups": [
+                                        {
+                                            "filter": "include",
+                                            "operator": "or",
+                                            "conditions": [
+                                                {
+                                                    "value": 1102,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "operator": "and"
+                                },
+                                "result.filter": {},
+                                "drill.down.filter": {}
+                            },
+                            "category": "log",
+                            "data.points": [
+                                {
+                                    "entities": [],
+                                    "aggregator": "count",
+                                    "data.point": "system.task"
+                                }
+                            ]
+                        }
+                    ],
+                    "visualization.timeline.preference": "no"
+                }
+            },
+            {
+                "x": 3,
+                "y": 0,
+                "h": 2,
+                "w": 2,
+                "id": 116243199002,
+                "i": "new-total-events",
+                "options": {},
+                "definition": {
+                    "id": 116243199002,
+                    "_type": "1",
+                    "container.type": "dashboard",
+                    "visualization.name": "Logging Service Starts",
+                    "visualization.type": "MetroTile",
+                    "visualization.category": "Gauge",
+                    "visualization.timeline": {
+                        "relative.timeline": "-48h",
+                        "visualization.time.range.inclusive": "no"
+                    },
+                    "visualization.result.by": [],
+                    "visualization.properties": {
+                        "gauge": {
+                            "style": {
+                                "type": "number",
+                                "font.size": "small",
+                                "text.align": "left",
+                                "chart.label": "no",
+                                "chart.legend": "no",
+                                "color.conditions": [
+                                    {
+                                        "color": "#f04e3e",
+                                        "value": 0
+                                    },
+                                    {
+                                        "color": "#f58518",
+                                        "value": 0
+                                    },
+                                    {
+                                        "color": "#f5bc18",
+                                        "value": 0
+                                    }
+                                ],
+                                "trend.background.enabled": false
+                            },
+                            "font.color.conditions": []
+                        }
+                    },
+                    "visualization.data.sources": [
+                        {
+                            "type": "log",
+                            "filters": {
+                                "data.filter": {
+                                    "filter": "include",
+                                    "groups": [
+                                        {
+                                            "filter": "include",
+                                            "operator": "or",
+                                            "conditions": [
+                                                {
+                                                    "value": 6005,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "operator": "and"
+                                },
+                                "result.filter": {},
+                                "drill.down.filter": {}
+                            },
+                            "category": "log",
+                            "data.points": [
+                                {
+                                    "entities": [],
+                                    "aggregator": "count",
+                                    "data.point": "system.task"
+                                }
+                            ]
+                        }
+                    ],
+                    "visualization.timeline.preference": "no"
+                }
+            },
+            {
+                "x": 5,
+                "y": 0,
+                "h": 2,
+                "w": 2,
+                "id": 116243198944,
+                "i": "2839e0f1-117c-4e3b-9250-db271984c504",
+                "options": {},
+                "definition": {
+                    "id": 116243198944,
+                    "_type": "1",
+                    "container.type": "dashboard",
+                    "visualization.name": "Logging Service Stops",
+                    "visualization.type": "MetroTile",
+                    "visualization.category": "Gauge",
+                    "visualization.timeline": {
+                        "relative.timeline": "-48h",
+                        "visualization.time.range.inclusive": "no"
+                    },
+                    "visualization.result.by": [],
+                    "visualization.properties": {
+                        "gauge": {
+                            "style": {
+                                "type": "number",
+                                "font.size": "small",
+                                "text.align": "left",
+                                "chart.label": "no",
+                                "chart.legend": "no",
+                                "color.conditions": [
+                                    {
+                                        "color": "#f04e3e",
+                                        "value": 0
+                                    },
+                                    {
+                                        "color": "#f58518",
+                                        "value": 0
+                                    },
+                                    {
+                                        "color": "#f5bc18",
+                                        "value": 0
+                                    }
+                                ],
+                                "trend.background.enabled": false
+                            },
+                            "font.color.conditions": []
+                        }
+                    },
+                    "visualization.data.sources": [
+                        {
+                            "type": "log",
+                            "filters": {
+                                "data.filter": {
+                                    "filter": "include",
+                                    "groups": [
+                                        {
+                                            "filter": "include",
+                                            "operator": "or",
+                                            "conditions": [
+                                                {
+                                                    "value": 1100,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 6006,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "operator": "and"
+                                },
+                                "result.filter": {},
+                                "drill.down.filter": {}
+                            },
+                            "category": "log",
+                            "data.points": [
+                                {
+                                    "entities": [],
+                                    "aggregator": "count",
+                                    "data.point": "system.task"
+                                }
+                            ]
+                        }
+                    ],
+                    "visualization.timeline.preference": "no"
+                }
+            },
+            {
+                "x": 7,
+                "y": 0,
+                "h": 2,
+                "w": 2,
+                "id": 116243198948,
+                "i": "12611a95-6851-458d-b833-da5be6984ade",
+                "options": {},
+                "definition": {
+                    "id": 116243198948,
+                    "_type": "1",
+                    "container.type": "dashboard",
+                    "visualization.name": "Full Capacity Count",
+                    "visualization.type": "MetroTile",
+                    "visualization.category": "Gauge",
+                    "visualization.timeline": {
+                        "relative.timeline": "-48h",
+                        "visualization.time.range.inclusive": "no"
+                    },
+                    "visualization.result.by": [],
+                    "visualization.properties": {
+                        "gauge": {
+                            "style": {
+                                "type": "number",
+                                "font.size": "small",
+                                "text.align": "left",
+                                "chart.label": "no",
+                                "chart.legend": "no",
+                                "color.conditions": [
+                                    {
+                                        "color": "#f04e3e",
+                                        "value": 0
+                                    },
+                                    {
+                                        "color": "#f58518",
+                                        "value": 0
+                                    },
+                                    {
+                                        "color": "#f5bc18",
+                                        "value": 0
+                                    }
+                                ],
+                                "trend.background.enabled": false
+                            },
+                            "font.color.conditions": []
+                        }
+                    },
+                    "visualization.data.sources": [
+                        {
+                            "type": "log",
+                            "filters": {
+                                "data.filter": {
+                                    "filter": "include",
+                                    "groups": [
+                                        {
+                                            "filter": "include",
+                                            "operator": "or",
+                                            "conditions": [
+                                                {
+                                                    "value": 1104,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "operator": "and"
+                                },
+                                "result.filter": {},
+                                "drill.down.filter": {}
+                            },
+                            "category": "log",
+                            "data.points": [
+                                {
+                                    "entities": [],
+                                    "aggregator": "count",
+                                    "data.point": "system.task"
+                                }
+                            ]
+                        }
+                    ],
+                    "visualization.timeline.preference": "no"
+                }
+            },
+            {
+                "x": 0,
+                "y": 0,
+                "h": 2,
+                "w": 3,
+                "id": 116243198949,
+                "i": "68bae470-ada1-4906-8a63-3fed0b7be6e7",
+                "options": {},
+                "definition": {
+                    "id": 116243198949,
+                    "_type": "1",
+                    "container.type": "dashboard",
+                    "visualization.name": "Total Log Activity",
+                    "visualization.type": "MetroTile",
+                    "visualization.category": "Gauge",
+                    "visualization.timeline": {
+                        "relative.timeline": "-48h",
+                        "visualization.time.range.inclusive": "no"
+                    },
+                    "visualization.result.by": [],
+                    "visualization.properties": {
+                        "gauge": {
+                            "style": {
+                                "type": "number",
+                                "font.size": "small",
+                                "text.align": "left",
+                                "chart.label": "no",
+                                "chart.legend": "no",
+                                "color.conditions": [
+                                    {
+                                        "color": "#f04e3e",
+                                        "value": 0
+                                    },
+                                    {
+                                        "color": "#f58518",
+                                        "value": 0
+                                    },
+                                    {
+                                        "color": "#f5bc18",
+                                        "value": 0
+                                    }
+                                ],
+                                "trend.background.enabled": false
+                            },
+                            "font.color.conditions": []
+                        }
+                    },
+                    "visualization.data.sources": [
+                        {
+                            "type": "log",
+                            "filters": {
+                                "data.filter": {
+                                    "filter": "include",
+                                    "groups": [
+                                        {
+                                            "filter": "include",
+                                            "operator": "or",
+                                            "conditions": [
+                                                {
+                                                    "value": 1100,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 1102,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 1104,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 1105,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 6005,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 6006,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 104,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "operator": "and"
+                                },
+                                "result.filter": {},
+                                "drill.down.filter": {}
+                            },
+                            "category": "log",
+                            "data.points": [
+                                {
+                                    "entities": [],
+                                    "aggregator": "count",
+                                    "data.point": "system.task"
+                                }
+                            ]
+                        }
+                    ],
+                    "visualization.timeline.preference": "no"
+                }
+            },
+            {
+                "x": 0,
+                "y": 2,
+                "h": 7,
+                "w": 8,
+                "id": 116243198946,
+                "i": "0b39b7b2-0f60-433a-a8cc-96c5ac5b0fc6",
+                "options": {},
+                "definition": {
+                    "id": 116243198946,
+                    "_type": "1",
+                    "granularity": {
+                        "unit": "m",
+                        "value": "5"
+                    },
+                    "container.type": "dashboard",
+                    "visualization.name": "Log management events",
+                    "visualization.type": "StackedArea",
+                    "visualization.category": "Chart",
+                    "visualization.timeline": {
+                        "relative.timeline": "-48h",
+                        "visualization.time.range.inclusive": "no"
+                    },
+                    "visualization.result.by": [
+                        "event.category"
+                    ],
+                    "visualization.properties": {
+                        "chart": {
+                            "sorting": {
+                                "limit": 10,
+                                "order": "desc"
+                            },
+                            "line.style": "solid",
+                            "line.width": 2,
+                            "point.size": 2,
+                            "axis.titles": {
+                                "x": "Time",
+                                "y": "Event Count"
+                            },
+                            "chart.label": "no",
+                            "chart.legend": "yes",
+                            "points.enabled": "yes",
+                            "rotation.angle": 0,
+                            "marker.property": [
+                                {
+                                    "marker.threshold": [
+                                        null,
+                                        null
+                                    ]
+                                }
+                            ],
+                            "vertical.legend": "no",
+                            "data.label.enabled": "no",
+                            "highchart.settings": {},
+                            "metric.grid.enabled": false
+                        }
+                    },
+                    "visualization.granularity": "5 m",
+                    "visualization.data.sources": [
+                        {
+                            "type": "log",
+                            "filters": {
+                                "data.filter": {
+                                    "filter": "include",
+                                    "groups": [
+                                        {
+                                            "filter": "include",
+                                            "operator": "or",
+                                            "conditions": [
+                                                {
+                                                    "value": 1100,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 1102,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 1104,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 1105,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 6005,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 6006,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 104,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "operator": "and"
+                                },
+                                "result.filter": {},
+                                "drill.down.filter": {}
+                            },
+                            "category": "log",
+                            "data.points": [
+                                {
+                                    "entities": [],
+                                    "aggregator": "count",
+                                    "data.point": "system.task"
+                                }
+                            ],
+                            "visualization.result.by": [
+                                "event.category"
+                            ]
+                        }
+                    ],
+                    "visualization.timeline.preference": "no"
+                }
+            },
+            {
+                "x": 8,
+                "y": 2,
+                "h": 7,
+                "w": 4,
+                "id": 116243198950,
+                "i": "e380dadb-3ada-476e-b9b5-f3f7e574e044",
+                "options": {},
+                "definition": {
+                    "id": 116243198950,
+                    "_type": "1",
+                    "container.type": "dashboard",
+                    "visualization.name": "Log Cleared by",
+                    "visualization.type": "HorizontalBar",
+                    "visualization.category": "TopN",
+                    "visualization.timeline": {
+                        "relative.timeline": "-48h",
+                        "visualization.time.range.inclusive": "no"
+                    },
+                    "visualization.result.by": [
+                        "userdata.logfilecleared.subjectusername"
+                    ],
+                    "visualization.properties": {
+                        "chart": {
+                            "sorting": {
+                                "limit": 25,
+                                "order": "desc",
+                                "column": "system.task.count"
+                            },
+                            "line.style": "solid",
+                            "line.width": 2,
+                            "point.size": 4,
+                            "chart.label": "no",
+                            "chart.legend": "no",
+                            "points.enabled": "no",
+                            "rotation.angle": 0,
+                            "marker.property": [
+                                {
+                                    "marker.threshold": [
+                                        null,
+                                        null
+                                    ]
+                                }
+                            ],
+                            "vertical.legend": "no",
+                            "data.label.enabled": "no",
+                            "highchart.settings": {}
+                        }
+                    },
+                    "visualization.data.sources": [
+                        {
+                            "type": "log",
+                            "filters": {
+                                "data.filter": {
+                                    "filter": "include",
+                                    "groups": [
+                                        {
+                                            "filter": "include",
+                                            "operator": "or",
+                                            "conditions": [
+                                                {
+                                                    "value": 1102,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "operator": "and"
+                                },
+                                "result.filter": {},
+                                "drill.down.filter": {}
+                            },
+                            "category": "log",
+                            "data.points": [
+                                {
+                                    "entities": [],
+                                    "aggregator": "count",
+                                    "data.point": "system.task"
+                                }
+                            ],
+                            "visualization.result.by": [
+                                "userdata.logfilecleared.subjectusername"
+                            ]
+                        }
+                    ],
+                    "visualization.timeline.preference": "no"
+                }
+            },
+            {
+                "x": 0,
+                "y": 9,
+                "h": 7,
+                "w": 12,
+                "id": 116243199004,
+                "i": "new-recent-events",
+                "options": {},
+                "definition": {
+                    "id": 116243199004,
+                    "_type": "1",
+                    "cache": true,
+                    "join.type": "custom",
+                    "join.result": "log.event",
+                    "max.records": 500,
+                    "container.type": "dashboard",
+                    "visualization.name": "Recent events ",
+                    "visualization.type": "Grid",
+                    "visualization.category": "Event History",
+                    "visualization.timeline": {
+                        "relative.timeline": "-48h",
+                        "visualization.time.range.inclusive": "no"
+                    },
+                    "visualization.result.by": [],
+                    "visualization.properties": {
+                        "grid": {
+                            "style": {
+                                "header.font.size": "small"
+                            },
+                            "header": "yes",
+                            "columns": [
+                                {
+                                    "name": "timestamp",
+                                    "show": "yes",
+                                    "style": {
+                                        "change.case": "none",
+                                        "width.percent": 19
+                                    },
+                                    "title": "Time",
+                                    "disable": "no",
+                                    "position": 1,
+                                    "sortable": "yes",
+                                    "orderable": "yes",
+                                    "resizable": "yes",
+                                    "selectable": "yes"
+                                },
+                                {
+                                    "name": "system.computer",
+                                    "show": "yes",
+                                    "style": {
+                                        "change.case": "none",
+                                        "width.percent": 19
+                                    },
+                                    "title": "Host",
+                                    "disable": "no",
+                                    "position": 2,
+                                    "sortable": "yes",
+                                    "orderable": "yes",
+                                    "resizable": "yes",
+                                    "selectable": "yes"
+                                },
+                                {
+                                    "name": "system.eventid",
+                                    "show": "yes",
+                                    "style": {
+                                        "change.case": "none",
+                                        "width.percent": 19
+                                    },
+                                    "title": "Event",
+                                    "disable": "no",
+                                    "position": 3,
+                                    "sortable": "yes",
+                                    "orderable": "yes",
+                                    "resizable": "yes",
+                                    "selectable": "yes"
+                                },
+                                {
+                                    "name": "summary",
+                                    "show": "yes",
+                                    "style": {
+                                        "change.case": "none",
+                                        "width.percent": 27
+                                    },
+                                    "title": "Detail",
+                                    "disable": "no",
+                                    "position": 4,
+                                    "sortable": "yes",
+                                    "orderable": "yes",
+                                    "resizable": "yes",
+                                    "selectable": "yes"
+                                },
+                                {
+                                    "name": "userdata.logfilecleared.subjectusername",
+                                    "show": "yes",
+                                    "style": {
+                                        "change.case": "none"
+                                    },
+                                    "title": "Actor",
+                                    "disable": "no",
+                                    "position": 5,
+                                    "sortable": "yes",
+                                    "orderable": "yes",
+                                    "resizable": "yes",
+                                    "selectable": "yes"
+                                },
+                                {
+                                    "name": "message",
+                                    "show": "no",
+                                    "style": {
+                                        "change.case": "none"
+                                    },
+                                    "disable": "no",
+                                    "position": 6,
+                                    "sortable": "yes",
+                                    "orderable": "yes",
+                                    "resizable": "yes",
+                                    "selectable": "yes"
+                                }
+                            ],
+                            "searchable": "yes",
+                            "column.selection": "no",
+                            "thresholdSettings": {},
+                            "visualization.grid.properties.required": "no"
+                        }
+                    },
+                    "visualization.data.sources": [
+                        {
+                            "type": "log",
+                            "filters": {
+                                "data.filter": {
+                                    "filter": "include",
+                                    "groups": [
+                                        {
+                                            "filter": "include",
+                                            "operator": "or",
+                                            "conditions": [
+                                                {
+                                                    "value": 1100,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 1102,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 1104,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 1105,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 6005,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 6006,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": 104,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "operator": "and"
+                                },
+                                "result.filter": {},
+                                "drill.down.filter": {}
+                            },
+                            "join.type": "custom",
+                            "data.points": [
+                                {
+                                    "aggregator": "",
+                                    "data.point": "system.computer"
+                                },
+                                {
+                                    "aggregator": "",
+                                    "data.point": "system.eventid"
+                                },
+                                {
+                                    "aggregator": "",
+                                    "data.point": "summary"
+                                },
+                                {
+                                    "aggregator": "",
+                                    "data.point": "userdata.logfilecleared.subjectusername"
+                                },
+                                {
+                                    "aggregator": "",
+                                    "data.point": "message"
+                                }
+                            ],
+                            "visualization.result.by": []
+                        }
+                    ],
+                    "visualization.secondary.category": "event.history",
+                    "visualization.timeline.preference": "no"
+                }
+            }
+        ],
+        "dashboard.users": []
+    }
+}

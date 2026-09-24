@@ -1,0 +1,1204 @@
+{
+    "id": 116243198462,
+    "dashboard.name": "Privilege Use",
+    "dashboard.category": "Windows",
+    "dashboard.access.type": "public",
+    "dashboard.users": [],
+    "dashboard.scope": "user",
+    "dashboard.user.profiles": [],
+    "dashboard.assigned.users": [],
+    "dashboard.assigned.user.profiles": [],
+    "dashboard.tabs": [],
+    "custom.tabs": [],
+    "style": {
+        "font.size": "medium",
+        "h.gap": 10,
+        "v.gap": 10,
+        "row.height": 50
+    },
+    "dashboard.context": {
+        "dashboard.widgets": [
+            {
+                "x": 0,
+                "y": 0,
+                "h": 3,
+                "w": 3,
+                "id": 116243198447,
+                "i": "1d8da178-907c-4126-8ffd-87e79c94d6c6",
+                "options": {},
+                "definition": {
+                    "id": 116243198447,
+                    "_type": "1",
+                    "container.type": "dashboard",
+                    "visualization.name": "Total privileged operations",
+                    "visualization.type": "MetroTile",
+                    "visualization.category": "Gauge",
+                    "visualization.timeline": {
+                        "relative.timeline": "today",
+                        "visualization.time.range.inclusive": "no"
+                    },
+                    "visualization.result.by": [],
+                    "visualization.properties": {
+                        "gauge": {
+                            "style": {
+                                "type": "number",
+                                "font.size": "small",
+                                "text.align": "left",
+                                "chart.label": "no",
+                                "chart.legend": "no",
+                                "color.conditions": [],
+                                "trend.background.enabled": false
+                            },
+                            "font.color.conditions": []
+                        }
+                    },
+                    "visualization.data.sources": [
+                        {
+                            "type": "log",
+                            "filters": {
+                                "data.filter": {
+                                    "filter": "include",
+                                    "groups": [
+                                        {
+                                            "filter": "include",
+                                            "operator": "and",
+                                            "conditions": [
+                                                {
+                                                    "value": [
+                                                        "4672",
+                                                        "4673",
+                                                        "4674"
+                                                    ],
+                                                    "operand": "system.eventid",
+                                                    "operator": "in"
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "operator": "and"
+                                },
+                                "result.filter": {},
+                                "drill.down.filter": {}
+                            },
+                            "category": "log",
+                            "data.points": [
+                                {
+                                    "entities": [],
+                                    "aggregator": "count",
+                                    "data.point": "system.task"
+                                }
+                            ]
+                        }
+                    ],
+                    "visualization.timeline.preference": "no"
+                }
+            },
+            {
+                "x": 3,
+                "y": 0,
+                "h": 3,
+                "w": 3,
+                "id": 116243198461,
+                "i": "c347a89f-cd88-4448-b1b1-e746d6639cc6",
+                "options": {},
+                "definition": {
+                    "id": 116243198461,
+                    "_type": "1",
+                    "container.type": "dashboard",
+                    "visualization.name": "Special-logon privilege grants",
+                    "visualization.type": "MetroTile",
+                    "visualization.category": "Gauge",
+                    "visualization.timeline": {
+                        "relative.timeline": "-48h",
+                        "visualization.time.range.inclusive": "no"
+                    },
+                    "visualization.result.by": [],
+                    "visualization.properties": {
+                        "gauge": {
+                            "style": {
+                                "type": "number",
+                                "font.size": "small",
+                                "text.align": "left",
+                                "chart.label": "no",
+                                "chart.legend": "no",
+                                "color.conditions": [],
+                                "trend.background.enabled": false
+                            },
+                            "font.color.conditions": []
+                        }
+                    },
+                    "visualization.data.sources": [
+                        {
+                            "type": "log",
+                            "filters": {
+                                "data.filter": {
+                                    "filter": "include",
+                                    "groups": [
+                                        {
+                                            "filter": "include",
+                                            "operator": "or",
+                                            "conditions": [
+                                                {
+                                                    "value": 4672,
+                                                    "operand": "system.eventid",
+                                                    "operator": "="
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "operator": "and"
+                                },
+                                "result.filter": {},
+                                "drill.down.filter": {}
+                            },
+                            "category": "log",
+                            "data.points": [
+                                {
+                                    "entities": [],
+                                    "aggregator": "count",
+                                    "data.point": "system.task"
+                                }
+                            ]
+                        }
+                    ],
+                    "visualization.timeline.preference": "no"
+                }
+            },
+            {
+                "x": 6,
+                "y": 0,
+                "h": 3,
+                "w": 3,
+                "id": 116243198449,
+                "i": "86228d3d-1112-4e1c-a96e-b408aed10074",
+                "options": {},
+                "definition": {
+                    "id": 116243198449,
+                    "_type": "1",
+                    "container.type": "dashboard",
+                    "visualization.name": "SeDebugPrivilege uses",
+                    "visualization.type": "MetroTile",
+                    "visualization.category": "Gauge",
+                    "visualization.timeline": {
+                        "relative.timeline": "today",
+                        "visualization.time.range.inclusive": "no"
+                    },
+                    "visualization.result.by": [],
+                    "visualization.properties": {
+                        "gauge": {
+                            "style": {
+                                "type": "number",
+                                "font.size": "small",
+                                "text.align": "left",
+                                "chart.label": "no",
+                                "chart.legend": "no",
+                                "color.conditions": [],
+                                "trend.background.enabled": false
+                            },
+                            "font.color.conditions": []
+                        }
+                    },
+                    "visualization.data.sources": [
+                        {
+                            "type": "log",
+                            "filters": {
+                                "data.filter": {
+                                    "filter": "include",
+                                    "groups": [
+                                        {
+                                            "filter": "include",
+                                            "operator": "and",
+                                            "conditions": [
+                                                {
+                                                    "value": [
+                                                        "4672",
+                                                        "4673",
+                                                        "4674"
+                                                    ],
+                                                    "operand": "system.eventid",
+                                                    "operator": "in"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "filter": "include",
+                                            "operator": "and",
+                                            "conditions": [
+                                                {
+                                                    "value": "SeDebugPrivilege",
+                                                    "operand": "eventdata.privilegelist",
+                                                    "operator": "contain"
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "operator": "and"
+                                },
+                                "result.filter": {},
+                                "drill.down.filter": {}
+                            },
+                            "category": "log",
+                            "data.points": [
+                                {
+                                    "entities": [],
+                                    "aggregator": "count",
+                                    "data.point": "system.task"
+                                }
+                            ]
+                        }
+                    ],
+                    "visualization.timeline.preference": "no"
+                }
+            },
+            {
+                "x": 9,
+                "y": 0,
+                "h": 3,
+                "w": 3,
+                "id": 116243198453,
+                "i": "44e89732-31ac-4025-86f6-7fd4fda22163",
+                "options": {},
+                "definition": {
+                    "id": 116243198453,
+                    "_type": "1",
+                    "container.type": "dashboard",
+                    "visualization.name": "SeLoadDriverPrivilege uses",
+                    "visualization.type": "MetroTile",
+                    "visualization.category": "Gauge",
+                    "visualization.timeline": {
+                        "relative.timeline": "today",
+                        "visualization.time.range.inclusive": "no"
+                    },
+                    "visualization.result.by": [],
+                    "visualization.properties": {
+                        "gauge": {
+                            "style": {
+                                "type": "number",
+                                "font.size": "small",
+                                "text.align": "left",
+                                "chart.label": "no",
+                                "chart.legend": "no",
+                                "color.conditions": [
+                                    {
+                                        "color": "#2ecc71",
+                                        "value": 0
+                                    },
+                                    {
+                                        "color": "#f5bc18",
+                                        "value": 1
+                                    },
+                                    {
+                                        "color": "#f04e3e",
+                                        "value": 1
+                                    }
+                                ],
+                                "trend.background.enabled": false
+                            },
+                            "font.color.conditions": []
+                        }
+                    },
+                    "visualization.data.sources": [
+                        {
+                            "type": "log",
+                            "filters": {
+                                "data.filter": {
+                                    "filter": "include",
+                                    "groups": [
+                                        {
+                                            "filter": "include",
+                                            "operator": "and",
+                                            "conditions": [
+                                                {
+                                                    "value": [
+                                                        "4672",
+                                                        "4673",
+                                                        "4674"
+                                                    ],
+                                                    "operand": "system.eventid",
+                                                    "operator": "in"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "filter": "include",
+                                            "operator": "and",
+                                            "conditions": [
+                                                {
+                                                    "value": "SeLoadDriverPrivilege",
+                                                    "operand": "eventdata.privilegelist",
+                                                    "operator": "contain"
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "operator": "and"
+                                },
+                                "result.filter": {},
+                                "drill.down.filter": {}
+                            },
+                            "category": "log",
+                            "data.points": [
+                                {
+                                    "entities": [],
+                                    "aggregator": "count",
+                                    "data.point": "system.task"
+                                }
+                            ]
+                        }
+                    ],
+                    "visualization.timeline.preference": "no"
+                }
+            },
+            {
+                "x": 0,
+                "y": 3,
+                "h": 7,
+                "w": 8,
+                "id": 116243198450,
+                "i": "249837e7-0b33-4e1b-8ba4-efd11e320121",
+                "options": {},
+                "definition": {
+                    "id": 116243198450,
+                    "_type": "1",
+                    "granularity": {
+                        "unit": "m",
+                        "value": "30"
+                    },
+                    "container.type": "dashboard",
+                    "visualization.name": "Privileged calls over time",
+                    "visualization.type": "StackedArea",
+                    "visualization.category": "Chart",
+                    "visualization.timeline": {
+                        "relative.timeline": "-48h",
+                        "visualization.time.range.inclusive": "no"
+                    },
+                    "visualization.result.by": [
+                        "system.eventid"
+                    ],
+                    "visualization.properties": {
+                        "chart": {
+                            "sorting": {
+                                "limit": 10,
+                                "order": "desc"
+                            },
+                            "line.style": "solid",
+                            "line.width": 2,
+                            "point.size": 4,
+                            "axis.titles": {
+                                "x": "Time",
+                                "y": "Event Count"
+                            },
+                            "chart.label": "no",
+                            "chart.legend": "no",
+                            "points.enabled": "no",
+                            "rotation.angle": 0,
+                            "marker.property": [
+                                {
+                                    "marker.threshold": [
+                                        null,
+                                        null
+                                    ]
+                                }
+                            ],
+                            "vertical.legend": "no",
+                            "data.label.enabled": "no",
+                            "highchart.settings": {},
+                            "metric.grid.enabled": false
+                        }
+                    },
+                    "visualization.granularity": "30 m",
+                    "visualization.data.sources": [
+                        {
+                            "type": "log",
+                            "filters": {
+                                "data.filter": {
+                                    "filter": "include",
+                                    "groups": [
+                                        {
+                                            "filter": "include",
+                                            "operator": "and",
+                                            "conditions": [
+                                                {
+                                                    "value": [
+                                                        "4672",
+                                                        "4673",
+                                                        "4674"
+                                                    ],
+                                                    "operand": "system.eventid",
+                                                    "operator": "in"
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "operator": "and"
+                                },
+                                "result.filter": {},
+                                "drill.down.filter": {}
+                            },
+                            "category": "log",
+                            "data.points": [
+                                {
+                                    "entities": [],
+                                    "aggregator": "count",
+                                    "data.point": "system.task"
+                                }
+                            ],
+                            "visualization.result.by": [
+                                "system.eventid"
+                            ]
+                        }
+                    ],
+                    "visualization.timeline.preference": "no"
+                }
+            },
+            {
+                "x": 8,
+                "y": 10,
+                "h": 7,
+                "w": 4,
+                "id": 116243198452,
+                "i": "7569b959-2d73-477a-953f-74c71f9bdf77",
+                "options": {},
+                "definition": {
+                    "id": 116243198452,
+                    "_type": "1",
+                    "container.type": "dashboard",
+                    "visualization.name": "Privilege leaderboard by account",
+                    "visualization.type": "HorizontalBar",
+                    "visualization.category": "TopN",
+                    "visualization.timeline": {
+                        "relative.timeline": "today",
+                        "visualization.time.range.inclusive": "no"
+                    },
+                    "visualization.result.by": [
+                        "eventdata.subjectusername"
+                    ],
+                    "visualization.properties": {
+                        "chart": {
+                            "sorting": {
+                                "limit": 25,
+                                "order": "desc",
+                                "column": "system.task.count"
+                            },
+                            "line.style": "solid",
+                            "line.width": 2,
+                            "point.size": 4,
+                            "chart.label": "no",
+                            "chart.legend": "no",
+                            "points.enabled": "no",
+                            "rotation.angle": 0,
+                            "marker.property": [
+                                {
+                                    "marker.threshold": [
+                                        null,
+                                        null
+                                    ]
+                                }
+                            ],
+                            "vertical.legend": "no",
+                            "data.label.enabled": "no",
+                            "highchart.settings": {}
+                        }
+                    },
+                    "visualization.data.sources": [
+                        {
+                            "type": "log",
+                            "filters": {
+                                "data.filter": {
+                                    "filter": "include",
+                                    "groups": [
+                                        {
+                                            "filter": "include",
+                                            "operator": "and",
+                                            "conditions": [
+                                                {
+                                                    "value": [
+                                                        "4672",
+                                                        "4673",
+                                                        "4674"
+                                                    ],
+                                                    "operand": "system.eventid",
+                                                    "operator": "in"
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "operator": "and"
+                                },
+                                "result.filter": {},
+                                "drill.down.filter": {}
+                            },
+                            "category": "log",
+                            "data.points": [
+                                {
+                                    "entities": [],
+                                    "aggregator": "count",
+                                    "data.point": "system.task"
+                                }
+                            ],
+                            "visualization.result.by": [
+                                "eventdata.subjectusername"
+                            ]
+                        }
+                    ],
+                    "visualization.timeline.preference": "no"
+                }
+            },
+            {
+                "x": 8,
+                "y": 3,
+                "h": 7,
+                "w": 4,
+                "id": 116243198454,
+                "i": "127a2cd7-311f-48a0-8d89-a24bb4fd3dcb",
+                "options": {},
+                "definition": {
+                    "id": 116243198454,
+                    "_type": "1",
+                    "container.type": "dashboard",
+                    "visualization.name": "Privileged calls by process",
+                    "visualization.type": "Pie",
+                    "visualization.category": "TopN",
+                    "visualization.timeline": {
+                        "relative.timeline": "today",
+                        "visualization.time.range.inclusive": "no"
+                    },
+                    "visualization.result.by": [
+                        "eventdata.processname"
+                    ],
+                    "visualization.properties": {
+                        "chart": {
+                            "sorting": {
+                                "limit": 25,
+                                "order": "desc",
+                                "column": "system.task.count"
+                            },
+                            "line.style": "solid",
+                            "line.width": 2,
+                            "point.size": 4,
+                            "chart.label": "no",
+                            "chart.legend": "yes",
+                            "points.enabled": "no",
+                            "rotation.angle": 0,
+                            "marker.property": [
+                                {
+                                    "marker.threshold": [
+                                        null,
+                                        null
+                                    ]
+                                }
+                            ],
+                            "vertical.legend": "no",
+                            "data.label.enabled": "no",
+                            "highchart.settings": {}
+                        }
+                    },
+                    "visualization.data.sources": [
+                        {
+                            "type": "log",
+                            "filters": {
+                                "data.filter": {
+                                    "filter": "include",
+                                    "groups": [
+                                        {
+                                            "filter": "include",
+                                            "operator": "and",
+                                            "conditions": [
+                                                {
+                                                    "value": [
+                                                        "4672",
+                                                        "4673",
+                                                        "4674"
+                                                    ],
+                                                    "operand": "system.eventid",
+                                                    "operator": "in"
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "operator": "and"
+                                },
+                                "result.filter": {},
+                                "drill.down.filter": {}
+                            },
+                            "category": "log",
+                            "data.points": [
+                                {
+                                    "entities": [],
+                                    "aggregator": "count",
+                                    "data.point": "system.task"
+                                }
+                            ],
+                            "visualization.result.by": [
+                                "eventdata.processname"
+                            ]
+                        }
+                    ],
+                    "visualization.timeline.preference": "no"
+                }
+            },
+            {
+                "x": 4,
+                "y": 10,
+                "h": 7,
+                "w": 4,
+                "id": 116243198457,
+                "i": "89eadd47-a628-4643-9f12-00a9070bc75a",
+                "options": {},
+                "definition": {
+                    "id": 116243198457,
+                    "_type": "1",
+                    "container.type": "dashboard",
+                    "visualization.name": "Sensitive privilege use",
+                    "visualization.type": "Pie",
+                    "visualization.category": "TopN",
+                    "visualization.timeline": {
+                        "relative.timeline": "today",
+                        "visualization.time.range.inclusive": "no"
+                    },
+                    "visualization.result.by": [
+                        "eventdata.privilegelist"
+                    ],
+                    "visualization.properties": {
+                        "chart": {
+                            "sorting": {
+                                "limit": 25,
+                                "order": "desc",
+                                "column": "system.task.count"
+                            },
+                            "line.style": "solid",
+                            "line.width": 2,
+                            "point.size": 4,
+                            "chart.label": "no",
+                            "chart.legend": "yes",
+                            "points.enabled": "no",
+                            "rotation.angle": 0,
+                            "marker.property": [
+                                {
+                                    "marker.threshold": [
+                                        null,
+                                        null
+                                    ]
+                                }
+                            ],
+                            "vertical.legend": "no",
+                            "data.label.enabled": "no",
+                            "highchart.settings": {}
+                        }
+                    },
+                    "visualization.data.sources": [
+                        {
+                            "type": "log",
+                            "filters": {
+                                "data.filter": {
+                                    "filter": "include",
+                                    "groups": [
+                                        {
+                                            "filter": "include",
+                                            "operator": "and",
+                                            "conditions": [
+                                                {
+                                                    "value": [
+                                                        "4672",
+                                                        "4673",
+                                                        "4674"
+                                                    ],
+                                                    "operand": "system.eventid",
+                                                    "operator": "in"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "filter": "include",
+                                            "operator": "or",
+                                            "conditions": [
+                                                {
+                                                    "value": "SeDebugPrivilege",
+                                                    "operand": "eventdata.privilegelist",
+                                                    "operator": "contain"
+                                                },
+                                                {
+                                                    "value": "SeLoadDriverPrivilege",
+                                                    "operand": "eventdata.privilegelist",
+                                                    "operator": "contain"
+                                                },
+                                                {
+                                                    "value": "SeTakeOwnershipPrivilege",
+                                                    "operand": "eventdata.privilegelist",
+                                                    "operator": "contain"
+                                                },
+                                                {
+                                                    "value": "SeTcbPrivilege",
+                                                    "operand": "eventdata.privilegelist",
+                                                    "operator": "contain"
+                                                },
+                                                {
+                                                    "value": "SeBackupPrivilege",
+                                                    "operand": "eventdata.privilegelist",
+                                                    "operator": "contain"
+                                                },
+                                                {
+                                                    "value": "SeRestorePrivilege",
+                                                    "operand": "eventdata.privilegelist",
+                                                    "operator": "contain"
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "operator": "and"
+                                },
+                                "result.filter": {},
+                                "drill.down.filter": {}
+                            },
+                            "category": "log",
+                            "data.points": [
+                                {
+                                    "entities": [],
+                                    "aggregator": "count",
+                                    "data.point": "system.task"
+                                }
+                            ],
+                            "visualization.result.by": [
+                                "eventdata.privilegelist"
+                            ]
+                        }
+                    ],
+                    "visualization.timeline.preference": "no"
+                }
+            },
+            {
+                "x": 0,
+                "y": 10,
+                "h": 7,
+                "w": 4,
+                "id": 116243198456,
+                "i": "1eb5b6ce-9bbe-4544-aa8a-af441cb68ec1",
+                "options": {},
+                "definition": {
+                    "id": 116243198456,
+                    "_type": "1",
+                    "container.type": "dashboard",
+                    "visualization.name": "SeDebugPrivilege use by account",
+                    "visualization.type": "HorizontalBar",
+                    "visualization.category": "TopN",
+                    "visualization.timeline": {
+                        "relative.timeline": "today",
+                        "visualization.time.range.inclusive": "no"
+                    },
+                    "visualization.result.by": [
+                        "eventdata.subjectusername",
+                        "system.computer"
+                    ],
+                    "visualization.properties": {
+                        "chart": {
+                            "sorting": {
+                                "limit": 25,
+                                "order": "desc",
+                                "column": "system.task.count"
+                            },
+                            "line.style": "solid",
+                            "line.width": 2,
+                            "point.size": 4,
+                            "chart.label": "no",
+                            "chart.legend": "no",
+                            "points.enabled": "no",
+                            "rotation.angle": 0,
+                            "marker.property": [
+                                {
+                                    "marker.threshold": [
+                                        null,
+                                        null
+                                    ]
+                                }
+                            ],
+                            "vertical.legend": "no",
+                            "data.label.enabled": "no",
+                            "highchart.settings": {}
+                        }
+                    },
+                    "visualization.data.sources": [
+                        {
+                            "type": "log",
+                            "filters": {
+                                "data.filter": {
+                                    "filter": "include",
+                                    "groups": [
+                                        {
+                                            "filter": "include",
+                                            "operator": "and",
+                                            "conditions": [
+                                                {
+                                                    "value": [
+                                                        "4672",
+                                                        "4673",
+                                                        "4674"
+                                                    ],
+                                                    "operand": "system.eventid",
+                                                    "operator": "in"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "filter": "include",
+                                            "operator": "and",
+                                            "conditions": [
+                                                {
+                                                    "value": "SeDebugPrivilege",
+                                                    "operand": "eventdata.privilegelist",
+                                                    "operator": "contain"
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "operator": "and"
+                                },
+                                "result.filter": {},
+                                "drill.down.filter": {}
+                            },
+                            "category": "log",
+                            "data.points": [
+                                {
+                                    "entities": [],
+                                    "aggregator": "count",
+                                    "data.point": "system.task"
+                                }
+                            ],
+                            "visualization.result.by": [
+                                "eventdata.subjectusername",
+                                "system.computer"
+                            ]
+                        }
+                    ],
+                    "visualization.timeline.preference": "no"
+                }
+            },
+            {
+                "x": 0,
+                "y": 17,
+                "h": 6,
+                "w": 4,
+                "id": 116243198459,
+                "i": "87f60c7a-9b49-4c81-8942-b18e3571190e",
+                "options": {},
+                "definition": {
+                    "id": 116243198459,
+                    "_type": "1",
+                    "container.type": "dashboard",
+                    "visualization.name": "SeLoadDriverPrivilege use by account",
+                    "visualization.type": "HorizontalBar",
+                    "visualization.category": "TopN",
+                    "visualization.timeline": {
+                        "relative.timeline": "today",
+                        "visualization.time.range.inclusive": "no"
+                    },
+                    "visualization.result.by": [
+                        "eventdata.subjectusername",
+                        "system.computer"
+                    ],
+                    "visualization.properties": {
+                        "chart": {
+                            "sorting": {
+                                "limit": 25,
+                                "order": "desc",
+                                "column": "system.task.count"
+                            },
+                            "line.style": "solid",
+                            "line.width": 2,
+                            "point.size": 4,
+                            "chart.label": "no",
+                            "chart.legend": "no",
+                            "points.enabled": "no",
+                            "rotation.angle": 0,
+                            "marker.property": [
+                                {
+                                    "marker.threshold": [
+                                        null,
+                                        null
+                                    ]
+                                }
+                            ],
+                            "vertical.legend": "no",
+                            "data.label.enabled": "no",
+                            "highchart.settings": {}
+                        }
+                    },
+                    "visualization.data.sources": [
+                        {
+                            "type": "log",
+                            "filters": {
+                                "data.filter": {
+                                    "filter": "include",
+                                    "groups": [
+                                        {
+                                            "filter": "include",
+                                            "operator": "and",
+                                            "conditions": [
+                                                {
+                                                    "value": [
+                                                        "4672",
+                                                        "4673",
+                                                        "4674"
+                                                    ],
+                                                    "operand": "system.eventid",
+                                                    "operator": "in"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "filter": "include",
+                                            "operator": "and",
+                                            "conditions": [
+                                                {
+                                                    "value": "SeLoadDriverPrivilege",
+                                                    "operand": "eventdata.privilegelist",
+                                                    "operator": "contain"
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "operator": "and"
+                                },
+                                "result.filter": {},
+                                "drill.down.filter": {}
+                            },
+                            "category": "log",
+                            "data.points": [
+                                {
+                                    "entities": [],
+                                    "aggregator": "count",
+                                    "data.point": "system.task"
+                                }
+                            ],
+                            "visualization.result.by": [
+                                "eventdata.subjectusername",
+                                "system.computer"
+                            ]
+                        }
+                    ],
+                    "visualization.timeline.preference": "no"
+                }
+            },
+            {
+                "x": 4,
+                "y": 17,
+                "h": 6,
+                "w": 8,
+                "id": 116243198460,
+                "i": "e39021c1-1553-4d75-859d-2081e65de91c",
+                "options": {},
+                "definition": {
+                    "id": 116243198460,
+                    "_type": "1",
+                    "cache": true,
+                    "join.type": "custom",
+                    "join.result": "log.event",
+                    "max.records": 500,
+                    "container.type": "dashboard",
+                    "visualization.name": "Recent sensitive privilege use",
+                    "visualization.type": "Grid",
+                    "visualization.category": "Event History",
+                    "visualization.timeline": {
+                        "relative.timeline": "today",
+                        "visualization.time.range.inclusive": "no"
+                    },
+                    "visualization.result.by": [],
+                    "visualization.properties": {
+                        "grid": {
+                            "style": {
+                                "header.font.size": "small"
+                            },
+                            "header": "yes",
+                            "columns": [
+                                {
+                                    "name": "timestamp",
+                                    "show": "yes",
+                                    "style": {
+                                        "change.case": "none",
+                                        "width.percent": 19
+                                    },
+                                    "title": "Time",
+                                    "disable": "no",
+                                    "position": 1,
+                                    "sortable": "yes",
+                                    "orderable": "yes",
+                                    "resizable": "yes",
+                                    "selectable": "yes"
+                                },
+                                {
+                                    "name": "system.computer",
+                                    "show": "yes",
+                                    "style": {
+                                        "change.case": "none",
+                                        "width.percent": 19
+                                    },
+                                    "title": "Host",
+                                    "disable": "no",
+                                    "position": 2,
+                                    "sortable": "yes",
+                                    "orderable": "yes",
+                                    "resizable": "yes",
+                                    "selectable": "yes"
+                                },
+                                {
+                                    "name": "eventdata.privilegelist",
+                                    "show": "yes",
+                                    "style": {
+                                        "change.case": "none",
+                                        "width.percent": 17
+                                    },
+                                    "title": "Privilege",
+                                    "disable": "no",
+                                    "position": 3,
+                                    "sortable": "yes",
+                                    "orderable": "yes",
+                                    "resizable": "yes",
+                                    "selectable": "yes"
+                                },
+                                {
+                                    "name": "eventdata.subjectusername",
+                                    "show": "yes",
+                                    "style": {
+                                        "change.case": "none",
+                                        "width.percent": 19
+                                    },
+                                    "title": "Account",
+                                    "disable": "no",
+                                    "position": 4,
+                                    "sortable": "yes",
+                                    "orderable": "yes",
+                                    "resizable": "yes",
+                                    "selectable": "yes"
+                                },
+                                {
+                                    "name": "eventdata.processname",
+                                    "show": "yes",
+                                    "style": {
+                                        "change.case": "none",
+                                        "width.percent": 19
+                                    },
+                                    "title": "Process",
+                                    "disable": "no",
+                                    "position": 5,
+                                    "sortable": "yes",
+                                    "orderable": "yes",
+                                    "resizable": "yes",
+                                    "selectable": "yes"
+                                },
+                                {
+                                    "name": "message",
+                                    "show": "no",
+                                    "style": {
+                                        "change.case": "none"
+                                    },
+                                    "disable": "no",
+                                    "position": 6,
+                                    "sortable": "yes",
+                                    "orderable": "yes",
+                                    "resizable": "yes",
+                                    "selectable": "yes"
+                                }
+                            ],
+                            "searchable": "yes",
+                            "column.selection": "no",
+                            "thresholdSettings": {},
+                            "visualization.grid.properties.required": "no"
+                        }
+                    },
+                    "visualization.data.sources": [
+                        {
+                            "type": "log",
+                            "filters": {
+                                "data.filter": {
+                                    "filter": "include",
+                                    "groups": [
+                                        {
+                                            "filter": "include",
+                                            "operator": "and",
+                                            "conditions": [
+                                                {
+                                                    "value": [
+                                                        "4672",
+                                                        "4673",
+                                                        "4674"
+                                                    ],
+                                                    "operand": "system.eventid",
+                                                    "operator": "in"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "filter": "include",
+                                            "operator": "or",
+                                            "conditions": [
+                                                {
+                                                    "value": "SeDebugPrivilege",
+                                                    "operand": "eventdata.privilegelist",
+                                                    "operator": "contain"
+                                                },
+                                                {
+                                                    "value": "SeLoadDriverPrivilege",
+                                                    "operand": "eventdata.privilegelist",
+                                                    "operator": "contain"
+                                                },
+                                                {
+                                                    "value": "SeTakeOwnershipPrivilege",
+                                                    "operand": "eventdata.privilegelist",
+                                                    "operator": "contain"
+                                                },
+                                                {
+                                                    "value": "SeTcbPrivilege",
+                                                    "operand": "eventdata.privilegelist",
+                                                    "operator": "contain"
+                                                },
+                                                {
+                                                    "value": "SeBackupPrivilege",
+                                                    "operand": "eventdata.privilegelist",
+                                                    "operator": "contain"
+                                                },
+                                                {
+                                                    "value": "SeRestorePrivilege",
+                                                    "operand": "eventdata.privilegelist",
+                                                    "operator": "contain"
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "operator": "and"
+                                },
+                                "result.filter": {},
+                                "drill.down.filter": {}
+                            },
+                            "join.type": "custom",
+                            "data.points": [
+                                {
+                                    "aggregator": "",
+                                    "data.point": "system.computer"
+                                },
+                                {
+                                    "aggregator": "",
+                                    "data.point": "eventdata.subjectusername"
+                                },
+                                {
+                                    "aggregator": "",
+                                    "data.point": "eventdata.privilegelist"
+                                },
+                                {
+                                    "aggregator": "",
+                                    "data.point": "eventdata.processname"
+                                },
+                                {
+                                    "aggregator": "",
+                                    "data.point": "message"
+                                }
+                            ],
+                            "visualization.result.by": []
+                        }
+                    ],
+                    "visualization.secondary.category": "event.history",
+                    "visualization.timeline.preference": "no"
+                }
+            }
+        ],
+        "dashboard.users": []
+    }
+}

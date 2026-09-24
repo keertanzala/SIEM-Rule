@@ -1,0 +1,1219 @@
+{
+    "id": 116243198643,
+    "dashboard.name": "Task Execution",
+    "dashboard.category": "Windows",
+    "dashboard.access.type": "public",
+    "dashboard.users": [],
+    "dashboard.scope": "user",
+    "dashboard.user.profiles": [],
+    "dashboard.assigned.users": [],
+    "dashboard.assigned.user.profiles": [],
+    "dashboard.tabs": [],
+    "custom.tabs": [],
+    "style": {
+        "font.size": "medium",
+        "h.gap": 10,
+        "v.gap": 10,
+        "row.height": 50
+    },
+    "dashboard.context": {
+        "dashboard.widgets": [
+            {
+                "x": 0,
+                "y": 0,
+                "h": 3,
+                "w": 3,
+                "id": 116243198631,
+                "i": "2efa5d24-c72b-426d-b5fa-a479a0a1ca42",
+                "options": {},
+                "definition": {
+                    "id": 116243198631,
+                    "_type": "1",
+                    "container.type": "dashboard",
+                    "visualization.name": "Total task executions",
+                    "visualization.type": "MetroTile",
+                    "visualization.category": "Gauge",
+                    "visualization.timeline": {
+                        "relative.timeline": "-48h",
+                        "visualization.time.range.inclusive": "no"
+                    },
+                    "visualization.result.by": [],
+                    "visualization.properties": {
+                        "gauge": {
+                            "style": {
+                                "type": "number",
+                                "font.size": "small",
+                                "text.align": "left",
+                                "chart.label": "no",
+                                "chart.legend": "no",
+                                "color.conditions": [
+                                    {
+                                        "color": "#f04e3e",
+                                        "value": 0
+                                    },
+                                    {
+                                        "color": "#f58518",
+                                        "value": 0
+                                    },
+                                    {
+                                        "color": "#f5bc18",
+                                        "value": 0
+                                    }
+                                ],
+                                "trend.background.enabled": false
+                            },
+                            "font.color.conditions": []
+                        }
+                    },
+                    "visualization.data.sources": [
+                        {
+                            "type": "log",
+                            "filters": {
+                                "data.filter": {
+                                    "filter": "include",
+                                    "groups": [
+                                        {
+                                            "filter": "include",
+                                            "operator": "or",
+                                            "conditions": [
+                                                {
+                                                    "value": "Windows Task Started Event",
+                                                    "operand": "event.category",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": "Windows Task completed Event",
+                                                    "operand": "event.category",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": "Windows Created Task Process Event",
+                                                    "operand": "event.category",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": "Windows Task triggered on scheduler Event",
+                                                    "operand": "event.category",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": "Windows Task triggered on logon Event",
+                                                    "operand": "event.category",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": "Windows Task triggered by computer startup Event",
+                                                    "operand": "event.category",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": "Windows Task triggered by user Event",
+                                                    "operand": "event.category",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": "Windows Task triggered by registration Event",
+                                                    "operand": "event.category",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": "Windows Task stopping due to timeout reached Event",
+                                                    "operand": "event.category",
+                                                    "operator": "="
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "operator": "and"
+                                },
+                                "result.filter": {},
+                                "drill.down.filter": {}
+                            },
+                            "category": "log",
+                            "data.points": [
+                                {
+                                    "entities": [],
+                                    "aggregator": "count",
+                                    "data.point": "system.task"
+                                }
+                            ]
+                        }
+                    ],
+                    "visualization.timeline.preference": "no"
+                }
+            },
+            {
+                "x": 9,
+                "y": 0,
+                "h": 3,
+                "w": 3,
+                "id": 116243198636,
+                "i": "16e0e5e2-5269-4ab8-82e7-32467c71bef9",
+                "options": {},
+                "definition": {
+                    "id": 116243198636,
+                    "_type": "1",
+                    "container.type": "dashboard",
+                    "visualization.name": "Completed executions",
+                    "visualization.type": "MetroTile",
+                    "visualization.category": "Gauge",
+                    "visualization.timeline": {
+                        "relative.timeline": "-48h",
+                        "visualization.time.range.inclusive": "no"
+                    },
+                    "visualization.result.by": [],
+                    "visualization.properties": {
+                        "gauge": {
+                            "style": {
+                                "type": "number",
+                                "font.size": "small",
+                                "text.align": "left",
+                                "chart.label": "no",
+                                "chart.legend": "no",
+                                "color.conditions": [
+                                    {
+                                        "color": "#f04e3e",
+                                        "value": 0
+                                    },
+                                    {
+                                        "color": "#f58518",
+                                        "value": 0
+                                    },
+                                    {
+                                        "color": "#f5bc18",
+                                        "value": 0
+                                    }
+                                ],
+                                "trend.background.enabled": false
+                            },
+                            "font.color.conditions": []
+                        }
+                    },
+                    "visualization.data.sources": [
+                        {
+                            "type": "log",
+                            "filters": {
+                                "data.filter": {
+                                    "filter": "include",
+                                    "groups": [
+                                        {
+                                            "filter": "include",
+                                            "operator": "or",
+                                            "conditions": [
+                                                {
+                                                    "value": "Windows Task completed Event",
+                                                    "operand": "event.category",
+                                                    "operator": "="
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "operator": "and"
+                                },
+                                "result.filter": {},
+                                "drill.down.filter": {}
+                            },
+                            "category": "log",
+                            "data.points": [
+                                {
+                                    "entities": [],
+                                    "aggregator": "count",
+                                    "data.point": "system.task"
+                                }
+                            ]
+                        }
+                    ],
+                    "visualization.timeline.preference": "no"
+                }
+            },
+            {
+                "x": 3,
+                "y": 0,
+                "h": 3,
+                "w": 3,
+                "id": 116243198633,
+                "i": "5ec3e31e-d1dd-470b-a290-19f03a79a0f0",
+                "options": {},
+                "definition": {
+                    "id": 116243198633,
+                    "_type": "1",
+                    "container.type": "dashboard",
+                    "visualization.name": "Tasks started",
+                    "visualization.type": "MetroTile",
+                    "visualization.category": "Gauge",
+                    "visualization.timeline": {
+                        "relative.timeline": "-48h",
+                        "visualization.time.range.inclusive": "no"
+                    },
+                    "visualization.result.by": [],
+                    "visualization.properties": {
+                        "gauge": {
+                            "style": {
+                                "type": "number",
+                                "font.size": "small",
+                                "text.align": "left",
+                                "chart.label": "no",
+                                "chart.legend": "no",
+                                "color.conditions": [
+                                    {
+                                        "color": "#f04e3e",
+                                        "value": 0
+                                    },
+                                    {
+                                        "color": "#f58518",
+                                        "value": 0
+                                    },
+                                    {
+                                        "color": "#f5bc18",
+                                        "value": 0
+                                    }
+                                ],
+                                "trend.background.enabled": false
+                            },
+                            "font.color.conditions": []
+                        }
+                    },
+                    "visualization.data.sources": [
+                        {
+                            "type": "log",
+                            "filters": {
+                                "data.filter": {
+                                    "filter": "include",
+                                    "groups": [
+                                        {
+                                            "filter": "include",
+                                            "operator": "or",
+                                            "conditions": [
+                                                {
+                                                    "value": "Windows Task Started Event",
+                                                    "operand": "event.category",
+                                                    "operator": "="
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "operator": "and"
+                                },
+                                "result.filter": {},
+                                "drill.down.filter": {}
+                            },
+                            "category": "log",
+                            "data.points": [
+                                {
+                                    "entities": [],
+                                    "aggregator": "count",
+                                    "data.point": "system.task"
+                                }
+                            ]
+                        }
+                    ],
+                    "visualization.timeline.preference": "no"
+                }
+            },
+            {
+                "x": 6,
+                "y": 0,
+                "h": 3,
+                "w": 3,
+                "id": 116243198637,
+                "i": "e90919e3-1431-4a3d-b19e-f95a9b0c6fb4",
+                "options": {},
+                "definition": {
+                    "id": 116243198637,
+                    "_type": "1",
+                    "container.type": "dashboard",
+                    "visualization.name": "Tasks completed",
+                    "visualization.type": "MetroTile",
+                    "visualization.category": "Gauge",
+                    "visualization.timeline": {
+                        "relative.timeline": "-48h",
+                        "visualization.time.range.inclusive": "no"
+                    },
+                    "visualization.result.by": [],
+                    "visualization.properties": {
+                        "gauge": {
+                            "style": {
+                                "type": "number",
+                                "font.size": "small",
+                                "text.align": "left",
+                                "chart.label": "no",
+                                "chart.legend": "no",
+                                "color.conditions": [
+                                    {
+                                        "color": "#f04e3e",
+                                        "value": 0
+                                    },
+                                    {
+                                        "color": "#f58518",
+                                        "value": 0
+                                    },
+                                    {
+                                        "color": "#f5bc18",
+                                        "value": 0
+                                    }
+                                ],
+                                "trend.background.enabled": false
+                            },
+                            "font.color.conditions": []
+                        }
+                    },
+                    "visualization.data.sources": [
+                        {
+                            "type": "log",
+                            "filters": {
+                                "data.filter": {
+                                    "filter": "include",
+                                    "groups": [
+                                        {
+                                            "filter": "include",
+                                            "operator": "or",
+                                            "conditions": [
+                                                {
+                                                    "value": "Windows Task completed Event",
+                                                    "operand": "event.category",
+                                                    "operator": "="
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "operator": "and"
+                                },
+                                "result.filter": {},
+                                "drill.down.filter": {}
+                            },
+                            "category": "log",
+                            "data.points": [
+                                {
+                                    "entities": [],
+                                    "aggregator": "count",
+                                    "data.point": "system.task"
+                                }
+                            ]
+                        }
+                    ],
+                    "visualization.timeline.preference": "no"
+                }
+            },
+            {
+                "x": 0,
+                "y": 3,
+                "h": 6,
+                "w": 8,
+                "id": 116243198634,
+                "i": "c5b579f0-ecf0-4146-8044-93b6868571f8",
+                "options": {},
+                "definition": {
+                    "id": 116243198634,
+                    "_type": "1",
+                    "granularity": {
+                        "unit": "m",
+                        "value": "5"
+                    },
+                    "container.type": "dashboard",
+                    "visualization.name": "Executions over time",
+                    "visualization.type": "StackedArea",
+                    "visualization.category": "Chart",
+                    "visualization.timeline": {
+                        "relative.timeline": "-48h",
+                        "visualization.time.range.inclusive": "no"
+                    },
+                    "visualization.result.by": [
+                        "event.category"
+                    ],
+                    "visualization.properties": {
+                        "chart": {
+                            "sorting": {
+                                "limit": 10,
+                                "order": "desc"
+                            },
+                            "line.style": "solid",
+                            "line.width": 2,
+                            "point.size": 1,
+                            "axis.titles": {
+                                "x": "Time",
+                                "y": "Event Count"
+                            },
+                            "chart.label": "no",
+                            "chart.legend": "no",
+                            "points.enabled": "yes",
+                            "rotation.angle": 0,
+                            "marker.property": [
+                                {
+                                    "marker.threshold": [
+                                        null,
+                                        null
+                                    ]
+                                }
+                            ],
+                            "vertical.legend": "no",
+                            "data.label.enabled": "no",
+                            "highchart.settings": {},
+                            "metric.grid.enabled": false
+                        }
+                    },
+                    "visualization.granularity": "5 m",
+                    "visualization.data.sources": [
+                        {
+                            "type": "log",
+                            "filters": {
+                                "data.filter": {
+                                    "filter": "include",
+                                    "groups": [
+                                        {
+                                            "filter": "include",
+                                            "operator": "or",
+                                            "conditions": [
+                                                {
+                                                    "value": "Windows Task Started Event",
+                                                    "operand": "event.category",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": "Windows Task completed Event",
+                                                    "operand": "event.category",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": "Windows Created Task Process Event",
+                                                    "operand": "event.category",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": "Windows Task triggered on scheduler Event",
+                                                    "operand": "event.category",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": "Windows Task triggered on logon Event",
+                                                    "operand": "event.category",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": "Windows Task triggered by computer startup Event",
+                                                    "operand": "event.category",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": "Windows Task triggered by user Event",
+                                                    "operand": "event.category",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": "Windows Task triggered by registration Event",
+                                                    "operand": "event.category",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": "Windows Task stopping due to timeout reached Event",
+                                                    "operand": "event.category",
+                                                    "operator": "="
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "operator": "and"
+                                },
+                                "result.filter": {},
+                                "drill.down.filter": {}
+                            },
+                            "category": "log",
+                            "data.points": [
+                                {
+                                    "entities": [],
+                                    "aggregator": "count",
+                                    "data.point": "system.task"
+                                }
+                            ],
+                            "visualization.result.by": [
+                                "event.category"
+                            ]
+                        }
+                    ],
+                    "visualization.timeline.preference": "no"
+                }
+            },
+            {
+                "x": 0,
+                "y": 9,
+                "h": 6,
+                "w": 4,
+                "id": 116243198635,
+                "i": "0bd79119-3dc8-4cc6-8f79-0efea3c36200",
+                "options": {},
+                "definition": {
+                    "id": 116243198635,
+                    "_type": "1",
+                    "container.type": "dashboard",
+                    "visualization.name": "Busiest tasks",
+                    "visualization.type": "HorizontalBar",
+                    "visualization.category": "TopN",
+                    "visualization.timeline": {
+                        "relative.timeline": "-48h",
+                        "visualization.time.range.inclusive": "no"
+                    },
+                    "visualization.result.by": [
+                        "eventdata.taskname"
+                    ],
+                    "visualization.properties": {
+                        "chart": {
+                            "sorting": {
+                                "limit": "5",
+                                "order": "desc",
+                                "column": "system.task.count"
+                            },
+                            "line.style": "solid",
+                            "line.width": 2,
+                            "point.size": 4,
+                            "chart.label": "no",
+                            "chart.legend": "no",
+                            "points.enabled": "no",
+                            "rotation.angle": 0,
+                            "marker.property": [
+                                {
+                                    "marker.threshold": [
+                                        null,
+                                        null
+                                    ]
+                                }
+                            ],
+                            "vertical.legend": "no",
+                            "data.label.enabled": "no",
+                            "highchart.settings": {}
+                        }
+                    },
+                    "visualization.data.sources": [
+                        {
+                            "type": "log",
+                            "filters": {
+                                "data.filter": {
+                                    "filter": "include",
+                                    "groups": [
+                                        {
+                                            "filter": "include",
+                                            "operator": "or",
+                                            "conditions": [
+                                                {
+                                                    "value": "Windows Task Started Event",
+                                                    "operand": "event.category",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": "Windows Task completed Event",
+                                                    "operand": "event.category",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": "Windows Created Task Process Event",
+                                                    "operand": "event.category",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": "Windows Task triggered on scheduler Event",
+                                                    "operand": "event.category",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": "Windows Task triggered on logon Event",
+                                                    "operand": "event.category",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": "Windows Task triggered by computer startup Event",
+                                                    "operand": "event.category",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": "Windows Task triggered by user Event",
+                                                    "operand": "event.category",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": "Windows Task triggered by registration Event",
+                                                    "operand": "event.category",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": "Windows Task stopping due to timeout reached Event",
+                                                    "operand": "event.category",
+                                                    "operator": "="
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "operator": "and"
+                                },
+                                "result.filter": {},
+                                "drill.down.filter": {}
+                            },
+                            "category": "log",
+                            "data.points": [
+                                {
+                                    "entities": [],
+                                    "aggregator": "count",
+                                    "data.point": "system.task"
+                                }
+                            ],
+                            "visualization.result.by": [
+                                "eventdata.taskname"
+                            ]
+                        }
+                    ],
+                    "visualization.timeline.preference": "no"
+                }
+            },
+            {
+                "x": 8,
+                "y": 9,
+                "h": 6,
+                "w": 4,
+                "id": 116243198641,
+                "i": "80db2636-51eb-40d3-87a7-fc9a0023a71b",
+                "options": {},
+                "definition": {
+                    "id": 116243198641,
+                    "_type": "1",
+                    "container.type": "dashboard",
+                    "visualization.name": "Executors",
+                    "visualization.type": "Grid",
+                    "visualization.category": "TopN",
+                    "visualization.timeline": {
+                        "relative.timeline": "-48h",
+                        "visualization.time.range.inclusive": "no"
+                    },
+                    "visualization.result.by": [
+                        "system.computer"
+                    ],
+                    "visualization.properties": {
+                        "grid": {
+                            "style": {
+                                "header.font.size": "small"
+                            },
+                            "header": "yes",
+                            "columns": [
+                                {
+                                    "name": "system.task.count",
+                                    "show": "yes",
+                                    "style": {},
+                                    "title": "count",
+                                    "disable": "no",
+                                    "position": 1,
+                                    "sortable": "yes",
+                                    "orderable": "yes",
+                                    "resizable": "yes",
+                                    "selectable": "yes"
+                                },
+                                {
+                                    "name": "system.computer",
+                                    "show": "yes",
+                                    "style": {
+                                        "change.case": "none"
+                                    },
+                                    "title": "host",
+                                    "disable": "no",
+                                    "position": 2,
+                                    "sortable": "yes",
+                                    "orderable": "yes",
+                                    "resizable": "yes",
+                                    "selectable": "yes"
+                                }
+                            ],
+                            "sorting": {
+                                "limit": "5",
+                                "order": "desc",
+                                "column": "system.task.count"
+                            },
+                            "searchable": "yes",
+                            "sorting.order": "desc",
+                            "sorting.column": "system.task.count",
+                            "column.selection": "no",
+                            "thresholdSettings": {},
+                            "visualization.grid.properties.required": "no"
+                        }
+                    },
+                    "visualization.data.sources": [
+                        {
+                            "type": "log",
+                            "filters": {
+                                "data.filter": {
+                                    "filter": "include",
+                                    "groups": [
+                                        {
+                                            "filter": "include",
+                                            "operator": "or",
+                                            "conditions": [
+                                                {
+                                                    "value": "Windows Task Started Event",
+                                                    "operand": "event.category",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": "Windows Task completed Event",
+                                                    "operand": "event.category",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": "Windows Created Task Process Event",
+                                                    "operand": "event.category",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": "Windows Task triggered on scheduler Event",
+                                                    "operand": "event.category",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": "Windows Task triggered on logon Event",
+                                                    "operand": "event.category",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": "Windows Task triggered by computer startup Event",
+                                                    "operand": "event.category",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": "Windows Task triggered by user Event",
+                                                    "operand": "event.category",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": "Windows Task triggered by registration Event",
+                                                    "operand": "event.category",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": "Windows Task stopping due to timeout reached Event",
+                                                    "operand": "event.category",
+                                                    "operator": "="
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "operator": "and"
+                                },
+                                "result.filter": {},
+                                "drill.down.filter": {}
+                            },
+                            "category": "log",
+                            "data.points": [
+                                {
+                                    "entities": [],
+                                    "aggregator": "count",
+                                    "data.point": "system.task"
+                                }
+                            ],
+                            "visualization.result.by": [
+                                "system.computer"
+                            ]
+                        }
+                    ],
+                    "visualization.timeline.preference": "no"
+                }
+            },
+            {
+                "x": 4,
+                "y": 9,
+                "h": 6,
+                "w": 4,
+                "id": 116243198639,
+                "i": "79d26244-fa1e-4377-a3f3-dedc41ad1a0e",
+                "options": {},
+                "definition": {
+                    "id": 116243198639,
+                    "_type": "1",
+                    "container.type": "dashboard",
+                    "visualization.name": "Type of Execution events",
+                    "visualization.type": "Pie",
+                    "visualization.category": "TopN",
+                    "visualization.timeline": {
+                        "relative.timeline": "-48h",
+                        "visualization.time.range.inclusive": "no"
+                    },
+                    "visualization.result.by": [
+                        "system.task"
+                    ],
+                    "visualization.properties": {
+                        "chart": {
+                            "sorting": {
+                                "limit": 25,
+                                "order": "desc",
+                                "column": "system.task.count"
+                            },
+                            "line.style": "solid",
+                            "line.width": 2,
+                            "point.size": 4,
+                            "chart.label": "no",
+                            "chart.legend": "yes",
+                            "points.enabled": "no",
+                            "rotation.angle": 0,
+                            "marker.property": [
+                                {
+                                    "marker.threshold": [
+                                        null,
+                                        null
+                                    ]
+                                }
+                            ],
+                            "vertical.legend": "no",
+                            "data.label.enabled": "no",
+                            "highchart.settings": {}
+                        }
+                    },
+                    "visualization.data.sources": [
+                        {
+                            "type": "log",
+                            "filters": {
+                                "data.filter": {
+                                    "filter": "include",
+                                    "groups": [
+                                        {
+                                            "filter": "include",
+                                            "operator": "or",
+                                            "conditions": [
+                                                {
+                                                    "value": "Windows Task Started Event",
+                                                    "operand": "event.category",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": "Windows Task completed Event",
+                                                    "operand": "event.category",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": "Windows Created Task Process Event",
+                                                    "operand": "event.category",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": "Windows Task triggered on scheduler Event",
+                                                    "operand": "event.category",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": "Windows Task triggered on logon Event",
+                                                    "operand": "event.category",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": "Windows Task triggered by computer startup Event",
+                                                    "operand": "event.category",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": "Windows Task triggered by user Event",
+                                                    "operand": "event.category",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": "Windows Task triggered by registration Event",
+                                                    "operand": "event.category",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": "Windows Task stopping due to timeout reached Event",
+                                                    "operand": "event.category",
+                                                    "operator": "="
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "operator": "and"
+                                },
+                                "result.filter": {},
+                                "drill.down.filter": {}
+                            },
+                            "category": "log",
+                            "data.points": [
+                                {
+                                    "entities": [],
+                                    "aggregator": "count",
+                                    "data.point": "system.task"
+                                }
+                            ],
+                            "visualization.result.by": [
+                                "system.task"
+                            ]
+                        }
+                    ],
+                    "visualization.timeline.preference": "no"
+                }
+            },
+            {
+                "x": 8,
+                "y": 3,
+                "h": 6,
+                "w": 4,
+                "id": 116243198640,
+                "i": "a9649c91-2eb8-4437-9afd-fbe250525108",
+                "options": {},
+                "definition": {
+                    "id": 116243198640,
+                    "_type": "1",
+                    "container.type": "dashboard",
+                    "visualization.name": "Execution duration proxy - started vs completed",
+                    "visualization.type": "Pie",
+                    "visualization.category": "TopN",
+                    "visualization.timeline": {
+                        "relative.timeline": "-48h",
+                        "visualization.time.range.inclusive": "no"
+                    },
+                    "visualization.result.by": [
+                        "event.category"
+                    ],
+                    "visualization.properties": {
+                        "chart": {
+                            "sorting": {
+                                "limit": 25,
+                                "order": "desc",
+                                "column": "system.task.count"
+                            },
+                            "line.style": "solid",
+                            "line.width": 2,
+                            "point.size": 4,
+                            "chart.label": "no",
+                            "chart.legend": "yes",
+                            "points.enabled": "no",
+                            "rotation.angle": 0,
+                            "marker.property": [
+                                {
+                                    "marker.threshold": [
+                                        null,
+                                        null
+                                    ]
+                                }
+                            ],
+                            "vertical.legend": "no",
+                            "data.label.enabled": "no",
+                            "highchart.settings": {}
+                        }
+                    },
+                    "visualization.data.sources": [
+                        {
+                            "type": "log",
+                            "filters": {
+                                "data.filter": {
+                                    "filter": "include",
+                                    "groups": [
+                                        {
+                                            "filter": "include",
+                                            "operator": "or",
+                                            "conditions": [
+                                                {
+                                                    "value": "Windows Task Started Event",
+                                                    "operand": "event.category",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": "Windows Task completed Event",
+                                                    "operand": "event.category",
+                                                    "operator": "="
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "operator": "and"
+                                },
+                                "result.filter": {},
+                                "drill.down.filter": {}
+                            },
+                            "category": "log",
+                            "data.points": [
+                                {
+                                    "entities": [],
+                                    "aggregator": "count",
+                                    "data.point": "system.task"
+                                }
+                            ],
+                            "visualization.result.by": [
+                                "event.category"
+                            ]
+                        }
+                    ],
+                    "visualization.timeline.preference": "no"
+                }
+            },
+            {
+                "x": 0,
+                "y": 15,
+                "h": 6,
+                "w": 12,
+                "id": 116243198642,
+                "i": "0b66006c-eef8-4750-923f-2ba0c531e280",
+                "options": {},
+                "definition": {
+                    "id": 116243198642,
+                    "_type": "1",
+                    "cache": true,
+                    "join.type": "custom",
+                    "join.result": "log.event",
+                    "max.records": 500,
+                    "container.type": "dashboard",
+                    "visualization.name": "Recent executions",
+                    "visualization.type": "Grid",
+                    "visualization.category": "Event History",
+                    "visualization.timeline": {
+                        "relative.timeline": "-48h",
+                        "visualization.time.range.inclusive": "no"
+                    },
+                    "visualization.result.by": [],
+                    "visualization.properties": {
+                        "grid": {
+                            "style": {
+                                "header.font.size": "small"
+                            },
+                            "header": "yes",
+                            "columns": [
+                                {
+                                    "name": "timestamp",
+                                    "show": "yes",
+                                    "style": {
+                                        "change.case": "none"
+                                    },
+                                    "title": "Time",
+                                    "disable": "no",
+                                    "position": 1,
+                                    "sortable": "yes",
+                                    "orderable": "yes",
+                                    "resizable": "yes",
+                                    "selectable": "yes"
+                                },
+                                {
+                                    "name": "system.computer",
+                                    "show": "yes",
+                                    "style": {
+                                        "change.case": "none"
+                                    },
+                                    "title": "Host",
+                                    "disable": "no",
+                                    "position": 2,
+                                    "sortable": "yes",
+                                    "orderable": "yes",
+                                    "resizable": "yes",
+                                    "selectable": "yes"
+                                },
+                                {
+                                    "name": "eventdata.taskname",
+                                    "show": "yes",
+                                    "style": {
+                                        "change.case": "none"
+                                    },
+                                    "title": "Task",
+                                    "disable": "no",
+                                    "position": 3,
+                                    "sortable": "yes",
+                                    "orderable": "yes",
+                                    "resizable": "yes",
+                                    "selectable": "yes"
+                                },
+                                {
+                                    "name": "event.category",
+                                    "show": "yes",
+                                    "style": {
+                                        "change.case": "none"
+                                    },
+                                    "title": "Event",
+                                    "disable": "no",
+                                    "position": 4,
+                                    "sortable": "yes",
+                                    "orderable": "yes",
+                                    "resizable": "yes",
+                                    "selectable": "yes"
+                                }
+                            ],
+                            "searchable": "yes",
+                            "column.selection": "no",
+                            "thresholdSettings": {},
+                            "visualization.grid.properties.required": "no"
+                        }
+                    },
+                    "visualization.data.sources": [
+                        {
+                            "type": "log",
+                            "filters": {
+                                "data.filter": {
+                                    "filter": "include",
+                                    "groups": [
+                                        {
+                                            "filter": "include",
+                                            "operator": "or",
+                                            "conditions": [
+                                                {
+                                                    "value": "Windows Task Started Event",
+                                                    "operand": "event.category",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": "Windows Task completed Event",
+                                                    "operand": "event.category",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": "Windows Created Task Process Event",
+                                                    "operand": "event.category",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": "Windows Task triggered on scheduler Event",
+                                                    "operand": "event.category",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": "Windows Task triggered on logon Event",
+                                                    "operand": "event.category",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": "Windows Task triggered by computer startup Event",
+                                                    "operand": "event.category",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": "Windows Task triggered by user Event",
+                                                    "operand": "event.category",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": "Windows Task triggered by registration Event",
+                                                    "operand": "event.category",
+                                                    "operator": "="
+                                                },
+                                                {
+                                                    "value": "Windows Task stopping due to timeout reached Event",
+                                                    "operand": "event.category",
+                                                    "operator": "="
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "operator": "and"
+                                },
+                                "result.filter": {},
+                                "drill.down.filter": {}
+                            },
+                            "join.type": "custom",
+                            "data.points": [
+                                {
+                                    "aggregator": "",
+                                    "data.point": "system.computer"
+                                },
+                                {
+                                    "aggregator": "",
+                                    "data.point": "eventdata.taskname"
+                                },
+                                {
+                                    "aggregator": "",
+                                    "data.point": "event.category"
+                                }
+                            ],
+                            "visualization.result.by": []
+                        }
+                    ],
+                    "visualization.secondary.category": "event.history",
+                    "visualization.timeline.preference": "no"
+                }
+            }
+        ],
+        "dashboard.users": []
+    }
+}

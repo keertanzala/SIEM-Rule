@@ -1,0 +1,1130 @@
+{
+    "id": 115724377948,
+    "dashboard.name": "Logon / Logoff",
+    "dashboard.category": "Windows",
+    "dashboard.access.type": "public",
+    "dashboard.users": [],
+    "dashboard.scope": "user",
+    "dashboard.user.profiles": [],
+    "dashboard.assigned.users": [],
+    "dashboard.assigned.user.profiles": [],
+    "dashboard.tabs": [],
+    "custom.tabs": [],
+    "style": {
+        "font.size": "medium",
+        "h.gap": 10,
+        "v.gap": 10,
+        "row.height": 50
+    },
+    "dashboard.context": {
+        "dashboard.widgets": [
+            {
+                "x": 0,
+                "y": 0,
+                "h": 2,
+                "w": 3,
+                "id": 115724377949,
+                "i": "9724916c-c68e-4894-b426-91ce8cdeb167",
+                "options": {},
+                "definition": {
+                    "id": 115724377949,
+                    "_type": "1",
+                    "container.type": "dashboard",
+                    "visualization.name": "Total Eventsss",
+                    "visualization.type": "MetroTile",
+                    "visualization.category": "Gauge",
+                    "visualization.timeline": {
+                        "relative.timeline": "this.month",
+                        "visualization.time.range.inclusive": "no"
+                    },
+                    "visualization.result.by": [],
+                    "visualization.properties": {
+                        "gauge": {
+                            "style": {
+                                "type": "number",
+                                "font.size": "small",
+                                "text.align": "left",
+                                "chart.label": "no",
+                                "chart.legend": "no",
+                                "color.conditions": [
+                                    {
+                                        "color": "#f04e3e",
+                                        "value": 0
+                                    },
+                                    {
+                                        "color": "#f58518",
+                                        "value": 0
+                                    },
+                                    {
+                                        "color": "#f5bc18",
+                                        "value": 0
+                                    }
+                                ],
+                                "trend.background.enabled": false
+                            },
+                            "font.color.conditions": []
+                        }
+                    },
+                    "visualization.data.sources": [
+                        {
+                            "type": "log",
+                            "filters": {
+                                "data.filter": {
+                                    "filter": "include",
+                                    "groups": [
+                                        {
+                                            "filter": "include",
+                                            "operator": "and",
+                                            "conditions": [
+                                                {
+                                                    "value": [
+                                                        "Windows Logoff Event",
+                                                        "Windows Logon Event"
+                                                    ],
+                                                    "operand": "event.category",
+                                                    "operator": "in"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "filter": "exclude",
+                                            "operator": "and",
+                                            "conditions": [
+                                                {
+                                                    "value": "$",
+                                                    "operand": "eventdata.targetusername",
+                                                    "operator": "contain"
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "operator": "and"
+                                },
+                                "result.filter": {},
+                                "drill.down.filter": {}
+                            },
+                            "category": "log",
+                            "data.points": [
+                                {
+                                    "aggregator": "count",
+                                    "data.point": "system.task"
+                                }
+                            ]
+                        }
+                    ],
+                    "visualization.timeline.preference": "no"
+                }
+            },
+            {
+                "x": 0,
+                "y": 2,
+                "h": 7,
+                "w": 8,
+                "id": 115724378001,
+                "i": "62fe6e3b-5eb5-4e2c-8bc1-32af95e83710",
+                "options": {},
+                "definition": {
+                    "id": 115724378001,
+                    "_type": "1",
+                    "granularity": {
+                        "unit": "m",
+                        "value": 5
+                    },
+                    "container.type": "dashboard",
+                    "visualization.name": "Logon trend by outcome",
+                    "visualization.type": "StackedArea",
+                    "visualization.category": "Chart",
+                    "visualization.timeline": {
+                        "relative.timeline": "today",
+                        "visualization.time.range.inclusive": "no"
+                    },
+                    "visualization.result.by": [
+                        "audit.status"
+                    ],
+                    "visualization.properties": {
+                        "chart": {
+                            "sorting": {
+                                "limit": 10,
+                                "order": "desc"
+                            },
+                            "line.style": "solid",
+                            "line.width": 1,
+                            "point.size": 2,
+                            "chart.label": "no",
+                            "chart.legend": "no",
+                            "points.enabled": "yes",
+                            "rotation.angle": 0,
+                            "marker.property": [
+                                {
+                                    "marker.type": "line"
+                                }
+                            ],
+                            "vertical.legend": "no",
+                            "data.label.enabled": "no",
+                            "highchart.settings": {},
+                            "metric.grid.enabled": false
+                        }
+                    },
+                    "visualization.granularity": "5 m",
+                    "visualization.data.sources": [
+                        {
+                            "type": "log",
+                            "filters": {
+                                "data.filter": {
+                                    "filter": "include",
+                                    "groups": [
+                                        {
+                                            "filter": "include",
+                                            "operator": "and",
+                                            "conditions": [
+                                                {
+                                                    "value": [
+                                                        "Windows Logon Event"
+                                                    ],
+                                                    "operand": "event.category",
+                                                    "operator": "in"
+                                                },
+                                                {
+                                                    "value": [
+                                                        "4625",
+                                                        4624
+                                                    ],
+                                                    "operand": "system.eventid",
+                                                    "operator": "in"
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "operator": "and"
+                                },
+                                "result.filter": {},
+                                "drill.down.filter": {}
+                            },
+                            "category": "log",
+                            "data.points": [
+                                {
+                                    "entities": [],
+                                    "aggregator": "count",
+                                    "data.point": "system.task"
+                                }
+                            ],
+                            "visualization.result.by": [
+                                "audit.status"
+                            ]
+                        }
+                    ],
+                    "visualization.timeline.preference": "no"
+                }
+            },
+            {
+                "x": 3,
+                "y": 0,
+                "h": 2,
+                "w": 3,
+                "id": 115724378005,
+                "i": "1ec3ffba-3936-490a-ae30-441320131329",
+                "options": {},
+                "definition": {
+                    "id": 115724378005,
+                    "_type": "1",
+                    "container.type": "dashboard",
+                    "visualization.name": "Failed logons",
+                    "visualization.type": "MetroTile",
+                    "visualization.category": "Gauge",
+                    "visualization.timeline": {
+                        "relative.timeline": "today",
+                        "visualization.time.range.inclusive": "no"
+                    },
+                    "visualization.result.by": [],
+                    "visualization.properties": {
+                        "gauge": {
+                            "style": {
+                                "type": "number",
+                                "font.size": "small",
+                                "text.align": "left",
+                                "chart.label": "no",
+                                "chart.legend": "no",
+                                "color.conditions": [
+                                    {
+                                        "color": "#f04e3e",
+                                        "value": 100
+                                    },
+                                    {
+                                        "color": "#f58518",
+                                        "value": 25
+                                    },
+                                    {
+                                        "color": "#f5bc18",
+                                        "value": 10
+                                    }
+                                ],
+                                "trend.background.enabled": false
+                            },
+                            "font.color.conditions": []
+                        }
+                    },
+                    "visualization.data.sources": [
+                        {
+                            "type": "log",
+                            "filters": {
+                                "data.filter": {
+                                    "filter": "include",
+                                    "groups": [
+                                        {
+                                            "filter": "include",
+                                            "operator": "and",
+                                            "conditions": [
+                                                {
+                                                    "value": [
+                                                        "Windows Logon Event"
+                                                    ],
+                                                    "operand": "event.category",
+                                                    "operator": "in"
+                                                },
+                                                {
+                                                    "value": [
+                                                        "4625"
+                                                    ],
+                                                    "operand": "system.eventid",
+                                                    "operator": "in"
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "operator": "and"
+                                },
+                                "result.filter": {},
+                                "drill.down.filter": {}
+                            },
+                            "category": "log",
+                            "data.points": [
+                                {
+                                    "entities": [],
+                                    "aggregator": "count",
+                                    "data.point": "system.task"
+                                }
+                            ]
+                        }
+                    ],
+                    "visualization.timeline.preference": "no"
+                }
+            },
+            {
+                "x": 6,
+                "y": 0,
+                "h": 2,
+                "w": 3,
+                "id": 115724378007,
+                "i": "6a57409e-4e57-48ff-956d-5d73ccd6db22",
+                "options": {},
+                "definition": {
+                    "id": 115724378007,
+                    "_type": "1",
+                    "container.type": "dashboard",
+                    "visualization.name": "Successful logons",
+                    "visualization.type": "MetroTile",
+                    "visualization.category": "Gauge",
+                    "visualization.timeline": {
+                        "relative.timeline": "today",
+                        "visualization.time.range.inclusive": "no"
+                    },
+                    "visualization.result.by": [],
+                    "visualization.properties": {
+                        "gauge": {
+                            "style": {
+                                "type": "number",
+                                "font.size": "small",
+                                "text.align": "left",
+                                "chart.label": "no",
+                                "chart.legend": "no",
+                                "color.conditions": [
+                                    {
+                                        "color": "#f04e3e",
+                                        "value": 0
+                                    },
+                                    {
+                                        "color": "#f58518",
+                                        "value": 0
+                                    },
+                                    {
+                                        "color": "#f5bc18",
+                                        "value": 0
+                                    }
+                                ],
+                                "trend.background.enabled": false
+                            },
+                            "font.color.conditions": []
+                        }
+                    },
+                    "visualization.data.sources": [
+                        {
+                            "type": "log",
+                            "filters": {
+                                "data.filter": {
+                                    "filter": "include",
+                                    "groups": [
+                                        {
+                                            "filter": "include",
+                                            "operator": "and",
+                                            "conditions": [
+                                                {
+                                                    "value": [
+                                                        "Windows Logon Event"
+                                                    ],
+                                                    "operand": "event.category",
+                                                    "operator": "in"
+                                                },
+                                                {
+                                                    "value": [
+                                                        "4624"
+                                                    ],
+                                                    "operand": "system.eventid",
+                                                    "operator": "in"
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "operator": "and"
+                                },
+                                "result.filter": {},
+                                "drill.down.filter": {}
+                            },
+                            "category": "log",
+                            "data.points": [
+                                {
+                                    "entities": [],
+                                    "aggregator": "count",
+                                    "data.point": "system.task"
+                                }
+                            ]
+                        }
+                    ],
+                    "visualization.timeline.preference": "no"
+                }
+            },
+            {
+                "x": 9,
+                "y": 0,
+                "h": 2,
+                "w": 3,
+                "id": 115724378009,
+                "i": "6edd7f95-60ac-4737-bdda-0ba2bf22e0c7",
+                "options": {},
+                "definition": {
+                    "id": 115724378009,
+                    "_type": "1",
+                    "container.type": "dashboard",
+                    "visualization.name": "Logon attempts",
+                    "visualization.type": "MetroTile",
+                    "visualization.category": "Gauge",
+                    "visualization.timeline": {
+                        "relative.timeline": "today",
+                        "visualization.time.range.inclusive": "no"
+                    },
+                    "visualization.result.by": [],
+                    "visualization.properties": {
+                        "gauge": {
+                            "style": {
+                                "type": "number",
+                                "font.size": "small",
+                                "text.align": "left",
+                                "chart.label": "no",
+                                "chart.legend": "no",
+                                "color.conditions": [
+                                    {
+                                        "color": "#f04e3e",
+                                        "value": 0
+                                    },
+                                    {
+                                        "color": "#f58518",
+                                        "value": 0
+                                    },
+                                    {
+                                        "color": "#f5bc18",
+                                        "value": 0
+                                    }
+                                ],
+                                "trend.background.enabled": false
+                            },
+                            "font.color.conditions": []
+                        }
+                    },
+                    "visualization.data.sources": [
+                        {
+                            "type": "log",
+                            "filters": {
+                                "data.filter": {
+                                    "filter": "include",
+                                    "groups": [
+                                        {
+                                            "filter": "include",
+                                            "operator": "and",
+                                            "conditions": [
+                                                {
+                                                    "value": [
+                                                        "Windows Logon Event"
+                                                    ],
+                                                    "operand": "event.category",
+                                                    "operator": "in"
+                                                },
+                                                {
+                                                    "value": [
+                                                        "4624",
+                                                        "4625"
+                                                    ],
+                                                    "operand": "system.eventid",
+                                                    "operator": "in"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "filter": "exclude",
+                                            "operator": "and",
+                                            "conditions": [
+                                                {
+                                                    "value": "$",
+                                                    "operand": "eventdata.targetusername",
+                                                    "operator": "contain"
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "operator": "and"
+                                },
+                                "result.filter": {},
+                                "drill.down.filter": {}
+                            },
+                            "category": "log",
+                            "data.points": [
+                                {
+                                    "entities": [],
+                                    "aggregator": "count",
+                                    "data.point": "system.task"
+                                }
+                            ]
+                        }
+                    ],
+                    "visualization.timeline.preference": "no"
+                }
+            },
+            {
+                "x": 4,
+                "y": 9,
+                "h": 7,
+                "w": 4,
+                "id": 115724378056,
+                "i": "0880ef2f-6b95-479b-a4f9-a0b087c3fdd7",
+                "options": {},
+                "definition": {
+                    "id": 115724378056,
+                    "_type": "1",
+                    "container.type": "dashboard",
+                    "visualization.name": "Why Logon Failed",
+                    "visualization.type": "HorizontalBar",
+                    "visualization.category": "TopN",
+                    "visualization.timeline": {
+                        "relative.timeline": "today",
+                        "visualization.time.range.inclusive": "no"
+                    },
+                    "visualization.result.by": [
+                        "auth.failure.reason"
+                    ],
+                    "visualization.properties": {
+                        "chart": {
+                            "sorting": {
+                                "limit": 10,
+                                "order": "desc",
+                                "column": "system.task.count"
+                            },
+                            "line.style": "solid",
+                            "line.width": 2,
+                            "point.size": 4,
+                            "chart.label": "no",
+                            "chart.legend": "no",
+                            "points.enabled": "no",
+                            "marker.property": [
+                                {
+                                    "marker.threshold": [
+                                        null,
+                                        null
+                                    ]
+                                }
+                            ],
+                            "vertical.legend": "no",
+                            "data.label.enabled": "no",
+                            "highchart.settings": {}
+                        }
+                    },
+                    "visualization.data.sources": [
+                        {
+                            "type": "log",
+                            "filters": {
+                                "data.filter": {},
+                                "result.filter": {},
+                                "drill.down.filter": {}
+                            },
+                            "category": "log",
+                            "data.points": [
+                                {
+                                    "aggregator": "count",
+                                    "data.point": "system.task"
+                                }
+                            ],
+                            "visualization.result.by": [
+                                "auth.failure.reason"
+                            ]
+                        }
+                    ],
+                    "visualization.timeline.preference": "no"
+                }
+            },
+            {
+                "x": 0,
+                "y": 9,
+                "h": 7,
+                "w": 4,
+                "id": 115887832775,
+                "i": "398c097d-0320-47bf-8fef-fbc65f8dbe2c",
+                "options": {},
+                "definition": {
+                    "id": 115887832775,
+                    "_type": "1",
+                    "container.type": "dashboard",
+                    "visualization.name": "Elevated-Token Logon",
+                    "visualization.type": "HorizontalBar",
+                    "visualization.category": "TopN",
+                    "visualization.timeline": {
+                        "relative.timeline": "today",
+                        "visualization.time.range.inclusive": "no"
+                    },
+                    "visualization.result.by": [
+                        "eventdata.targetusername"
+                    ],
+                    "visualization.properties": {
+                        "chart": {
+                            "sorting": {
+                                "limit": "5",
+                                "order": "desc",
+                                "column": "system.task.count"
+                            },
+                            "line.style": "solid",
+                            "line.width": 2,
+                            "point.size": 4,
+                            "chart.label": "no",
+                            "chart.legend": "yes",
+                            "points.enabled": "no",
+                            "rotation.angle": 0,
+                            "marker.property": [
+                                {
+                                    "marker.threshold": [
+                                        null,
+                                        null
+                                    ]
+                                }
+                            ],
+                            "vertical.legend": "no",
+                            "data.label.enabled": "no",
+                            "highchart.settings": {}
+                        }
+                    },
+                    "visualization.data.sources": [
+                        {
+                            "type": "log",
+                            "filters": {
+                                "data.filter": {
+                                    "filter": "include",
+                                    "groups": [
+                                        {
+                                            "filter": "include",
+                                            "operator": "and",
+                                            "conditions": [
+                                                {
+                                                    "value": [
+                                                        "Windows Logon Event"
+                                                    ],
+                                                    "operand": "event.category",
+                                                    "operator": "in"
+                                                },
+                                                {
+                                                    "value": [
+                                                        "4624"
+                                                    ],
+                                                    "operand": "system.eventid",
+                                                    "operator": "in"
+                                                },
+                                                {
+                                                    "value": [
+                                                        "Yes"
+                                                    ],
+                                                    "operand": "eventdata.elevatedtoken",
+                                                    "operator": "in"
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "operator": "and"
+                                },
+                                "result.filter": {},
+                                "drill.down.filter": {}
+                            },
+                            "category": "log",
+                            "data.points": [
+                                {
+                                    "entities": [],
+                                    "aggregator": "count",
+                                    "data.point": "system.task"
+                                }
+                            ],
+                            "visualization.result.by": [
+                                "eventdata.targetusername"
+                            ]
+                        }
+                    ],
+                    "visualization.timeline.preference": "no"
+                }
+            },
+            {
+                "x": 8,
+                "y": 9,
+                "h": 7,
+                "w": 4,
+                "id": 115887832788,
+                "i": "d4e4202d-41bf-4ecf-9b7f-406862da2689",
+                "options": {},
+                "definition": {
+                    "id": 115887832788,
+                    "_type": "1",
+                    "container.type": "dashboard",
+                    "visualization.name": "Top Failed Users​",
+                    "visualization.type": "HorizontalBar",
+                    "visualization.category": "TopN",
+                    "visualization.timeline": {
+                        "relative.timeline": "today",
+                        "visualization.time.range.inclusive": "no"
+                    },
+                    "visualization.result.by": [
+                        "eventdata.targetusername"
+                    ],
+                    "visualization.properties": {
+                        "chart": {
+                            "sorting": {
+                                "limit": 10,
+                                "order": "desc",
+                                "column": "system.task.count"
+                            },
+                            "line.style": "solid",
+                            "line.width": 2,
+                            "point.size": 4,
+                            "chart.label": "no",
+                            "chart.legend": "yes",
+                            "points.enabled": "no",
+                            "rotation.angle": 0,
+                            "marker.property": [
+                                {
+                                    "marker.threshold": [
+                                        null,
+                                        null
+                                    ]
+                                }
+                            ],
+                            "vertical.legend": "no",
+                            "data.label.enabled": "no",
+                            "highchart.settings": {}
+                        }
+                    },
+                    "visualization.data.sources": [
+                        {
+                            "type": "log",
+                            "filters": {
+                                "data.filter": {
+                                    "filter": "include",
+                                    "groups": [
+                                        {
+                                            "filter": "include",
+                                            "operator": "and",
+                                            "conditions": [
+                                                {
+                                                    "value": [
+                                                        "Windows Logon Event"
+                                                    ],
+                                                    "operand": "event.category",
+                                                    "operator": "in"
+                                                },
+                                                {
+                                                    "value": [
+                                                        "4625"
+                                                    ],
+                                                    "operand": "system.eventid",
+                                                    "operator": "in"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "filter": "exclude",
+                                            "operator": "and",
+                                            "conditions": [
+                                                {
+                                                    "value": "$",
+                                                    "operand": "eventdata.targetusername",
+                                                    "operator": "contain"
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "operator": "and"
+                                },
+                                "result.filter": {},
+                                "drill.down.filter": {}
+                            },
+                            "category": "log",
+                            "data.points": [
+                                {
+                                    "entities": [],
+                                    "aggregator": "count",
+                                    "data.point": "system.task"
+                                }
+                            ],
+                            "visualization.result.by": [
+                                "eventdata.targetusername"
+                            ]
+                        }
+                    ],
+                    "visualization.timeline.preference": "no"
+                }
+            },
+            {
+                "x": 8,
+                "y": 2,
+                "h": 7,
+                "w": 4,
+                "id": 115887832793,
+                "i": "a53dc725-4a9b-431c-a18b-ee3d3236439a",
+                "options": {},
+                "definition": {
+                    "id": 115887832793,
+                    "_type": "1",
+                    "container.type": "dashboard",
+                    "visualization.name": "Logon Type Breakdown2",
+                    "visualization.type": "Pie",
+                    "visualization.category": "TopN",
+                    "visualization.timeline": {
+                        "relative.timeline": "today",
+                        "visualization.time.range.inclusive": "no"
+                    },
+                    "visualization.result.by": [
+                        "eventdata.logonprocessname"
+                    ],
+                    "visualization.properties": {
+                        "chart": {
+                            "sorting": {
+                                "limit": 10,
+                                "order": "desc",
+                                "column": "system.task.count"
+                            },
+                            "line.style": "solid",
+                            "line.width": 2,
+                            "point.size": 4,
+                            "chart.label": "no",
+                            "chart.legend": "yes",
+                            "points.enabled": "no",
+                            "rotation.angle": 0,
+                            "marker.property": [
+                                {
+                                    "marker.threshold": [
+                                        null,
+                                        null
+                                    ]
+                                }
+                            ],
+                            "vertical.legend": "no",
+                            "data.label.enabled": "no",
+                            "highchart.settings": {}
+                        }
+                    },
+                    "visualization.data.sources": [
+                        {
+                            "type": "log",
+                            "filters": {
+                                "data.filter": {
+                                    "filter": "include",
+                                    "groups": [
+                                        {
+                                            "filter": "include",
+                                            "operator": "and",
+                                            "conditions": [
+                                                {
+                                                    "value": [
+                                                        "Windows Logon Event"
+                                                    ],
+                                                    "operand": "event.category",
+                                                    "operator": "in"
+                                                },
+                                                {
+                                                    "value": [
+                                                        "4625"
+                                                    ],
+                                                    "operand": "system.eventid",
+                                                    "operator": "in"
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "operator": "and"
+                                },
+                                "result.filter": {},
+                                "drill.down.filter": {}
+                            },
+                            "category": "log",
+                            "data.points": [
+                                {
+                                    "entities": [],
+                                    "aggregator": "count",
+                                    "data.point": "system.task"
+                                }
+                            ],
+                            "visualization.result.by": [
+                                "eventdata.logonprocessname"
+                            ]
+                        }
+                    ],
+                    "visualization.timeline.preference": "no"
+                }
+            },
+            {
+                "x": 0,
+                "y": 16,
+                "h": 7,
+                "w": 12,
+                "id": 115887832815,
+                "i": "f79f5bba-27fe-45e9-abf2-21f0d785c374",
+                "options": {},
+                "definition": {
+                    "id": 115887832815,
+                    "_type": "1",
+                    "cache": true,
+                    "join.type": "custom",
+                    "join.result": "log.event",
+                    "max.records": 500,
+                    "container.type": "dashboard",
+                    "visualization.name": "Recent Logon Events",
+                    "visualization.type": "Grid",
+                    "visualization.category": "Event History",
+                    "visualization.timeline": {
+                        "relative.timeline": "today",
+                        "visualization.time.range.inclusive": "no"
+                    },
+                    "visualization.result.by": [],
+                    "visualization.properties": {
+                        "grid": {
+                            "style": {
+                                "header.font.size": "small"
+                            },
+                            "header": "yes",
+                            "columns": [
+                                {
+                                    "name": "timestamp",
+                                    "show": "yes",
+                                    "style": {
+                                        "change.case": "none"
+                                    },
+                                    "disable": "no",
+                                    "position": 1,
+                                    "sortable": "yes",
+                                    "orderable": "yes",
+                                    "resizable": "yes",
+                                    "selectable": "yes"
+                                },
+                                {
+                                    "name": "system.task",
+                                    "show": "no",
+                                    "style": {
+                                        "change.case": "none"
+                                    },
+                                    "title": "",
+                                    "disable": "no",
+                                    "position": 2,
+                                    "sortable": "yes",
+                                    "orderable": "yes",
+                                    "resizable": "yes",
+                                    "selectable": "yes"
+                                },
+                                {
+                                    "name": "message",
+                                    "show": "no",
+                                    "style": {
+                                        "change.case": "none"
+                                    },
+                                    "disable": "no",
+                                    "position": 3,
+                                    "sortable": "yes",
+                                    "orderable": "yes",
+                                    "resizable": "yes",
+                                    "selectable": "yes"
+                                },
+                                {
+                                    "name": "system.computer",
+                                    "show": "yes",
+                                    "style": {
+                                        "change.case": "none"
+                                    },
+                                    "title": "Host",
+                                    "disable": "no",
+                                    "position": 4,
+                                    "sortable": "yes",
+                                    "orderable": "yes",
+                                    "resizable": "yes",
+                                    "selectable": "yes"
+                                },
+                                {
+                                    "name": "eventdata.targetusername",
+                                    "show": "yes",
+                                    "style": {
+                                        "change.case": "none"
+                                    },
+                                    "title": "user",
+                                    "disable": "no",
+                                    "position": 5,
+                                    "sortable": "yes",
+                                    "orderable": "yes",
+                                    "resizable": "yes",
+                                    "selectable": "yes"
+                                },
+                                {
+                                    "name": "eventdata.ipaddress",
+                                    "show": "yes",
+                                    "style": {
+                                        "change.case": "none"
+                                    },
+                                    "title": "ip-address",
+                                    "disable": "no",
+                                    "position": 6,
+                                    "sortable": "yes",
+                                    "orderable": "yes",
+                                    "resizable": "yes",
+                                    "selectable": "yes"
+                                },
+                                {
+                                    "name": "auth.logon.type",
+                                    "show": "yes",
+                                    "style": {
+                                        "change.case": "none",
+                                        "value.display.operations": [
+                                            {
+                                                "value": " - Network",
+                                                "operator": "=",
+                                                "operation.type": "suffix",
+                                                "value.to.compare": "3"
+                                            }
+                                        ]
+                                    },
+                                    "title": "Logon Type",
+                                    "disable": "no",
+                                    "position": 7,
+                                    "sortable": "yes",
+                                    "orderable": "yes",
+                                    "resizable": "yes",
+                                    "selectable": "yes"
+                                },
+                                {
+                                    "name": "system.keywords",
+                                    "show": "yes",
+                                    "style": {
+                                        "change.case": "none",
+                                        "color.conditions": [
+                                            {
+                                                "color": "#FF0000",
+                                                "value": "Audit Failure",
+                                                "operator": "=",
+                                                "color.type": "foreground"
+                                            },
+                                            {
+                                                "color": "#00FD09",
+                                                "value": "Audit Success",
+                                                "operator": "=",
+                                                "color.type": "foreground"
+                                            }
+                                        ]
+                                    },
+                                    "title": "Outcome",
+                                    "disable": "no",
+                                    "position": 8,
+                                    "sortable": "yes",
+                                    "orderable": "yes",
+                                    "resizable": "yes",
+                                    "selectable": "yes"
+                                }
+                            ],
+                            "searchable": "yes",
+                            "column.selection": "no",
+                            "thresholdSettings": {},
+                            "visualization.grid.properties.required": "no"
+                        }
+                    },
+                    "visualization.data.sources": [
+                        {
+                            "type": "log",
+                            "filters": {
+                                "data.filter": {
+                                    "filter": "include",
+                                    "groups": [
+                                        {
+                                            "filter": "include",
+                                            "operator": "and",
+                                            "conditions": [
+                                                {
+                                                    "value": [
+                                                        "Windows Logon Event"
+                                                    ],
+                                                    "operand": "event.category",
+                                                    "operator": "in"
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "operator": "and"
+                                },
+                                "result.filter": {},
+                                "drill.down.filter": {}
+                            },
+                            "join.type": "custom",
+                            "data.points": [
+                                {
+                                    "aggregator": "",
+                                    "data.point": "system.task"
+                                },
+                                {
+                                    "aggregator": "",
+                                    "data.point": "system.computer"
+                                },
+                                {
+                                    "aggregator": "",
+                                    "data.point": "eventdata.targetusername"
+                                },
+                                {
+                                    "aggregator": "",
+                                    "data.point": "eventdata.ipaddress"
+                                },
+                                {
+                                    "aggregator": "",
+                                    "data.point": "auth.logon.type"
+                                },
+                                {
+                                    "aggregator": "",
+                                    "data.point": "system.keywords"
+                                },
+                                {
+                                    "aggregator": "",
+                                    "data.point": "message"
+                                }
+                            ],
+                            "visualization.result.by": []
+                        }
+                    ],
+                    "visualization.secondary.category": "event.history",
+                    "visualization.timeline.preference": "no"
+                }
+            }
+        ],
+        "dashboard.users": []
+    }
+}

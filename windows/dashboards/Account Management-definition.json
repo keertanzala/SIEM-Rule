@@ -1,0 +1,1473 @@
+{
+    "id": 115887833071,
+    "dashboard.name": "Account Management",
+    "dashboard.category": "Windows",
+    "dashboard.access.type": "public",
+    "dashboard.users": [],
+    "dashboard.scope": "user",
+    "dashboard.user.profiles": [],
+    "dashboard.assigned.users": [],
+    "dashboard.assigned.user.profiles": [],
+    "dashboard.tabs": [],
+    "custom.tabs": [],
+    "style": {
+        "font.size": "medium",
+        "h.gap": 10,
+        "v.gap": 10,
+        "row.height": 50
+    },
+    "dashboard.context": {
+        "dashboard.widgets": [
+            {
+                "x": 0,
+                "y": 0,
+                "h": 2,
+                "w": 2,
+                "id": 115887833072,
+                "i": "2805666f-4295-400f-8025-a411c9a68aa8",
+                "options": {},
+                "definition": {
+                    "id": 115887833072,
+                    "_type": "1",
+                    "container.type": "dashboard",
+                    "visualization.name": "Total account changes",
+                    "visualization.type": "MetroTile",
+                    "visualization.category": "Gauge",
+                    "visualization.timeline": {
+                        "relative.timeline": "today",
+                        "visualization.time.range.inclusive": "no"
+                    },
+                    "visualization.result.by": [],
+                    "visualization.properties": {
+                        "gauge": {
+                            "style": {
+                                "type": "number",
+                                "font.size": "small",
+                                "text.align": "left",
+                                "chart.label": "no",
+                                "chart.legend": "no",
+                                "color.conditions": [],
+                                "trend.background.enabled": false
+                            },
+                            "font.color.conditions": []
+                        }
+                    },
+                    "visualization.data.sources": [
+                        {
+                            "type": "log",
+                            "filters": {
+                                "data.filter": {
+                                    "filter": "include",
+                                    "groups": [
+                                        {
+                                            "filter": "include",
+                                            "operator": "or",
+                                            "conditions": [
+                                                {
+                                                    "operand": "system.event.id",
+                                                    "operator": "in",
+                                                    "value": [
+                                                        "4720",
+                                                        "4722",
+                                                        "4723",
+                                                        "4724",
+                                                        "4725",
+                                                        "4726",
+                                                        "4738",
+                                                        "4740",
+                                                        "4767",
+                                                        "4781",
+                                                        "4728",
+                                                        "4732",
+                                                        "4756",
+                                                        "4729",
+                                                        "4733",
+                                                        "4757",
+                                                        "4727",
+                                                        "4730",
+                                                        "4731",
+                                                        "4734",
+                                                        "4735",
+                                                        "4754",
+                                                        "4755",
+                                                        "4764",
+                                                        "4741",
+                                                        "4742",
+                                                        "4743"
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "operator": "and"
+                                },
+                                "result.filter": {},
+                                "drill.down.filter": {}
+                            },
+                            "category": "log",
+                            "data.points": [
+                                {
+                                    "entities": [],
+                                    "aggregator": "count",
+                                    "data.point": "system.task"
+                                }
+                            ]
+                        }
+                    ],
+                    "visualization.timeline.preference": "no"
+                }
+            },
+            {
+                "x": 2,
+                "y": 0,
+                "h": 2,
+                "w": 2,
+                "id": 115887833078,
+                "i": "5e9133b6-f394-4a90-be1e-98f608acda61",
+                "options": {},
+                "definition": {
+                    "id": 115887833078,
+                    "_type": "1",
+                    "container.type": "dashboard",
+                    "visualization.name": "Accounts created",
+                    "visualization.type": "MetroTile",
+                    "visualization.category": "Gauge",
+                    "visualization.timeline": {
+                        "relative.timeline": "today",
+                        "visualization.time.range.inclusive": "no"
+                    },
+                    "visualization.result.by": [],
+                    "visualization.properties": {
+                        "gauge": {
+                            "style": {
+                                "type": "number",
+                                "font.size": "small",
+                                "text.align": "left",
+                                "chart.label": "no",
+                                "chart.legend": "no",
+                                "color.conditions": [
+                                    {
+                                        "color": "#f04e3e",
+                                        "value": 0
+                                    },
+                                    {
+                                        "color": "#f58518",
+                                        "value": 0
+                                    },
+                                    {
+                                        "color": "#f5bc18",
+                                        "value": 0
+                                    }
+                                ],
+                                "trend.background.enabled": false
+                            },
+                            "font.color.conditions": []
+                        }
+                    },
+                    "visualization.data.sources": [
+                        {
+                            "type": "log",
+                            "filters": {
+                                "data.filter": {
+                                    "filter": "include",
+                                    "groups": [
+                                        {
+                                            "filter": "include",
+                                            "operator": "or",
+                                            "conditions": [
+                                                {
+                                                    "operand": "system.event.id",
+                                                    "operator": "in",
+                                                    "value": [
+                                                        "4720"
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "operator": "and"
+                                },
+                                "result.filter": {},
+                                "drill.down.filter": {}
+                            },
+                            "category": "log",
+                            "data.points": [
+                                {
+                                    "entities": [],
+                                    "aggregator": "count",
+                                    "data.point": "system.task"
+                                }
+                            ]
+                        }
+                    ],
+                    "visualization.timeline.preference": "no"
+                }
+            },
+            {
+                "x": 6,
+                "y": 0,
+                "h": 2,
+                "w": 2,
+                "id": 115887833080,
+                "i": "9441d4fb-14dc-41b1-a181-6a696f50b0ed",
+                "options": {},
+                "definition": {
+                    "id": 115887833080,
+                    "_type": "1",
+                    "container.type": "dashboard",
+                    "visualization.name": "Admin password resets",
+                    "visualization.type": "MetroTile",
+                    "visualization.category": "Gauge",
+                    "visualization.timeline": {
+                        "relative.timeline": "today",
+                        "visualization.time.range.inclusive": "no"
+                    },
+                    "visualization.result.by": [],
+                    "visualization.properties": {
+                        "gauge": {
+                            "style": {
+                                "type": "number",
+                                "font.size": "small",
+                                "text.align": "left",
+                                "chart.label": "no",
+                                "chart.legend": "no",
+                                "color.conditions": [
+                                    {
+                                        "color": "#f04e3e",
+                                        "value": 0
+                                    },
+                                    {
+                                        "color": "#f58518",
+                                        "value": 0
+                                    },
+                                    {
+                                        "color": "#f5bc18",
+                                        "value": 0
+                                    }
+                                ],
+                                "trend.background.enabled": false
+                            },
+                            "font.color.conditions": []
+                        }
+                    },
+                    "visualization.data.sources": [
+                        {
+                            "type": "log",
+                            "filters": {
+                                "data.filter": {
+                                    "filter": "include",
+                                    "groups": [
+                                        {
+                                            "filter": "include",
+                                            "operator": "or",
+                                            "conditions": [
+                                                {
+                                                    "operand": "system.event.id",
+                                                    "operator": "in",
+                                                    "value": [
+                                                        "4724"
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "operator": "and"
+                                },
+                                "result.filter": {},
+                                "drill.down.filter": {}
+                            },
+                            "category": "log",
+                            "data.points": [
+                                {
+                                    "entities": [],
+                                    "aggregator": "count",
+                                    "data.point": "system.task"
+                                }
+                            ]
+                        }
+                    ],
+                    "visualization.timeline.preference": "no"
+                }
+            },
+            {
+                "x": 10,
+                "y": 0,
+                "h": 2,
+                "w": 2,
+                "id": 115887833081,
+                "i": "b020b1db-edd5-41cb-b5df-aa4655041f3d",
+                "options": {},
+                "definition": {
+                    "id": 115887833081,
+                    "_type": "1",
+                    "container.type": "dashboard",
+                    "visualization.name": "Account lockouts",
+                    "visualization.type": "MetroTile",
+                    "visualization.category": "Gauge",
+                    "visualization.timeline": {
+                        "relative.timeline": "today",
+                        "visualization.time.range.inclusive": "no"
+                    },
+                    "visualization.result.by": [],
+                    "visualization.properties": {
+                        "gauge": {
+                            "style": {
+                                "type": "number",
+                                "font.size": "small",
+                                "text.align": "left",
+                                "chart.label": "no",
+                                "chart.legend": "no",
+                                "color.conditions": [
+                                    {
+                                        "color": "#f04e3e",
+                                        "value": 20
+                                    },
+                                    {
+                                        "color": "#f58518",
+                                        "value": 5
+                                    },
+                                    {
+                                        "color": "#f5bc18",
+                                        "value": 0
+                                    }
+                                ],
+                                "trend.background.enabled": false
+                            },
+                            "font.color.conditions": []
+                        }
+                    },
+                    "visualization.data.sources": [
+                        {
+                            "type": "log",
+                            "filters": {
+                                "data.filter": {
+                                    "filter": "include",
+                                    "groups": [
+                                        {
+                                            "filter": "include",
+                                            "operator": "or",
+                                            "conditions": [
+                                                {
+                                                    "operand": "system.event.id",
+                                                    "operator": "in",
+                                                    "value": [
+                                                        "4740"
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "operator": "and"
+                                },
+                                "result.filter": {},
+                                "drill.down.filter": {}
+                            },
+                            "category": "log",
+                            "data.points": [
+                                {
+                                    "entities": [],
+                                    "aggregator": "count",
+                                    "data.point": "system.task"
+                                }
+                            ]
+                        }
+                    ],
+                    "visualization.timeline.preference": "no"
+                }
+            },
+            {
+                "x": 8,
+                "y": 0,
+                "h": 2,
+                "w": 2,
+                "id": 115887833083,
+                "i": "55528341-b6f7-4098-8ddf-b470be444973",
+                "options": {},
+                "definition": {
+                    "id": 115887833083,
+                    "_type": "1",
+                    "container.type": "dashboard",
+                    "visualization.name": "Privileged group changes",
+                    "visualization.type": "MetroTile",
+                    "visualization.category": "Gauge",
+                    "visualization.timeline": {
+                        "relative.timeline": "today",
+                        "visualization.time.range.inclusive": "no"
+                    },
+                    "visualization.result.by": [],
+                    "visualization.properties": {
+                        "gauge": {
+                            "style": {
+                                "type": "number",
+                                "font.size": "small",
+                                "text.align": "left",
+                                "chart.label": "no",
+                                "chart.legend": "no",
+                                "color.conditions": [
+                                    {
+                                        "color": "#f04e3e",
+                                        "value": 1
+                                    },
+                                    {
+                                        "color": "#f58518",
+                                        "value": 0
+                                    },
+                                    {
+                                        "color": "#f5bc18",
+                                        "value": 0
+                                    }
+                                ],
+                                "trend.background.enabled": false
+                            },
+                            "font.color.conditions": []
+                        }
+                    },
+                    "visualization.data.sources": [
+                        {
+                            "type": "log",
+                            "filters": {
+                                "data.filter": {
+                                    "filter": "include",
+                                    "groups": [
+                                        {
+                                            "filter": "include",
+                                            "operator": "or",
+                                            "conditions": [
+                                                {
+                                                    "operand": "system.event.id",
+                                                    "operator": "in",
+                                                    "value": [
+                                                        "4728",
+                                                        "4732",
+                                                        "4756",
+                                                        "4729",
+                                                        "4733",
+                                                        "4757"
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "operator": "and"
+                                },
+                                "result.filter": {},
+                                "drill.down.filter": {}
+                            },
+                            "category": "log",
+                            "data.points": [
+                                {
+                                    "entities": [],
+                                    "aggregator": "count",
+                                    "data.point": "system.task"
+                                }
+                            ]
+                        }
+                    ],
+                    "visualization.timeline.preference": "no"
+                }
+            },
+            {
+                "x": 4,
+                "y": 0,
+                "h": 2,
+                "w": 2,
+                "id": 115887833085,
+                "i": "da9b5636-d6e2-4b46-8763-9c614c4cba37",
+                "options": {},
+                "definition": {
+                    "id": 115887833085,
+                    "_type": "1",
+                    "container.type": "dashboard",
+                    "visualization.name": "Accounts deleted",
+                    "visualization.type": "MetroTile",
+                    "visualization.category": "Gauge",
+                    "visualization.timeline": {
+                        "relative.timeline": "today",
+                        "visualization.time.range.inclusive": "no"
+                    },
+                    "visualization.result.by": [],
+                    "visualization.properties": {
+                        "gauge": {
+                            "style": {
+                                "type": "number",
+                                "font.size": "small",
+                                "text.align": "left",
+                                "chart.label": "no",
+                                "chart.legend": "no",
+                                "color.conditions": [
+                                    {
+                                        "color": "#f58518",
+                                        "value": 1
+                                    },
+                                    {
+                                        "color": "#f58518",
+                                        "value": 0
+                                    },
+                                    {
+                                        "color": "#f5bc18",
+                                        "value": 0
+                                    }
+                                ],
+                                "trend.background.enabled": false
+                            },
+                            "font.color.conditions": []
+                        }
+                    },
+                    "visualization.data.sources": [
+                        {
+                            "type": "log",
+                            "filters": {
+                                "data.filter": {
+                                    "filter": "include",
+                                    "groups": [
+                                        {
+                                            "filter": "include",
+                                            "operator": "or",
+                                            "conditions": [
+                                                {
+                                                    "operand": "system.event.id",
+                                                    "operator": "in",
+                                                    "value": [
+                                                        "4726"
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "operator": "and"
+                                },
+                                "result.filter": {},
+                                "drill.down.filter": {}
+                            },
+                            "category": "log",
+                            "data.points": [
+                                {
+                                    "entities": [],
+                                    "aggregator": "count",
+                                    "data.point": "system.task"
+                                }
+                            ]
+                        }
+                    ],
+                    "visualization.timeline.preference": "no"
+                }
+            },
+            {
+                "x": 0,
+                "y": 2,
+                "h": 6,
+                "w": 8,
+                "id": 115887833088,
+                "i": "cb5a2856-7d69-4ea5-a34e-dcdfb34a10d9",
+                "options": {},
+                "definition": {
+                    "id": 115887833088,
+                    "_type": "1",
+                    "granularity": {
+                        "unit": "m",
+                        "value": 5
+                    },
+                    "container.type": "dashboard",
+                    "visualization.name": "Change timeline by action",
+                    "visualization.type": "StackedArea",
+                    "visualization.category": "Chart",
+                    "visualization.timeline": {
+                        "relative.timeline": "today",
+                        "visualization.time.range.inclusive": "no"
+                    },
+                    "visualization.result.by": [
+                        "operation.user.status"
+                    ],
+                    "visualization.properties": {
+                        "chart": {
+                            "sorting": {
+                                "limit": 10,
+                                "order": "desc"
+                            },
+                            "line.style": "solid",
+                            "line.width": 2,
+                            "point.size": 4,
+                            "axis.titles": {
+                                "x": "Time",
+                                "y": "Event Count"
+                            },
+                            "chart.label": "no",
+                            "chart.legend": "no",
+                            "points.enabled": "no",
+                            "rotation.angle": 0,
+                            "marker.property": [
+                                {
+                                    "marker.threshold": [
+                                        null,
+                                        null
+                                    ]
+                                }
+                            ],
+                            "vertical.legend": "no",
+                            "data.label.enabled": "no",
+                            "highchart.settings": {},
+                            "metric.grid.enabled": false
+                        }
+                    },
+                    "visualization.granularity": "5 m",
+                    "visualization.data.sources": [
+                        {
+                            "type": "log",
+                            "filters": {
+                                "data.filter": {
+                                    "filter": "include",
+                                    "groups": [
+                                        {
+                                            "filter": "include",
+                                            "operator": "or",
+                                            "conditions": [
+                                                {
+                                                    "operand": "system.event.id",
+                                                    "operator": "in",
+                                                    "value": [
+                                                        "4720",
+                                                        "4722",
+                                                        "4723",
+                                                        "4724",
+                                                        "4725",
+                                                        "4726",
+                                                        "4738",
+                                                        "4740",
+                                                        "4767",
+                                                        "4781",
+                                                        "4728",
+                                                        "4732",
+                                                        "4756",
+                                                        "4729",
+                                                        "4733",
+                                                        "4757",
+                                                        "4727",
+                                                        "4730",
+                                                        "4731",
+                                                        "4734",
+                                                        "4735",
+                                                        "4754",
+                                                        "4755",
+                                                        "4764",
+                                                        "4741",
+                                                        "4742",
+                                                        "4743"
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "operator": "and"
+                                },
+                                "result.filter": {},
+                                "drill.down.filter": {}
+                            },
+                            "category": "log",
+                            "data.points": [
+                                {
+                                    "entities": [],
+                                    "aggregator": "count",
+                                    "data.point": "system.task"
+                                }
+                            ],
+                            "visualization.result.by": [
+                                "operation.user.status"
+                            ]
+                        }
+                    ],
+                    "visualization.timeline.preference": "no"
+                }
+            },
+            {
+                "x": 8,
+                "y": 8,
+                "h": 6,
+                "w": 4,
+                "id": 115887833095,
+                "i": "fe968446-4482-434b-a093-b2984b80ac24",
+                "options": {},
+                "definition": {
+                    "id": 115887833095,
+                    "_type": "1",
+                    "container.type": "dashboard",
+                    "visualization.name": "Who is making changes",
+                    "visualization.type": "HorizontalBar",
+                    "visualization.category": "TopN",
+                    "visualization.timeline": {
+                        "relative.timeline": "today",
+                        "visualization.time.range.inclusive": "no"
+                    },
+                    "visualization.result.by": [
+                        "eventdata.subject.user.name"
+                    ],
+                    "visualization.properties": {
+                        "chart": {
+                            "sorting": {
+                                "limit": 10,
+                                "order": "desc",
+                                "column": "system.task.count"
+                            },
+                            "line.style": "solid",
+                            "line.width": 2,
+                            "point.size": 4,
+                            "chart.label": "no",
+                            "chart.legend": "no",
+                            "points.enabled": "no",
+                            "rotation.angle": 0,
+                            "marker.property": [
+                                {
+                                    "marker.threshold": [
+                                        null,
+                                        null
+                                    ]
+                                }
+                            ],
+                            "vertical.legend": "no",
+                            "data.label.enabled": "no",
+                            "highchart.settings": {}
+                        }
+                    },
+                    "visualization.data.sources": [
+                        {
+                            "type": "log",
+                            "filters": {
+                                "data.filter": {
+                                    "filter": "include",
+                                    "groups": [
+                                        {
+                                            "filter": "include",
+                                            "operator": "or",
+                                            "conditions": [
+                                                {
+                                                    "operand": "system.event.id",
+                                                    "operator": "in",
+                                                    "value": [
+                                                        "4720",
+                                                        "4722",
+                                                        "4723",
+                                                        "4724",
+                                                        "4725",
+                                                        "4726",
+                                                        "4738",
+                                                        "4740",
+                                                        "4767",
+                                                        "4781",
+                                                        "4728",
+                                                        "4732",
+                                                        "4756",
+                                                        "4729",
+                                                        "4733",
+                                                        "4757",
+                                                        "4727",
+                                                        "4730",
+                                                        "4731",
+                                                        "4734",
+                                                        "4735",
+                                                        "4754",
+                                                        "4755",
+                                                        "4764",
+                                                        "4741",
+                                                        "4742",
+                                                        "4743"
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "operator": "and"
+                                },
+                                "result.filter": {},
+                                "drill.down.filter": {}
+                            },
+                            "category": "log",
+                            "data.points": [
+                                {
+                                    "entities": [],
+                                    "aggregator": "count",
+                                    "data.point": "system.task"
+                                }
+                            ],
+                            "visualization.result.by": [
+                                "eventdata.subject.user.name"
+                            ]
+                        }
+                    ],
+                    "visualization.timeline.preference": "no"
+                }
+            },
+            {
+                "x": 8,
+                "y": 2,
+                "h": 6,
+                "w": 4,
+                "id": 115887833099,
+                "i": "b4baddb6-9770-49d0-a3d8-dcc5d8f425dd",
+                "options": {},
+                "definition": {
+                    "id": 115887833099,
+                    "_type": "1",
+                    "container.type": "dashboard",
+                    "visualization.name": "Most-Changed Accounts",
+                    "visualization.type": "Pie",
+                    "visualization.category": "TopN",
+                    "visualization.timeline": {
+                        "relative.timeline": "today",
+                        "visualization.time.range.inclusive": "no"
+                    },
+                    "visualization.result.by": [
+                        "eventdata.target.user.name"
+                    ],
+                    "visualization.properties": {
+                        "chart": {
+                            "sorting": {
+                                "limit": 10,
+                                "order": "desc",
+                                "column": "system.task.count"
+                            },
+                            "line.style": "solid",
+                            "line.width": 2,
+                            "point.size": 4,
+                            "chart.label": "no",
+                            "chart.legend": "yes",
+                            "points.enabled": "no",
+                            "rotation.angle": 0,
+                            "marker.property": [
+                                {
+                                    "marker.threshold": [
+                                        null,
+                                        null
+                                    ]
+                                }
+                            ],
+                            "vertical.legend": "no",
+                            "data.label.enabled": "no",
+                            "highchart.settings": {}
+                        }
+                    },
+                    "visualization.data.sources": [
+                        {
+                            "type": "log",
+                            "filters": {
+                                "data.filter": {
+                                    "filter": "include",
+                                    "groups": [
+                                        {
+                                            "filter": "include",
+                                            "operator": "or",
+                                            "conditions": [
+                                                {
+                                                    "operand": "system.event.id",
+                                                    "operator": "in",
+                                                    "value": [
+                                                        "4720",
+                                                        "4722",
+                                                        "4723",
+                                                        "4724",
+                                                        "4725",
+                                                        "4726",
+                                                        "4738",
+                                                        "4740",
+                                                        "4767",
+                                                        "4781"
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "operator": "and"
+                                },
+                                "result.filter": {},
+                                "drill.down.filter": {}
+                            },
+                            "category": "log",
+                            "data.points": [
+                                {
+                                    "entities": [],
+                                    "aggregator": "count",
+                                    "data.point": "system.task"
+                                }
+                            ],
+                            "visualization.result.by": [
+                                "eventdata.target.user.name"
+                            ]
+                        }
+                    ],
+                    "visualization.timeline.preference": "no"
+                }
+            },
+            {
+                "x": 0,
+                "y": 14,
+                "h": 6,
+                "w": 6,
+                "id": 115887833101,
+                "i": "c436002c-2728-4536-b62c-9c60426b91ba",
+                "options": {},
+                "definition": {
+                    "id": 115887833101,
+                    "_type": "1",
+                    "cache": true,
+                    "join.type": "custom",
+                    "join.result": "log.event",
+                    "max.records": 500,
+                    "container.type": "dashboard",
+                    "visualization.name": "Recent Events - Account Management",
+                    "visualization.type": "Grid",
+                    "visualization.category": "Event History",
+                    "visualization.timeline": {
+                        "relative.timeline": "today",
+                        "visualization.time.range.inclusive": "no"
+                    },
+                    "visualization.result.by": [],
+                    "visualization.properties": {
+                        "grid": {
+                            "style": {
+                                "header.font.size": "small"
+                            },
+                            "header": "yes",
+                            "columns": [
+                                {
+                                    "name": "timestamp",
+                                    "show": "yes",
+                                    "style": {
+                                        "change.case": "none"
+                                    },
+                                    "title": "TIme",
+                                    "disable": "no",
+                                    "position": 1,
+                                    "sortable": "yes",
+                                    "orderable": "yes",
+                                    "resizable": "yes",
+                                    "selectable": "yes"
+                                },
+                                {
+                                    "name": "system.computer",
+                                    "show": "yes",
+                                    "style": {
+                                        "change.case": "none"
+                                    },
+                                    "title": "Host",
+                                    "disable": "no",
+                                    "position": 2,
+                                    "sortable": "yes",
+                                    "orderable": "yes",
+                                    "resizable": "yes",
+                                    "selectable": "yes"
+                                },
+                                {
+                                    "name": "eventdata.subject.user.name",
+                                    "show": "yes",
+                                    "style": {
+                                        "change.case": "none"
+                                    },
+                                    "title": "Actor",
+                                    "disable": "no",
+                                    "position": 3,
+                                    "sortable": "yes",
+                                    "orderable": "yes",
+                                    "resizable": "yes",
+                                    "selectable": "yes"
+                                },
+                                {
+                                    "name": "message",
+                                    "show": "no",
+                                    "style": {
+                                        "change.case": "none"
+                                    },
+                                    "title": "",
+                                    "disable": "no",
+                                    "position": 4,
+                                    "sortable": "yes",
+                                    "orderable": "yes",
+                                    "resizable": "yes",
+                                    "selectable": "yes"
+                                },
+                                {
+                                    "name": "eventdata.target.user.name",
+                                    "show": "yes",
+                                    "style": {
+                                        "change.case": "none"
+                                    },
+                                    "title": "User",
+                                    "disable": "no",
+                                    "position": 5,
+                                    "sortable": "yes",
+                                    "orderable": "yes",
+                                    "resizable": "yes",
+                                    "selectable": "yes"
+                                },
+                                {
+                                    "name": "summary",
+                                    "show": "yes",
+                                    "style": {
+                                        "change.case": "none"
+                                    },
+                                    "disable": "no",
+                                    "position": 6,
+                                    "sortable": "yes",
+                                    "orderable": "yes",
+                                    "resizable": "yes",
+                                    "selectable": "yes"
+                                }
+                            ],
+                            "searchable": "yes",
+                            "column.selection": "no",
+                            "thresholdSettings": {},
+                            "visualization.grid.properties.required": "no"
+                        }
+                    },
+                    "visualization.data.sources": [
+                        {
+                            "type": "log",
+                            "filters": {
+                                "data.filter": {
+                                    "filter": "include",
+                                    "groups": [
+                                        {
+                                            "filter": "include",
+                                            "operator": "or",
+                                            "conditions": [
+                                                {
+                                                    "operand": "system.event.id",
+                                                    "operator": "in",
+                                                    "value": [
+                                                        "4720",
+                                                        "4722",
+                                                        "4723",
+                                                        "4724",
+                                                        "4725",
+                                                        "4726",
+                                                        "4738",
+                                                        "4740",
+                                                        "4767",
+                                                        "4781",
+                                                        "4728",
+                                                        "4732",
+                                                        "4756",
+                                                        "4729",
+                                                        "4733",
+                                                        "4757",
+                                                        "4727",
+                                                        "4730",
+                                                        "4731",
+                                                        "4734",
+                                                        "4735",
+                                                        "4754",
+                                                        "4755",
+                                                        "4764",
+                                                        "4741",
+                                                        "4742",
+                                                        "4743"
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "operator": "and"
+                                },
+                                "result.filter": {},
+                                "drill.down.filter": {}
+                            },
+                            "join.type": "custom",
+                            "data.points": [
+                                {
+                                    "aggregator": "",
+                                    "data.point": "summary"
+                                },
+                                {
+                                    "aggregator": "",
+                                    "data.point": "eventdata.subject.user.name"
+                                },
+                                {
+                                    "aggregator": "",
+                                    "data.point": "system.computer"
+                                },
+                                {
+                                    "aggregator": "",
+                                    "data.point": "eventdata.target.user.name"
+                                },
+                                {
+                                    "aggregator": "",
+                                    "data.point": "message"
+                                }
+                            ],
+                            "visualization.result.by": []
+                        }
+                    ],
+                    "visualization.secondary.category": "event.history",
+                    "visualization.timeline.preference": "no"
+                }
+            },
+            {
+                "x": 4,
+                "y": 8,
+                "h": 6,
+                "w": 4,
+                "id": 116243198371,
+                "i": "40270b6b-13aa-42fe-9273-5636c6196bad",
+                "options": {},
+                "definition": {
+                    "id": 116243198371,
+                    "_type": "1",
+                    "visualization.name": "Privileged group membership changes",
+                    "visualization.type": "HorizontalBar",
+                    "visualization.category": "TopN",
+                    "visualization.timeline": {
+                        "relative.timeline": "today",
+                        "visualization.time.range.inclusive": "no"
+                    },
+                    "visualization.result.by": [
+                        "eventdata.target.user.name",
+                        "eventdata.member.name"
+                    ],
+                    "visualization.properties": {
+                        "chart": {
+                            "sorting": {
+                                "limit": 25,
+                                "order": "desc",
+                                "column": "system.task.count"
+                            },
+                            "line.style": "solid",
+                            "line.width": 2,
+                            "point.size": 4,
+                            "chart.label": "no",
+                            "chart.legend": "no",
+                            "points.enabled": "no",
+                            "rotation.angle": 0,
+                            "marker.property": [
+                                {
+                                    "marker.threshold": [
+                                        null,
+                                        null
+                                    ]
+                                }
+                            ],
+                            "vertical.legend": "no",
+                            "data.label.enabled": "no",
+                            "highchart.settings": {}
+                        }
+                    },
+                    "visualization.data.sources": [
+                        {
+                            "type": "log",
+                            "filters": {
+                                "data.filter": {
+                                    "filter": "include",
+                                    "groups": [
+                                        {
+                                            "filter": "include",
+                                            "operator": "or",
+                                            "conditions": [
+                                                {
+                                                    "operand": "system.event.id",
+                                                    "operator": "in",
+                                                    "value": [
+                                                        "4728",
+                                                        "4732",
+                                                        "4756",
+                                                        "4729",
+                                                        "4733",
+                                                        "4757"
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "operator": "and"
+                                },
+                                "result.filter": {},
+                                "drill.down.filter": {}
+                            },
+                            "category": "log",
+                            "data.points": [
+                                {
+                                    "entities": [],
+                                    "aggregator": "count",
+                                    "data.point": "system.task"
+                                }
+                            ],
+                            "visualization.result.by": [
+                                "eventdata.target.user.name",
+                                "eventdata.member.name"
+                            ]
+                        }
+                    ],
+                    "visualization.timeline.preference": "no"
+                }
+            },
+            {
+                "x": 0,
+                "y": 8,
+                "h": 6,
+                "w": 4,
+                "id": 116243198372,
+                "i": "ef8af0fb-8410-4916-b902-df7ccf9369df",
+                "options": {},
+                "definition": {
+                    "id": 116243198372,
+                    "_type": "1",
+                    "visualization.name": "Account creations by actor",
+                    "visualization.type": "HorizontalBar",
+                    "visualization.category": "TopN",
+                    "visualization.timeline": {
+                        "relative.timeline": "today",
+                        "visualization.time.range.inclusive": "no"
+                    },
+                    "visualization.result.by": [
+                        "eventdata.subject.user.name"
+                    ],
+                    "visualization.properties": {
+                        "chart": {
+                            "sorting": {
+                                "limit": 25,
+                                "order": "desc",
+                                "column": "system.task.count"
+                            },
+                            "line.style": "solid",
+                            "line.width": 2,
+                            "point.size": 4,
+                            "chart.label": "no",
+                            "chart.legend": "no",
+                            "points.enabled": "no",
+                            "rotation.angle": 0,
+                            "marker.property": [
+                                {
+                                    "marker.threshold": [
+                                        null,
+                                        null
+                                    ]
+                                }
+                            ],
+                            "vertical.legend": "no",
+                            "data.label.enabled": "no",
+                            "highchart.settings": {}
+                        }
+                    },
+                    "visualization.data.sources": [
+                        {
+                            "type": "log",
+                            "filters": {
+                                "data.filter": {
+                                    "filter": "include",
+                                    "groups": [
+                                        {
+                                            "filter": "include",
+                                            "operator": "or",
+                                            "conditions": [
+                                                {
+                                                    "operand": "system.event.id",
+                                                    "operator": "in",
+                                                    "value": [
+                                                        "4720"
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "operator": "and"
+                                },
+                                "result.filter": {},
+                                "drill.down.filter": {}
+                            },
+                            "category": "log",
+                            "data.points": [
+                                {
+                                    "entities": [],
+                                    "aggregator": "count",
+                                    "data.point": "system.task"
+                                }
+                            ],
+                            "visualization.result.by": [
+                                "eventdata.subject.user.name"
+                            ]
+                        }
+                    ],
+                    "visualization.timeline.preference": "no"
+                }
+            },
+            {
+                "x": 6,
+                "y": 14,
+                "h": 6,
+                "w": 6,
+                "id": 116243198373,
+                "i": "7794ab59-3674-4621-a2f1-cdda77ec8b8c",
+                "options": {},
+                "definition": {
+                    "id": 116243198373,
+                    "_type": "1",
+                    "cache": true,
+                    "join.type": "custom",
+                    "join.result": "log.event",
+                    "max.records": 500,
+                    "container.type": "dashboard",
+                    "visualization.name": "Privileged group member changes",
+                    "visualization.type": "Grid",
+                    "visualization.category": "Event History",
+                    "visualization.timeline": {
+                        "relative.timeline": "today",
+                        "visualization.time.range.inclusive": "no"
+                    },
+                    "visualization.result.by": [],
+                    "visualization.properties": {
+                        "grid": {
+                            "style": {
+                                "header.font.size": "small"
+                            },
+                            "header": "yes",
+                            "columns": [
+                                {
+                                    "name": "timestamp",
+                                    "show": "yes",
+                                    "style": {
+                                        "change.case": "none"
+                                    },
+                                    "title": "Time",
+                                    "disable": "no",
+                                    "position": 1,
+                                    "sortable": "yes",
+                                    "orderable": "yes",
+                                    "resizable": "yes",
+                                    "selectable": "yes"
+                                },
+                                {
+                                    "name": "system.computer",
+                                    "show": "yes",
+                                    "style": {
+                                        "change.case": "none"
+                                    },
+                                    "title": "DC",
+                                    "disable": "no",
+                                    "position": 2,
+                                    "sortable": "yes",
+                                    "orderable": "yes",
+                                    "resizable": "yes",
+                                    "selectable": "yes"
+                                },
+                                {
+                                    "name": "eventdata.subject.user.name",
+                                    "show": "yes",
+                                    "style": {
+                                        "change.case": "none"
+                                    },
+                                    "title": "Actor",
+                                    "disable": "no",
+                                    "position": 3,
+                                    "sortable": "yes",
+                                    "orderable": "yes",
+                                    "resizable": "yes",
+                                    "selectable": "yes"
+                                },
+                                {
+                                    "name": "eventdata.member.name",
+                                    "show": "yes",
+                                    "style": {
+                                        "change.case": "none"
+                                    },
+                                    "title": "Member",
+                                    "disable": "no",
+                                    "position": 4,
+                                    "sortable": "yes",
+                                    "orderable": "yes",
+                                    "resizable": "yes",
+                                    "selectable": "yes"
+                                },
+                                {
+                                    "name": "eventdata.target.user.name",
+                                    "show": "yes",
+                                    "style": {
+                                        "change.case": "none"
+                                    },
+                                    "title": "Group",
+                                    "disable": "no",
+                                    "position": 5,
+                                    "sortable": "yes",
+                                    "orderable": "yes",
+                                    "resizable": "yes",
+                                    "selectable": "yes"
+                                },
+                                {
+                                    "name": "message",
+                                    "show": "no",
+                                    "style": {
+                                        "change.case": "none"
+                                    },
+                                    "disable": "no",
+                                    "position": 6,
+                                    "sortable": "yes",
+                                    "orderable": "yes",
+                                    "resizable": "yes",
+                                    "selectable": "yes"
+                                }
+                            ],
+                            "searchable": "yes",
+                            "column.selection": "no",
+                            "thresholdSettings": {},
+                            "visualization.grid.properties.required": "no"
+                        }
+                    },
+                    "visualization.data.sources": [
+                        {
+                            "type": "log",
+                            "filters": {
+                                "data.filter": {
+                                    "filter": "include",
+                                    "groups": [
+                                        {
+                                            "filter": "include",
+                                            "operator": "or",
+                                            "conditions": [
+                                                {
+                                                    "operand": "system.event.id",
+                                                    "operator": "in",
+                                                    "value": [
+                                                        "4728",
+                                                        "4732",
+                                                        "4756",
+                                                        "4729",
+                                                        "4733",
+                                                        "4757"
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "operator": "and"
+                                },
+                                "result.filter": {},
+                                "drill.down.filter": {}
+                            },
+                            "join.type": "custom",
+                            "data.points": [
+                                {
+                                    "aggregator": "",
+                                    "data.point": "system.computer"
+                                },
+                                {
+                                    "aggregator": "",
+                                    "data.point": "eventdata.subject.user.name"
+                                },
+                                {
+                                    "aggregator": "",
+                                    "data.point": "eventdata.member.name"
+                                },
+                                {
+                                    "aggregator": "",
+                                    "data.point": "eventdata.target.user.name"
+                                },
+                                {
+                                    "aggregator": "",
+                                    "data.point": "message"
+                                }
+                            ],
+                            "visualization.result.by": []
+                        }
+                    ],
+                    "visualization.secondary.category": "event.history",
+                    "visualization.timeline.preference": "no"
+                }
+            }
+        ],
+        "dashboard.users": []
+    }
+}
